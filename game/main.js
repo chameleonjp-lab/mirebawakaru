@@ -237,6 +237,7 @@ function tick(now, token) {
   }
 }
 function submit(button, event) {
+  const receivedAt = performance.now();
   if (phase !== "question" || button.disabled || event.timeStamp < readyTime)
     return;
   // Pointer and keyboard start tokens prevent a press begun on the previous screen from carrying over.
@@ -261,7 +262,7 @@ function submit(button, event) {
     session.submitAnswer({
       questionIndex: s.index,
       choiceId: choice.choiceId,
-      receivedAt: performance.now(),
+      receivedAt,
       snapshot: frame,
     }) !== "accepted"
   )

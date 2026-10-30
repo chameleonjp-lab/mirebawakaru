@@ -320,3 +320,47 @@ test("selecting another gallery ID while interrupted clears stale controls and r
   await expect(page.locator("#feedback")).toContainText("正解");
   expect(errors).toEqual([]);
 });
+
+test("answer time is captured on receipt, before copying session/review state", async ({
+  page,
+}) => {
+  await page.goto("dev/question-gallery.html?q=Q01");
+  await expect(page.locator("#load-question")).toBeEnabled();
+  await page.evaluate(() => {
+    const nativeNow = performance.now.bind(performance);
+    globalThis.clockReads = [];
+    globalThis.copyCost = 0;
+    Object.defineProperty(performance, "now", {
+      value: () => {
+        const actual = nativeNow();
+        globalThis.clockReads.push({
+          phase: document.querySelector("#app").dataset.phase,
+          actual,
+          stack: new Error().stack,
+        });
+        return actual + globalThis.copyCost;
+      },
+    });
+  });
+  await page.locator("#load-question").click();
+  await expect(page.locator("#app")).toHaveAttribute("data-phase", "question");
+  await page.evaluate(() => {
+    const nativeClone = globalThis.structuredClone;
+    globalThis.structuredClone = (...args) => {
+      globalThis.copyCost += 250;
+      return nativeClone(...args);
+    };
+  });
+  await answer(page);
+  const text = await page.locator("#feedback").textContent(),
+    ms = Number(text.match(/([0-9]+\.[0-9]{3}) 秒/)[1]) * 1000;
+  const actual = await page.evaluate(() => {
+    const readings = globalThis.clockReads;
+    return (
+      readings.find(
+        (r) => r.stack.includes("/game/main.js") && r.stack.includes("submit"),
+      ).actual - readings.find((r) => r.stack.includes("/game/clock.js")).actual
+    );
+  });
+  expect(Math.abs(ms - actual)).toBeLessThanOrEqual(1);
+});
