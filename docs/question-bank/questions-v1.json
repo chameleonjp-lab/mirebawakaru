@@ -16,14 +16,18 @@
       "total_answer_time_asc"
     ],
     "question_style": "短い比較・識別の問い",
-    "variation_policy": "基本33問を作成後、色・配置・問い・正解のバリエーションを増やす"
+    "variation_policy": "基本33問を作成後、色・配置・問い・正解のバリエーションを増やす",
+    "development_phase": "まず基本33問の仕組みに問題がないか確認する",
+    "initial_score_persistence": false,
+    "production_phase": "問題がなかった問いの種類を増やし、記録機能を追加する",
+    "conditional_66_note": "各系統1派生・計66形の案は全33系統に問題がなかった場合に限る。無条件の目標ではない。"
   },
   "author_proposals": {
     "layout": "A〜Dを付けた4つの対象と、対応する4つの回答ボタン。比較対象を短い補足で明示。",
     "base_answer_policy": "基本33問では『全部同じ』『わからない』を選択肢にせず、A〜Dの対象から1つを選ぶ。",
-    "motion_time_policy": "回答可能な図が実際に描画されてから回答受付までの時間を集計。背景化・画面回転・描画中断があった比較記録は保留し、速さだけを有利にする時刻補正をしない。",
+    "motion_time_policy": "現在のプレイ中の計測だけを扱い、中断時は時間を参考表示にする。成績の保存・送信は初期段階に実装しない。",
     "feedback": "10問の計測に解説を混ぜず、終了後に答え合わせ。",
-    "ranking_scope": "正解数と時間の比較方法のみを定義。オンラインランキングの接続はこの資料の対象外。"
+    "ranking_scope": "正解数と時間の比較規則は維持する。初期段階はその場の結果のみ。保存先・自己ベスト・オンライン順位などの記録方式は本番準備で設計する。"
   },
   "categories": [
     {
@@ -2302,6 +2306,24 @@
         }
       ]
     }
-  ]
+  ],
+  "phase_policy": {
+    "initial": {
+      "purpose": "33問の仕組み・図・4択・正解・答え合わせを確認する",
+      "score_persistence": false,
+      "personal_best": false,
+      "history": false,
+      "ranking": false,
+      "temporary_state": "現在のプレイの答え合わせまでメモリー内のみ。ホーム・再開始・再読み込みで破棄。",
+      "question_assessment": "採用可・要修正・保留と理由は開発資料として残す"
+    },
+    "production": {
+      "eligible_parent_families": "確認の結果、問題がなかった採用可の種類のみ",
+      "variants": "追加対象と件数は確認結果を見て決め、派生ごとに再確認する",
+      "records": "本番準備で保存先・項目・比較条件を設計して実装する",
+      "all_33_pass_required": false,
+      "sixty_six_is_unconditional_target": false
+    }
+  }
 }
 
