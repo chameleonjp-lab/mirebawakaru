@@ -1,0 +1,2307 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "question_design_bank",
+  "status": "designed_not_implemented",
+  "title": "ミレバワカル 基本33問と派生方針",
+  "date": "2026-10-31",
+  "source_catalog": "catalog.json",
+  "source_commit": "7438332a458bf42ff32ede83c931b9829b56fcb0",
+  "scope_note": "問題内容と描画条件の設計資料。ゲームでそのまま実行する完成コードや、検証済みの描画素材ではない。",
+  "confirmed_by_user": {
+    "questions_per_play": 10,
+    "choice_count": 4,
+    "base_family_count": 33,
+    "ranking_order": [
+      "correct_count_desc",
+      "total_answer_time_asc"
+    ],
+    "question_style": "短い比較・識別の問い",
+    "variation_policy": "基本33問を作成後、色・配置・問い・正解のバリエーションを増やす"
+  },
+  "author_proposals": {
+    "layout": "A〜Dを付けた4つの対象と、対応する4つの回答ボタン。比較対象を短い補足で明示。",
+    "base_answer_policy": "基本33問では『全部同じ』『わからない』を選択肢にせず、A〜Dの対象から1つを選ぶ。",
+    "motion_time_policy": "回答可能な図が実際に描画されてから回答受付までの時間を集計。背景化・画面回転・描画中断があった比較記録は保留し、速さだけを有利にする時刻補正をしない。",
+    "feedback": "10問の計測に解説を混ぜず、終了後に答え合わせ。",
+    "ranking_scope": "正解数と時間の比較方法のみを定義。オンラインランキングの接続はこの資料の対象外。"
+  },
+  "categories": [
+    {
+      "id": "length",
+      "name": "長さ・大きさ",
+      "count": 9
+    },
+    {
+      "id": "shape",
+      "name": "傾き・形",
+      "count": 7
+    },
+    {
+      "id": "light",
+      "name": "明るさ・暗い点",
+      "count": 5
+    },
+    {
+      "id": "color",
+      "name": "色・色の広がり",
+      "count": 4
+    },
+    {
+      "id": "contour",
+      "name": "輪郭・境界",
+      "count": 2
+    },
+    {
+      "id": "motion",
+      "name": "動き・速さ・位置",
+      "count": 6
+    }
+  ],
+  "deduplication_groups": [
+    [
+      "G11",
+      "G12"
+    ],
+    [
+      "C05",
+      "C06"
+    ],
+    [
+      "C03",
+      "C10"
+    ]
+  ],
+  "questions": [
+    {
+      "id": "Q01",
+      "family_id": "F01",
+      "category": "length",
+      "title": "矢羽の線",
+      "source_ids": [
+        "G01"
+      ],
+      "source_names": [
+        "ミュラー・リヤー錯視"
+      ],
+      "status": "designed_not_rendered",
+      "prompt": "長いのは？",
+      "target_hint": "横線だけの長さ",
+      "scene_design": "4本の横線に、内向き・外向き・混合の矢羽を付ける。端の飾りを比較対象に含めない。",
+      "baseline": {
+        "metric": "logical_length",
+        "unit": "unit",
+        "correct_rule": "max",
+        "target_value": null,
+        "choices": [
+          {
+            "label": "A",
+            "value": 106
+          },
+          {
+            "label": "B",
+            "value": 100
+          },
+          {
+            "label": "C",
+            "value": 102
+          },
+          {
+            "label": "D",
+            "value": 104
+          }
+        ],
+        "correct_label": "A"
+      },
+      "answer_explanation": "飾りを消し、線を同じ始点にそろえて終点を比べる。",
+      "variation": {
+        "alternate_prompt": "短いのは？",
+        "changeable": "矢羽の向き・開き・長さ、横線の長さ、背景の色",
+        "phase": "基本形の描画・答え合わせ確認後に増やす",
+        "must_recompute_answer": true,
+        "must_validate_unique_answer": true
+      },
+      "acceptance": {
+        "mathematical_uniqueness": "確認済み",
+        "visual_effect": "未確認",
+        "four_choice_readability": "未確認",
+        "iphone_portrait": "未確認",
+        "iphone_landscape": "未確認",
+        "ranking_eligibility": "描画・実機確認完了まで保留"
+      },
+      "sources": [
+        {
+          "title": "Michael Bach: Müller-Lyer Illusion",
+          "url": "https://michaelbach.de/ot/sze-muelue/index.html"
+        }
+      ]
+    },
+    {
+      "id": "Q02",
+      "family_id": "F02",
+      "category": "length",
+      "title": "遠近の横棒",
+      "source_ids": [
+        "G02"
+      ],
+      "source_names": [
+        "ポンゾ錯視"
+      ],
+      "status": "designed_not_rendered",
+      "prompt": "長いのは？",
+      "target_hint": "画面上の横棒",
+      "scene_design": "4本の横棒を、収束する背景の異なる高さに置く。比較するのは画面上の長さ。",
+      "baseline": {
+        "metric": "logical_length",
+        "unit": "unit",
+        "correct_rule": "max",
+        "target_value": null,
+        "choices": [
+          {
+            "label": "A",
+            "value": 105
+          },
+          {
+            "label": "B",
+            "value": 108
+          },
+          {
+            "label": "C",
+            "value": 100
+          },
+          {
+            "label": "D",
+            "value": 103
+          }
+        ],
+        "correct_label": "B"
+      },
+      "answer_explanation": "収束線を消し、横棒を同じ高さと始点へ移す。",
+      "variation": {
+        "alternate_prompt": "短いのは？",
+        "changeable": "背景の収束、横棒の上下位置、実際の長さ",
+        "phase": "基本形の描画・答え合わせ確認後に増やす",
+        "must_recompute_answer": true,
+        "must_validate_unique_answer": true
+      },
+      "acceptance": {
+        "mathematical_uniqueness": "確認済み",
+        "visual_effect": "未確認",
+        "four_choice_readability": "未確認",
+        "iphone_portrait": "未確認",
+        "iphone_landscape": "未確認",
+        "ranking_eligibility": "描画・実機確認完了まで保留"
+      },
+      "sources": [
+        {
+          "title": "Donaldson & Macpherson: Ponzo Illusion — The Illusions Index",
+          "url": "https://www.illusionsindex.org/i/ponzo-illusion"
+        }
+      ]
+    },
+    {
+      "id": "Q03",
+      "family_id": "F03",
+      "category": "length",
+      "title": "周囲の円",
+      "source_ids": [
+        "G03"
+      ],
+      "source_names": [
+        "エビングハウス錯視"
+      ],
+      "status": "designed_not_rendered",
+      "prompt": "大きいのは？",
+      "target_hint": "印のある中央の円",
+      "scene_design": "4個の中央円を、大きさと距離の異なる小円で囲む。",
+      "baseline": {
+        "metric": "radius",
+        "unit": "unit",
+        "correct_rule": "max",
+        "target_value": null,
+        "choices": [
+          {
+            "label": "A",
+            "value": 24
+          },
+          {
+            "label": "B",
+            "value": 25
+          },
+          {
+            "label": "C",
+            "value": 27
+          },
+          {
+            "label": "D",
+            "value": 23
+          }
+        ],
+        "correct_label": "C"
+      },
+      "answer_explanation": "周りの円を消し、中央円を同じ中心に重ねる。",
+      "variation": {
+        "alternate_prompt": "小さいのは？",
+        "changeable": "周囲の円の大きさ・数・間隔、中央円の半径",
+        "phase": "基本形の描画・答え合わせ確認後に増やす",
+        "must_recompute_answer": true,
+        "must_validate_unique_answer": true
+      },
+      "acceptance": {
+        "mathematical_uniqueness": "確認済み",
+        "visual_effect": "未確認",
+        "four_choice_readability": "未確認",
+        "iphone_portrait": "未確認",
+        "iphone_landscape": "未確認",
+        "ranking_eligibility": "描画・実機確認完了まで保留"
+      },
+      "sources": [
+        {
+          "title": "Michael Bach: Ebbinghaus Illusion",
+          "url": "https://michaelbach.de/ot/cog-Ebbinghaus/index.html"
+        }
+      ]
+    },
+    {
+      "id": "Q04",
+      "family_id": "F04",
+      "category": "length",
+      "title": "外側の輪",
+      "source_ids": [
+        "G04"
+      ],
+      "source_names": [
+        "デルブーフ錯視"
+      ],
+      "status": "designed_not_rendered",
+      "prompt": "大きいのは？",
+      "target_hint": "内側の円",
+      "scene_design": "4個の内円の外側に、大きさの異なる輪を置く。",
+      "baseline": {
+        "metric": "radius",
+        "unit": "unit",
+        "correct_rule": "max",
+        "target_value": null,
+        "choices": [
+          {
+            "label": "A",
+            "value": 25
+          },
+          {
+            "label": "B",
+            "value": 26
+          },
+          {
+            "label": "C",
+            "value": 27
+          },
+          {
+            "label": "D",
+            "value": 29
+          }
+        ],
+        "correct_label": "D"
+      },
+      "answer_explanation": "外側の輪を消し、内円の直径に目盛りを出す。",
+      "variation": {
+        "alternate_prompt": "小さいのは？",
+        "changeable": "外輪と内円の比率、間隔、内円の半径",
+        "phase": "基本形の描画・答え合わせ確認後に増やす",
+        "must_recompute_answer": true,
+        "must_validate_unique_answer": true
+      },
+      "acceptance": {
+        "mathematical_uniqueness": "確認済み",
+        "visual_effect": "未確認",
+        "four_choice_readability": "未確認",
+        "iphone_portrait": "未確認",
+        "iphone_landscape": "未確認",
+        "ranking_eligibility": "描画・実機確認完了まで保留"
+      },
+      "sources": [
+        {
+          "title": "Akiyoshi Kitaoka: A catalogue of illusions — Delboeuf illusion",
+          "url": "https://www.psy.ritsumei.ac.jp/~akitaoka/cataloge.html"
+        },
+        {
+          "title": "Michael Bach: The Delboeuf Illusion",
+          "url": "https://michaelbach.de/ot/cog-Delboeuf/index.html"
+        }
+      ]
+    },
+    {
+      "id": "Q05",
+      "family_id": "F05",
+      "category": "length",
+      "title": "曲がった帯",
+      "source_ids": [
+        "G05"
+      ],
+      "source_names": [
+        "ジャストロー錯視"
+      ],
+      "status": "designed_not_rendered",
+      "prompt": "大きいのは？",
+      "target_hint": "曲がった帯の面積",
+      "scene_design": "同じ形の曲がった帯を4枚、少しずつ倍率を変えてずらして並べる。大きさは帯の面積で定義する。",
+      "baseline": {
+        "metric": "area",
+        "unit": "unit_squared",
+        "correct_rule": "max",
+        "target_value": null,
+        "choices": [
+          {
+            "label": "A",
+            "value": 11025
+          },
+          {
+            "label": "B",
+            "value": 9604
+          },
+          {
+            "label": "C",
+            "value": 10000
+          },
+          {
+            "label": "D",
+            "value": 10404
+          }
+        ],
+        "correct_label": "A"
+      },
+      "answer_explanation": "帯を同じ向きと位置に重ねて比較する。",
+      "variation": {
+        "alternate_prompt": "小さいのは？",
+        "changeable": "帯のずれ、倍率、並ぶ向き。円弧の形は同じに保つ",
+        "phase": "基本形の描画・答え合わせ確認後に増やす",
+        "must_recompute_answer": true,
+        "must_validate_unique_answer": true
+      },
+      "acceptance": {
+        "mathematical_uniqueness": "確認済み",
+        "visual_effect": "未確認",
+        "four_choice_readability": "未確認",
+        "iphone_portrait": "未確認",
+        "iphone_landscape": "未確認",
+        "ranking_eligibility": "描画・実機確認完了まで保留"
+      },
+      "sources": [
+        {
+          "title": "Michael Bach: Jastrow Illusion",
+          "url": "https://michaelbach.de/ot/geom-Jastrow/index.html"
+        }
+      ]
+    },
+    {
+      "id": "Q06",
+      "family_id": "F06",
+      "category": "length",
+      "title": "縦と横の線",
+      "source_ids": [
+        "G06"
+      ],
+      "source_names": [
+        "垂直水平錯視"
+      ],
+      "status": "designed_not_rendered",
+      "prompt": "長いのは？",
+      "target_hint": "印のある太い線",
+      "scene_design": "4組のT字またはL字で、比較する太線の向きを縦・横に変える。補助の細線は対象に含めない。",
+      "baseline": {
+        "metric": "logical_length",
+        "unit": "unit",
+        "correct_rule": "max",
+        "target_value": null,
+        "choices": [
+          {
+            "label": "A",
+            "value": 105
+          },
+          {
+            "label": "B",
+            "value": 108
+          },
+          {
+            "label": "C",
+            "value": 99
+          },
+          {
+            "label": "D",
+            "value": 102
+          }
+        ],
+        "correct_label": "B"
+      },
+      "answer_explanation": "太線だけを取り出し、同じ向きに回して始点をそろえる。",
+      "variation": {
+        "alternate_prompt": "短いのは？",
+        "changeable": "縦横の向き、補助線の交差位置、実際の長さ",
+        "phase": "基本形の描画・答え合わせ確認後に増やす",
+        "must_recompute_answer": true,
+        "must_validate_unique_answer": true
+      },
+      "acceptance": {
+        "mathematical_uniqueness": "確認済み",
+        "visual_effect": "未確認",
+        "four_choice_readability": "未確認",
+        "iphone_portrait": "未確認",
+        "iphone_landscape": "未確認",
+        "ranking_eligibility": "描画・実機確認完了まで保留"
+      },
+      "sources": [
+        {
+          "title": "Donaldson & Macpherson: Vertical-Horizontal Illusion — The Illusions Index",
+          "url": "https://www.illusionsindex.org/i/vertical-horizontal-illusion"
+        }
+      ]
+    },
+    {
+      "id": "Q07",
+      "family_id": "F07",
+      "category": "length",
+      "title": "区切りのある幅",
+      "source_ids": [
+        "G07"
+      ],
+      "source_names": [
+        "オッペル・クント錯視"
+      ],
+      "status": "designed_not_rendered",
+      "prompt": "広いのは？",
+      "target_hint": "両端の印の間",
+      "scene_design": "4本の区間に異なる数の目盛りを入れる。比較するのは両端の印の距離。",
+      "baseline": {
+        "metric": "endpoint_distance",
+        "unit": "unit",
+        "correct_rule": "max",
+        "target_value": null,
+        "choices": [
+          {
+            "label": "A",
+            "value": 104
+          },
+          {
+            "label": "B",
+            "value": 108
+          },
+          {
+            "label": "C",
+            "value": 112
+          },
+          {
+            "label": "D",
+            "value": 100
+          }
+        ],
+        "correct_label": "C"
+      },
+      "answer_explanation": "内側の目盛りを消し、両端だけを残す。",
+      "variation": {
+        "alternate_prompt": "狭いのは？",
+        "changeable": "区切りの数・間隔、端点間の距離",
+        "phase": "基本形の描画・答え合わせ確認後に増やす",
+        "must_recompute_answer": true,
+        "must_validate_unique_answer": true
+      },
+      "acceptance": {
+        "mathematical_uniqueness": "確認済み",
+        "visual_effect": "未確認",
+        "four_choice_readability": "未確認",
+        "iphone_portrait": "未確認",
+        "iphone_landscape": "未確認",
+        "ranking_eligibility": "描画・実機確認完了まで保留"
+      },
+      "sources": [
+        {
+          "title": "Landwehr: Bimanual thumb-index finger indications of noncorresponding extents",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8795064/"
+        },
+        {
+          "title": "Akiyoshi Kitaoka: A catalogue of illusions — Oppel-Kundt illusion",
+          "url": "https://www.psy.ritsumei.ac.jp/~akitaoka/cataloge.html"
+        }
+      ]
+    },
+    {
+      "id": "Q08",
+      "family_id": "F08",
+      "category": "length",
+      "title": "斜めの線と枠",
+      "source_ids": [
+        "G08"
+      ],
+      "source_names": [
+        "ザンダーの平行四辺形錯視"
+      ],
+      "status": "designed_not_rendered",
+      "prompt": "長いのは？",
+      "target_hint": "枠の中の太い斜線",
+      "scene_design": "比率の異なる斜めの枠の中へ4本の太い斜線を置く。枠の辺を比較しない。",
+      "baseline": {
+        "metric": "segment_distance",
+        "unit": "unit",
+        "correct_rule": "max",
+        "target_value": null,
+        "choices": [
+          {
+            "label": "A",
+            "value": 101
+          },
+          {
+            "label": "B",
+            "value": 105
+          },
+          {
+            "label": "C",
+            "value": 109
+          },
+          {
+            "label": "D",
+            "value": 113
+          }
+        ],
+        "correct_label": "D"
+      },
+      "answer_explanation": "枠を消し、太線を同じ向きに回して比べる。",
+      "variation": {
+        "alternate_prompt": "短いのは？",
+        "changeable": "枠の形・傾き、太線の長さ。斜線の端点が隠れない範囲",
+        "phase": "基本形の描画・答え合わせ確認後に増やす",
+        "must_recompute_answer": true,
+        "must_validate_unique_answer": true
+      },
+      "acceptance": {
+        "mathematical_uniqueness": "確認済み",
+        "visual_effect": "未確認",
+        "four_choice_readability": "未確認",
+        "iphone_portrait": "未確認",
+        "iphone_landscape": "未確認",
+        "ranking_eligibility": "描画・実機確認完了まで保留"
+      },
+      "sources": [
+        {
+          "title": "Effects of surrounding frames and inner targeted line segments on event-related potentials in geometric-optical illusions",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36367794/"
+        }
+      ]
+    },
+    {
+      "id": "Q09",
+      "family_id": "F09",
+      "category": "length",
+      "title": "机の天板",
+      "source_ids": [
+        "G17"
+      ],
+      "source_names": [
+        "シェパードのテーブル"
+      ],
+      "status": "designed_not_rendered",
+      "prompt": "大きいのは？",
+      "target_hint": "画面上の天板の面積",
+      "scene_design": "同形の平行四辺形を回転・拡大縮小して4枚の天板にする。脚は対象に含めない。立体内の実寸は問わない。",
+      "baseline": {
+        "metric": "projected_area",
+        "unit": "unit_squared",
+        "correct_rule": "max",
+        "target_value": null,
+        "choices": [
+          {
+            "label": "A",
+            "value": 10816
+          },
+          {
+            "label": "B",
+            "value": 9409
+          },
+          {
+            "label": "C",
+            "value": 10000
+          },
+          {
+            "label": "D",
+            "value": 10201
+          }
+        ],
+        "correct_label": "A"
+      },
+      "answer_explanation": "脚を消し、天板だけを同じ向きに重ねる。",
+      "variation": {
+        "alternate_prompt": "小さいのは？",
+        "changeable": "画面内の回転、同形を保つ倍率、脚の向き",
+        "phase": "基本形の描画・答え合わせ確認後に増やす",
+        "must_recompute_answer": true,
+        "must_validate_unique_answer": true
+      },
+      "acceptance": {
+        "mathematical_uniqueness": "確認済み",
+        "visual_effect": "未確認",
+        "four_choice_readability": "未確認",
+        "iphone_portrait": "未確認",
+        "iphone_landscape": "未確認",
+        "ranking_eligibility": "描画・実機確認完了まで保留"
+      },
+      "sources": [
+        {
+          "title": "Michael Bach: Shepard’s Rotated Tables",
+          "url": "https://michaelbach.de/ot/sze-ShepardTables/index.html"
+        }
+      ]
+    },
+    {
+      "id": "Q10",
+      "family_id": "F10",
+      "category": "shape",
+      "title": "隠れた直線",
+      "source_ids": [
+        "G09"
+      ],
+      "source_names": [
+        "ポッゲンドルフ錯視"
+      ],
+      "status": "designed_not_rendered",
+      "prompt": "つながるのは？",
+      "target_hint": "帯の左右の太線",
+      "scene_design": "中央を帯で隠した4組の斜線を示す。1組だけが同一直線の左右の続きになり、ほかは平行な位置ずれを持つ。",
+      "baseline": {
+        "metric": "join_error",
+        "unit": "unit",
+        "correct_rule": "equals",
+        "target_value": 0,
+        "choices": [
+          {
+            "label": "A",
+            "value": 19
+          },
+          {
+            "label": "B",
+            "value": 0
+          },
+          {
+            "label": "C",
+            "value": 9
+          },
+          {
+            "label": "D",
+            "value": 14
+          }
+        ],
+        "correct_label": "B"
+      },
+      "answer_explanation": "帯を消し、元の直線を延長してずれを示す。",
+      "variation": {
+        "alternate_prompt": "ずれが小さいのは？",
+        "changeable": "帯の幅、線の角度、接続のずれ。接続が完全なのは1組だけ",
+        "phase": "基本形の描画・答え合わせ確認後に増やす",
+        "must_recompute_answer": true,
+        "must_validate_unique_answer": true
+      },
+      "acceptance": {
+        "mathematical_uniqueness": "確認済み",
+        "visual_effect": "未確認",
+        "four_choice_readability": "未確認",
+        "iphone_portrait": "未確認",
+        "iphone_landscape": "未確認",
+        "ranking_eligibility": "描画・実機確認完了まで保留"
+      },
+      "sources": [
+        {
+          "title": "Michael Bach: Poggendorff Illusion",
+          "url": "https://michaelbach.de/ot/ang-poggendorff/index.html"
+        }
+      ]
+    },
+    {
+      "id": "Q11",
+      "family_id": "F11",
+      "category": "shape",
+      "title": "短い斜線と平行線",
+      "source_ids": [
+        "G10"
+      ],
+      "source_names": [
+        "ツェルナー錯視"
+      ],
+      "status": "designed_not_rendered",
+      "prompt": "平行なのは？",
+      "target_hint": "2本の長い線",
+      "scene_design": "4組の長線に短い斜線を付ける。1組だけ長線の角度差を0にする。",
+      "baseline": {
+        "metric": "angle_difference",
+        "unit": "degrees",
+        "correct_rule": "equals",
+        "target_value": 0,
+        "choices": [
+          {
+            "label": "A",
+            "value": 5
+          },
+          {
+            "label": "B",
+            "value": 7
+          },
+          {
+            "label": "C",
+            "value": 0
+          },
+          {
+            "label": "D",
+            "value": 3
+          }
+        ],
+        "correct_label": "C"
+      },
+      "answer_explanation": "短線を消し、長線を延長して間隔を示す。",
+      "variation": {
+        "alternate_prompt": "開きが小さいのは？",
+        "changeable": "短線の方向・間隔、長線の角度差",
+        "phase": "基本形の描画・答え合わせ確認後に増やす",
+        "must_recompute_answer": true,
+        "must_validate_unique_answer": true
+      },
+      "acceptance": {
+        "mathematical_uniqueness": "確認済み",
+        "visual_effect": "未確認",
+        "four_choice_readability": "未確認",
+        "iphone_portrait": "未確認",
+        "iphone_landscape": "未確認",
+        "ranking_eligibility": "描画・実機確認完了まで保留"
+      },
+      "sources": [
+        {
+          "title": "Michael Bach: Tilted Table Illusion — Zöllner illusion",
+          "url": "https://michaelbach.de/ot/ang-tiltedTable/index.html"
+        },
+        {
+          "title": "Akiyoshi Kitaoka: A catalogue of illusions — Zöllner illusion",
+          "url": "https://www.psy.ritsumei.ac.jp/~akitaoka/cataloge.html"
+        }
+      ]
+    },
+    {
+      "id": "Q12",
+      "family_id": "F12",
+      "category": "shape",
+      "title": "背景に曲がって見える線",
+      "source_ids": [
+        "G11",
+        "G12"
+      ],
+      "source_names": [
+        "ヘリング錯視",
+        "ヴント錯視"
+      ],
+      "status": "designed_not_rendered",
+      "prompt": "まっすぐなのは？",
+      "target_hint": "印のある長い線",
+      "scene_design": "放射状または逆向きの背景に4本の長線を置き、1本だけを直線、ほかをわずかな曲線にする。ヘリングとヴントは同じ出題系統。",
+      "baseline": {
+        "metric": "curve_amplitude",
+        "unit": "unit",
+        "correct_rule": "equals",
+        "target_value": 0,
+        "choices": [
+          {
+            "label": "A",
+            "value": 4
+          },
+          {
+            "label": "B",
+            "value": -5
+          },
+          {
+            "label": "C",
+            "value": 7
+          },
+          {
+            "label": "D",
+            "value": 0
+          }
+        ],
+        "correct_label": "D"
+      },
+      "answer_explanation": "背景を消し、直線の基準と重ねる。",
+      "variation": {
+        "alternate_prompt": "曲がりが小さいのは？",
+        "changeable": "放射線の向き・密度、曲線の向き。直線は1本だけ",
+        "phase": "基本形の描画・答え合わせ確認後に増やす",
+        "must_recompute_answer": true,
+        "must_validate_unique_answer": true
+      },
+      "acceptance": {
+        "mathematical_uniqueness": "確認済み",
+        "visual_effect": "未確認",
+        "four_choice_readability": "未確認",
+        "iphone_portrait": "未確認",
+        "iphone_landscape": "未確認",
+        "ranking_eligibility": "描画・実機確認完了まで保留"
+      },
+      "sources": [
+        {
+          "title": "Michael Bach: Hering Illusion",
+          "url": "https://michaelbach.de/ot/ang-hering/index.html"
+        },
+        {
+          "title": "Donaldson & Macpherson: Wundt Illusion — The Illusions Index",
+          "url": "https://www.illusionsindex.org/i/wundt-illusion"
+        }
+      ]
+    },
+    {
+      "id": "Q13",
+      "family_id": "F13",
+      "category": "shape",
+      "title": "ゆがんで見える四角",
+      "source_ids": [
+        "G13"
+      ],
+      "source_names": [
+        "オービソン錯視"
+      ],
+      "status": "designed_not_rendered",
+      "prompt": "正方形なのは？",
+      "target_hint": "中央の四角",
+      "scene_design": "4つの四角を角度のある背景に置く。1つだけ縦横が等しく、すべての角は直角にする。",
+      "baseline": {
+        "metric": "aspect_ratio",
+        "unit": "ratio",
+        "correct_rule": "equals",
+        "target_value": 1,
+        "choices": [
+          {
+            "label": "A",
+            "value": 1
+          },
+          {
+            "label": "B",
+            "value": 0.9
+          },
+          {
+            "label": "C",
+            "value": 1.1
+          },
+          {
+            "label": "D",
+            "value": 1.16
+          }
+        ],
+        "correct_label": "A"
+      },
+      "answer_explanation": "背景を消し、縦横の長さと直角を示す。",
+      "variation": {
+        "alternate_prompt": "横長なのは？",
+        "changeable": "背景線の角度、縦横比。横長を問う派生では該当を1つに限定",
+        "phase": "基本形の描画・答え合わせ確認後に増やす",
+        "must_recompute_answer": true,
+        "must_validate_unique_answer": true
+      },
+      "acceptance": {
+        "mathematical_uniqueness": "確認済み",
+        "visual_effect": "未確認",
+        "four_choice_readability": "未確認",
+        "iphone_portrait": "未確認",
+        "iphone_landscape": "未確認",
+        "ranking_eligibility": "描画・実機確認完了まで保留"
+      },
+      "sources": [
+        {
+          "title": "Donaldson & Macpherson: Orbison Illusion — The Illusions Index",
+          "url": "https://www.illusionsindex.org/i/orbison-illusion"
+        }
+      ]
+    },
+    {
+      "id": "Q14",
+      "family_id": "F14",
+      "category": "shape",
+      "title": "タイルの横線",
+      "source_ids": [
+        "G14"
+      ],
+      "source_names": [
+        "カフェウォール錯視"
+      ],
+      "status": "designed_not_rendered",
+      "prompt": "水平なのは？",
+      "target_hint": "タイルの間の太い横線",
+      "scene_design": "ずらした白黒タイルの4枚の壁を示す。比較する横線は1枚だけ水平、ほかは小さく傾ける。基準の画面枠は固定する。",
+      "baseline": {
+        "metric": "line_angle",
+        "unit": "degrees",
+        "correct_rule": "equals",
+        "target_value": 0,
+        "choices": [
+          {
+            "label": "A",
+            "value": 6
+          },
+          {
+            "label": "B",
+            "value": 0
+          },
+          {
+            "label": "C",
+            "value": -3
+          },
+          {
+            "label": "D",
+            "value": 4
+          }
+        ],
+        "correct_label": "B"
+      },
+      "answer_explanation": "タイルを消し、共通の水平線と比較する。",
+      "variation": {
+        "alternate_prompt": "傾きが小さいのは？",
+        "changeable": "タイルの横ずれ、目地の太さ・灰色、比較線の角度",
+        "phase": "基本形の描画・答え合わせ確認後に増やす",
+        "must_recompute_answer": true,
+        "must_validate_unique_answer": true
+      },
+      "acceptance": {
+        "mathematical_uniqueness": "確認済み",
+        "visual_effect": "未確認",
+        "four_choice_readability": "未確認",
+        "iphone_portrait": "未確認",
+        "iphone_landscape": "未確認",
+        "ranking_eligibility": "描画・実機確認完了まで保留"
+      },
+      "sources": [
+        {
+          "title": "Michael Bach: Café Wall Illusion",
+          "url": "https://michaelbach.de/ot/ang-cafewall/index.html"
+        }
+      ]
+    },
+    {
+      "id": "Q15",
+      "family_id": "F15",
+      "category": "shape",
+      "title": "渦巻きに見える輪",
+      "source_ids": [
+        "G15"
+      ],
+      "source_names": [
+        "フレーザーの偽渦巻き"
+      ],
+      "status": "designed_not_rendered",
+      "prompt": "円なのは？",
+      "target_hint": "印のある1本の道",
+      "scene_design": "4枚のねじれた帯の模様で、印の道の中心線を1枚だけ閉じた円にする。ほかは中心からの距離が一周ごとに変わる渦巻き。",
+      "baseline": {
+        "metric": "radial_growth_per_turn",
+        "unit": "unit",
+        "correct_rule": "equals",
+        "target_value": 0,
+        "choices": [
+          {
+            "label": "A",
+            "value": -9
+          },
+          {
+            "label": "B",
+            "value": 12
+          },
+          {
+            "label": "C",
+            "value": 0
+          },
+          {
+            "label": "D",
+            "value": 7
+          }
+        ],
+        "correct_label": "C"
+      },
+      "answer_explanation": "帯の飾りを消し、中心線を1周だけたどる。",
+      "variation": {
+        "alternate_prompt": "渦巻きなのは？",
+        "changeable": "帯の色・ねじれ、円の半径、渦の伸び。単一の道を印で指定",
+        "phase": "基本形の描画・答え合わせ確認後に増やす",
+        "must_recompute_answer": true,
+        "must_validate_unique_answer": true
+      },
+      "acceptance": {
+        "mathematical_uniqueness": "確認済み",
+        "visual_effect": "未確認",
+        "four_choice_readability": "未確認",
+        "iphone_portrait": "未確認",
+        "iphone_landscape": "未確認",
+        "ranking_eligibility": "描画・実機確認完了まで保留"
+      },
+      "sources": [
+        {
+          "title": "Michael Bach: Fraser’s Spiral",
+          "url": "https://michaelbach.de/ot/ang-fraser/index.html"
+        },
+        {
+          "title": "Akiyoshi Kitaoka: A catalogue of illusions — Fraser illusion",
+          "url": "https://www.psy.ritsumei.ac.jp/~akitaoka/cataloge.html"
+        }
+      ]
+    },
+    {
+      "id": "Q16",
+      "family_id": "F16",
+      "category": "shape",
+      "title": "周りの傾き",
+      "source_ids": [
+        "G16"
+      ],
+      "source_names": [
+        "傾き錯視"
+      ],
+      "status": "designed_not_rendered",
+      "prompt": "縦なのは？",
+      "target_hint": "中央の縞",
+      "scene_design": "傾いた外側の縞に囲まれた4個の中央縞を示し、1個だけ垂直にする。",
+      "baseline": {
+        "metric": "center_angle",
+        "unit": "degrees",
+        "correct_rule": "equals",
+        "target_value": 0,
+        "choices": [
+          {
+            "label": "A",
+            "value": -3
+          },
+          {
+            "label": "B",
+            "value": 4
+          },
+          {
+            "label": "C",
+            "value": 6
+          },
+          {
+            "label": "D",
+            "value": 0
+          }
+        ],
+        "correct_label": "D"
+      },
+      "answer_explanation": "外側の縞を消し、画面の縦方向と重ねる。",
+      "variation": {
+        "alternate_prompt": "横なのは？",
+        "changeable": "外側の縞の角度、中央の角度。縦と横の定義は画面に固定",
+        "phase": "基本形の描画・答え合わせ確認後に増やす",
+        "must_recompute_answer": true,
+        "must_validate_unique_answer": true
+      },
+      "acceptance": {
+        "mathematical_uniqueness": "確認済み",
+        "visual_effect": "未確認",
+        "four_choice_readability": "未確認",
+        "iphone_portrait": "未確認",
+        "iphone_landscape": "未確認",
+        "ranking_eligibility": "描画・実機確認完了まで保留"
+      },
+      "sources": [
+        {
+          "title": "Michael Bach: Tilt Illusion",
+          "url": "https://michaelbach.de/ot/ang-tilt/index.html"
+        }
+      ]
+    },
+    {
+      "id": "Q17",
+      "family_id": "F17",
+      "category": "light",
+      "title": "背景の明暗",
+      "source_ids": [
+        "C01"
+      ],
+      "source_names": [
+        "同時明るさ対比"
+      ],
+      "status": "designed_not_rendered",
+      "prompt": "明るいのは？",
+      "target_hint": "中央の灰色の面",
+      "scene_design": "白から黒まで異なる背景の上へ、4枚の均一な灰色の面を置く。",
+      "baseline": {
+        "metric": "gray_level",
+        "unit": "0_to_255",
+        "correct_rule": "max",
+        "target_value": null,
+        "choices": [
+          {
+            "label": "A",
+            "value": 146
+          },
+          {
+            "label": "B",
+            "value": 128
+          },
+          {
+            "label": "C",
+            "value": 134
+          },
+          {
+            "label": "D",
+            "value": 140
+          }
+        ],
+        "correct_label": "A"
+      },
+      "answer_explanation": "中央の面を同じ背景へ移し、描画値を示す。",
+      "variation": {
+        "alternate_prompt": "暗いのは？",
+        "changeable": "背景の明るさ、対象の灰色。対象自体の色は均一",
+        "phase": "基本形の描画・答え合わせ確認後に増やす",
+        "must_recompute_answer": true,
+        "must_validate_unique_answer": true
+      },
+      "acceptance": {
+        "mathematical_uniqueness": "確認済み",
+        "visual_effect": "未確認",
+        "four_choice_readability": "未確認",
+        "iphone_portrait": "未確認",
+        "iphone_landscape": "未確認",
+        "ranking_eligibility": "描画・実機確認完了まで保留"
+      },
+      "sources": [
+        {
+          "title": "Michael Bach — Brightness induction",
+          "url": "https://michaelbach.de/ot/lum-inducedBrightness/index.html"
+        }
+      ]
+    },
+    {
+      "id": "Q18",
+      "family_id": "F18",
+      "category": "light",
+      "title": "影と市松模様",
+      "source_ids": [
+        "C02"
+      ],
+      "source_names": [
+        "チェッカーシャドウ錯視"
+      ],
+      "status": "designed_not_rendered",
+      "prompt": "明るいのは？",
+      "target_hint": "印のあるマス",
+      "scene_design": "影を描いた市松模様の4個の指定マスを比べる。影の合成後の最終色で判定する。",
+      "baseline": {
+        "metric": "gray_level",
+        "unit": "0_to_255",
+        "correct_rule": "max",
+        "target_value": null,
+        "choices": [
+          {
+            "label": "A",
+            "value": 152
+          },
+          {
+            "label": "B",
+            "value": 160
+          },
+          {
+            "label": "C",
+            "value": 136
+          },
+          {
+            "label": "D",
+            "value": 144
+          }
+        ],
+        "correct_label": "B"
+      },
+      "answer_explanation": "周囲と影を隠し、対象の内部色を同じ背景で並べる。",
+      "variation": {
+        "alternate_prompt": "暗いのは？",
+        "changeable": "影の向き・配置、市松の明暗、対象マスの最終色",
+        "phase": "基本形の描画・答え合わせ確認後に増やす",
+        "must_recompute_answer": true,
+        "must_validate_unique_answer": true
+      },
+      "acceptance": {
+        "mathematical_uniqueness": "確認済み",
+        "visual_effect": "未確認",
+        "four_choice_readability": "未確認",
+        "iphone_portrait": "未確認",
+        "iphone_landscape": "未確認",
+        "ranking_eligibility": "描画・実機確認完了まで保留"
+      },
+      "sources": [
+        {
+          "title": "Michael Bach — Adelson’s Checker-shadow illusion",
+          "url": "https://michaelbach.de/ot/lum-adelsonCheckShadow/index.html"
+        }
+      ]
+    },
+    {
+      "id": "Q19",
+      "family_id": "F19",
+      "category": "light",
+      "title": "勾配と明るい帯",
+      "source_ids": [
+        "C04"
+      ],
+      "source_names": [
+        "マッハバンド"
+      ],
+      "status": "designed_not_rendered",
+      "prompt": "明るい帯があるのは？",
+      "target_hint": "印の場所",
+      "scene_design": "灰色が徐々に変わる4枚の帯を示す。1枚だけ指定位置に明るい細帯を実際に追加し、残りは単調な勾配だけにする。",
+      "baseline": {
+        "metric": "added_band",
+        "unit": "boolean",
+        "correct_rule": "equals",
+        "target_value": 1,
+        "choices": [
+          {
+            "label": "A",
+            "value": 0
+          },
+          {
+            "label": "B",
+            "value": 0
+          },
+          {
+            "label": "C",
+            "value": 1
+          },
+          {
+            "label": "D",
+            "value": 0
+          }
+        ],
+        "correct_label": "C"
+      },
+      "answer_explanation": "横断面の描画値を示し、追加した帯と勾配だけの境界を比べる。",
+      "variation": {
+        "alternate_prompt": "暗い帯があるのは？",
+        "changeable": "勾配の向き・幅、追加する帯の明暗。追加の帯は1枚だけ",
+        "phase": "基本形の描画・答え合わせ確認後に増やす",
+        "must_recompute_answer": true,
+        "must_validate_unique_answer": true
+      },
+      "acceptance": {
+        "mathematical_uniqueness": "確認済み",
+        "visual_effect": "未確認",
+        "four_choice_readability": "未確認",
+        "iphone_portrait": "未確認",
+        "iphone_landscape": "未確認",
+        "ranking_eligibility": "描画・実機確認完了まで保留"
+      },
+      "sources": [
+        {
+          "title": "Michael Bach — Mach Bands",
+          "url": "https://michaelbach.de/ot/lum-MachBands/index.html"
+        }
+      ]
+    },
+    {
+      "id": "Q20",
+      "family_id": "F20",
+      "category": "light",
+      "title": "格子の黒い点",
+      "source_ids": [
+        "C05",
+        "C06"
+      ],
+      "source_names": [
+        "ヘルマン格子",
+        "きらめき格子"
+      ],
+      "status": "designed_not_rendered",
+      "prompt": "黒い点があるのは？",
+      "target_hint": "白い交差点の中",
+      "scene_design": "4枚の格子の交差点に白い点を置く。1枚だけ、交差点の内側に本物の暗い点を1個加える。ヘルマン格子ときらめき格子は同系統。",
+      "baseline": {
+        "metric": "painted_dark_dot",
+        "unit": "boolean",
+        "correct_rule": "equals",
+        "target_value": 1,
+        "choices": [
+          {
+            "label": "A",
+            "value": 0
+          },
+          {
+            "label": "B",
+            "value": 0
+          },
+          {
+            "label": "C",
+            "value": 0
+          },
+          {
+            "label": "D",
+            "value": 1
+          }
+        ],
+        "correct_label": "D"
+      },
+      "answer_explanation": "格子を消し、描いた点だけを残す。",
+      "variation": {
+        "alternate_prompt": "点がないのは？",
+        "changeable": "格子の間隔・太さ、点の配置。派生の『ない』は3枚に実点を置く",
+        "phase": "基本形の描画・答え合わせ確認後に増やす",
+        "must_recompute_answer": true,
+        "must_validate_unique_answer": true
+      },
+      "acceptance": {
+        "mathematical_uniqueness": "確認済み",
+        "visual_effect": "未確認",
+        "four_choice_readability": "未確認",
+        "iphone_portrait": "未確認",
+        "iphone_landscape": "未確認",
+        "ranking_eligibility": "描画・実機確認完了まで保留"
+      },
+      "sources": [
+        {
+          "title": "Michael Bach — Hermann Grid",
+          "url": "https://michaelbach.de/ot/lum-herGrid/index.html"
+        },
+        {
+          "title": "Michael Bach — Grid Illusions, curved, Hermann Grid",
+          "url": "https://michaelbach.de/ot/lum-herGridCurved/index.html"
+        },
+        {
+          "title": "Michael Bach — Grid Illusions – Scintillating Grid",
+          "url": "https://michaelbach.de/ot/lum-scGrid/index.html"
+        }
+      ]
+    },
+    {
+      "id": "Q21",
+      "family_id": "F21",
+      "category": "light",
+      "title": "境界だけが明暗を変える面",
+      "source_ids": [
+        "C07"
+      ],
+      "source_names": [
+        "クレイク＝オブライエン＝コーンスウィート錯視"
+      ],
+      "status": "designed_not_rendered",
+      "prompt": "明るいのは？",
+      "target_hint": "境界から離れた面",
+      "scene_design": "中央の境界だけに明暗の勾配を付けた4枚の面を示す。比較する場所は境界から離して固定する。",
+      "baseline": {
+        "metric": "gray_level",
+        "unit": "0_to_255",
+        "correct_rule": "max",
+        "target_value": null,
+        "choices": [
+          {
+            "label": "A",
+            "value": 154
+          },
+          {
+            "label": "B",
+            "value": 132
+          },
+          {
+            "label": "C",
+            "value": 140
+          },
+          {
+            "label": "D",
+            "value": 146
+          }
+        ],
+        "correct_label": "A"
+      },
+      "answer_explanation": "境界を覆い、指定部分を切り出して同じ背景に置く。",
+      "variation": {
+        "alternate_prompt": "暗いのは？",
+        "changeable": "中央の境界の向き・強さ、離れた面の均一な灰色",
+        "phase": "基本形の描画・答え合わせ確認後に増やす",
+        "must_recompute_answer": true,
+        "must_validate_unique_answer": true
+      },
+      "acceptance": {
+        "mathematical_uniqueness": "確認済み",
+        "visual_effect": "未確認",
+        "four_choice_readability": "未確認",
+        "iphone_portrait": "未確認",
+        "iphone_landscape": "未確認",
+        "ranking_eligibility": "描画・実機確認完了まで保留"
+      },
+      "sources": [
+        {
+          "title": "Michael Bach — Craik-O’Brien-Cornsweet illusion",
+          "url": "https://michaelbach.de/ot/lum-cobc/index.html"
+        }
+      ]
+    },
+    {
+      "id": "Q22",
+      "family_id": "F22",
+      "category": "color",
+      "title": "縞と色の混ざり",
+      "source_ids": [
+        "C03",
+        "C10"
+      ],
+      "source_names": [
+        "ホワイト錯視",
+        "ムンカーの色同化"
+      ],
+      "status": "designed_not_rendered",
+      "prompt": "赤いのは？",
+      "target_hint": "縞の間の面の内部色",
+      "scene_design": "色の違う縞に囲まれた4個の面を示す。対象の最終色は、赤系1個と灰・青系・緑系各1個。ホワイトとムンカーは同じ系統にまとめる。",
+      "baseline": {
+        "metric": "red_category",
+        "unit": "boolean",
+        "correct_rule": "equals",
+        "target_value": 1,
+        "choices": [
+          {
+            "label": "A",
+            "value": 0,
+            "fill_rgb": [
+              132,
+              132,
+              132
+            ]
+          },
+          {
+            "label": "B",
+            "value": 1,
+            "fill_rgb": [
+              186,
+              104,
+              104
+            ]
+          },
+          {
+            "label": "C",
+            "value": 0,
+            "fill_rgb": [
+              110,
+              132,
+              156
+            ]
+          },
+          {
+            "label": "D",
+            "value": 0,
+            "fill_rgb": [
+              110,
+              150,
+              126
+            ]
+          }
+        ],
+        "correct_label": "B",
+        "color_predicate": "R >= G + 32 and R >= B + 32"
+      },
+      "answer_explanation": "縞を消し、内部色だけを中立の背景へ移す。",
+      "variation": {
+        "alternate_prompt": "青いのは？",
+        "changeable": "縞の色・向き・間隔、問う色。対象と縞の混色画素を判定に含めない",
+        "phase": "基本形の描画・答え合わせ確認後に増やす",
+        "must_recompute_answer": true,
+        "must_validate_unique_answer": true
+      },
+      "acceptance": {
+        "mathematical_uniqueness": "確認済み",
+        "visual_effect": "未確認",
+        "four_choice_readability": "未確認",
+        "iphone_portrait": "未確認",
+        "iphone_landscape": "未確認",
+        "ranking_eligibility": "描画・実機確認完了まで保留"
+      },
+      "sources": [
+        {
+          "title": "Michael Bach — Munker-White Illusion",
+          "url": "https://michaelbach.de/ot/lum-white/index.html"
+        },
+        {
+          "title": "Michael Bach — Munker Illusion",
+          "url": "https://michaelbach.de/ot/col-Munker/index.html"
+        },
+        {
+          "title": "Akiyoshi Kitaoka — Munker illusion",
+          "url": "https://www.psy.ritsumei.ac.jp/~akitaoka/Munkere.html"
+        }
+      ]
+    },
+    {
+      "id": "Q23",
+      "family_id": "F23",
+      "category": "color",
+      "title": "輪郭から広がる色",
+      "source_ids": [
+        "C08"
+      ],
+      "source_names": [
+        "水彩錯視"
+      ],
+      "status": "designed_not_rendered",
+      "prompt": "白いのは？",
+      "target_hint": "輪郭で囲まれた面",
+      "scene_design": "二重の波形で囲んだ4個の面を示す。1個は無彩色の白、残りは赤・緑・青へ薄く着色する。",
+      "baseline": {
+        "metric": "neutral_white",
+        "unit": "boolean",
+        "correct_rule": "equals",
+        "target_value": 1,
+        "choices": [
+          {
+            "label": "A",
+            "value": 0,
+            "fill_rgb": [
+              245,
+              220,
+              205
+            ]
+          },
+          {
+            "label": "B",
+            "value": 0,
+            "fill_rgb": [
+              230,
+              240,
+              210
+            ]
+          },
+          {
+            "label": "C",
+            "value": 1,
+            "fill_rgb": [
+              245,
+              245,
+              245
+            ]
+          },
+          {
+            "label": "D",
+            "value": 0,
+            "fill_rgb": [
+              215,
+              230,
+              245
+            ]
+          }
+        ],
+        "correct_label": "C",
+        "color_predicate": "R == G == B and R >= 240"
+      },
+      "answer_explanation": "輪郭を消し、内部の均一な塗りだけを並べる。",
+      "variation": {
+        "alternate_prompt": "色がついているのは？",
+        "changeable": "二重輪郭の色・順序、内部の色。白は無彩色のまま保持",
+        "phase": "基本形の描画・答え合わせ確認後に増やす",
+        "must_recompute_answer": true,
+        "must_validate_unique_answer": true
+      },
+      "acceptance": {
+        "mathematical_uniqueness": "確認済み",
+        "visual_effect": "未確認",
+        "four_choice_readability": "未確認",
+        "iphone_portrait": "未確認",
+        "iphone_landscape": "未確認",
+        "ranking_eligibility": "描画・実機確認完了まで保留"
+      },
+      "sources": [
+        {
+          "title": "Michael Bach — Watercolor Illusion",
+          "url": "https://michaelbach.de/ot/col-watercolor/index.html"
+        }
+      ]
+    },
+    {
+      "id": "Q24",
+      "family_id": "F24",
+      "category": "color",
+      "title": "線の間に広がる色",
+      "source_ids": [
+        "C09"
+      ],
+      "source_names": [
+        "ネオン色拡散"
+      ],
+      "status": "designed_not_rendered",
+      "prompt": "色がついているのは？",
+      "target_hint": "中央の線のない面",
+      "scene_design": "色つきの細線で囲まれた4個の中央の空白を示す。1個だけ中央を実際に薄く塗り、残り3個は背景と同じ白のままにする。",
+      "baseline": {
+        "metric": "center_fill",
+        "unit": "boolean",
+        "correct_rule": "equals",
+        "target_value": 1,
+        "choices": [
+          {
+            "label": "A",
+            "value": 0,
+            "fill_rgb": [
+              255,
+              255,
+              255
+            ]
+          },
+          {
+            "label": "B",
+            "value": 0,
+            "fill_rgb": [
+              255,
+              255,
+              255
+            ]
+          },
+          {
+            "label": "C",
+            "value": 0,
+            "fill_rgb": [
+              255,
+              255,
+              255
+            ]
+          },
+          {
+            "label": "D",
+            "value": 1,
+            "fill_rgb": [
+              218,
+              242,
+              248
+            ]
+          }
+        ],
+        "correct_label": "D",
+        "color_predicate": "max(abs(R-255),abs(G-255),abs(B-255)) >= 16; baseline background is RGB(255,255,255)"
+      },
+      "answer_explanation": "周りの細線を消し、中央の塗りの有無を示す。",
+      "variation": {
+        "alternate_prompt": "白いのは？",
+        "changeable": "細線の色・配置、中央の塗り。指定領域に細線を入れない",
+        "phase": "基本形の描画・答え合わせ確認後に増やす",
+        "must_recompute_answer": true,
+        "must_validate_unique_answer": true
+      },
+      "acceptance": {
+        "mathematical_uniqueness": "確認済み",
+        "visual_effect": "未確認",
+        "four_choice_readability": "未確認",
+        "iphone_portrait": "未確認",
+        "iphone_landscape": "未確認",
+        "ranking_eligibility": "描画・実機確認完了まで保留"
+      },
+      "sources": [
+        {
+          "title": "Michael Bach — Colour Spreading",
+          "url": "https://michaelbach.de/ot/col-neon/index.html"
+        }
+      ]
+    },
+    {
+      "id": "Q25",
+      "family_id": "F25",
+      "category": "color",
+      "title": "背景に引っぱられる色",
+      "source_ids": [
+        "C11"
+      ],
+      "source_names": [
+        "同時色対比"
+      ],
+      "status": "designed_not_rendered",
+      "prompt": "青いのは？",
+      "target_hint": "中央の面",
+      "scene_design": "補色方向の異なる背景の中に4個の中央面を置き、青系を1個、灰・赤系・緑系を各1個にする。",
+      "baseline": {
+        "metric": "blue_category",
+        "unit": "boolean",
+        "correct_rule": "equals",
+        "target_value": 1,
+        "choices": [
+          {
+            "label": "A",
+            "value": 1,
+            "fill_rgb": [
+              104,
+              128,
+              186
+            ]
+          },
+          {
+            "label": "B",
+            "value": 0,
+            "fill_rgb": [
+              132,
+              132,
+              132
+            ]
+          },
+          {
+            "label": "C",
+            "value": 0,
+            "fill_rgb": [
+              156,
+              110,
+              110
+            ]
+          },
+          {
+            "label": "D",
+            "value": 0,
+            "fill_rgb": [
+              110,
+              150,
+              126
+            ]
+          }
+        ],
+        "correct_label": "A",
+        "color_predicate": "B >= R + 32 and B >= G + 32"
+      },
+      "answer_explanation": "4面を同じ灰色背景へ移して比べる。",
+      "variation": {
+        "alternate_prompt": "赤いのは？",
+        "changeable": "背景の色、対象の色。問う色は一意な色分類に限定",
+        "phase": "基本形の描画・答え合わせ確認後に増やす",
+        "must_recompute_answer": true,
+        "must_validate_unique_answer": true
+      },
+      "acceptance": {
+        "mathematical_uniqueness": "確認済み",
+        "visual_effect": "未確認",
+        "four_choice_readability": "未確認",
+        "iphone_portrait": "未確認",
+        "iphone_landscape": "未確認",
+        "ranking_eligibility": "描画・実機確認完了まで保留"
+      },
+      "sources": [
+        {
+          "title": "Michael Bach — Colour Contrast",
+          "url": "https://michaelbach.de/ot/col-context/index.html"
+        },
+        {
+          "title": "Peter Gouras — Color Vision, Webvision",
+          "url": "https://webvision.med.utah.edu/book/part-vii-color-vision/color-vision/"
+        }
+      ]
+    },
+    {
+      "id": "Q26",
+      "family_id": "F26",
+      "category": "contour",
+      "title": "見えてしまう三角形",
+      "source_ids": [
+        "C17"
+      ],
+      "source_names": [
+        "カニッツァの三角形"
+      ],
+      "status": "designed_not_rendered",
+      "prompt": "線があるのは？",
+      "target_hint": "三角形の辺",
+      "scene_design": "欠けた円から白い三角形が浮かぶ4枚の図を示す。1枚だけ、指定した辺に実際の細線を追加する。",
+      "baseline": {
+        "metric": "painted_triangle_edge",
+        "unit": "boolean",
+        "correct_rule": "equals",
+        "target_value": 1,
+        "choices": [
+          {
+            "label": "A",
+            "value": 0
+          },
+          {
+            "label": "B",
+            "value": 1
+          },
+          {
+            "label": "C",
+            "value": 0
+          },
+          {
+            "label": "D",
+            "value": 0
+          }
+        ],
+        "correct_label": "B"
+      },
+      "answer_explanation": "欠けた円を消し、追加した線の有無を示す。",
+      "variation": {
+        "alternate_prompt": "線がないのは？",
+        "changeable": "欠けた円の向き・大きさ、線の有無。追加線は背景と異なる可視色",
+        "phase": "基本形の描画・答え合わせ確認後に増やす",
+        "must_recompute_answer": true,
+        "must_validate_unique_answer": true
+      },
+      "acceptance": {
+        "mathematical_uniqueness": "確認済み",
+        "visual_effect": "未確認",
+        "four_choice_readability": "未確認",
+        "iphone_portrait": "未確認",
+        "iphone_landscape": "未確認",
+        "ranking_eligibility": "描画・実機確認完了まで保留"
+      },
+      "sources": [
+        {
+          "title": "Michael Bach — Kanizsa Illusion",
+          "url": "https://michaelbach.de/ot/cog-Kanizsa/index.html"
+        },
+        {
+          "title": "Thielen et al. (2024) — Amodal completion across the brain: The impact of structure and knowledge",
+          "url": "https://europepmc.org/articles/PMC11185268"
+        }
+      ]
+    },
+    {
+      "id": "Q27",
+      "family_id": "F27",
+      "category": "contour",
+      "title": "線の端に見える円",
+      "source_ids": [
+        "C19"
+      ],
+      "source_names": [
+        "エーレンシュタイン錯視"
+      ],
+      "status": "designed_not_rendered",
+      "prompt": "円があるのは？",
+      "target_hint": "中央の円の輪郭",
+      "scene_design": "線の端が囲む4個の中央領域を示し、1個だけ本物の円の輪郭を追加する。",
+      "baseline": {
+        "metric": "painted_circle_edge",
+        "unit": "boolean",
+        "correct_rule": "equals",
+        "target_value": 1,
+        "choices": [
+          {
+            "label": "A",
+            "value": 0
+          },
+          {
+            "label": "B",
+            "value": 0
+          },
+          {
+            "label": "C",
+            "value": 1
+          },
+          {
+            "label": "D",
+            "value": 0
+          }
+        ],
+        "correct_label": "C"
+      },
+      "answer_explanation": "周囲の放射線を消し、描いた円だけを残す。",
+      "variation": {
+        "alternate_prompt": "円がないのは？",
+        "changeable": "放射線の数・長さ、輪郭の有無。円と放射線を接触させない",
+        "phase": "基本形の描画・答え合わせ確認後に増やす",
+        "must_recompute_answer": true,
+        "must_validate_unique_answer": true
+      },
+      "acceptance": {
+        "mathematical_uniqueness": "確認済み",
+        "visual_effect": "未確認",
+        "four_choice_readability": "未確認",
+        "iphone_portrait": "未確認",
+        "iphone_landscape": "未確認",
+        "ranking_eligibility": "描画・実機確認完了まで保留"
+      },
+      "sources": [
+        {
+          "title": "Michael Bach — Ehrenstein Illusion",
+          "url": "https://michaelbach.de/ot/lum-Ehrenstein/index.html"
+        }
+      ]
+    },
+    {
+      "id": "Q28",
+      "family_id": "F28",
+      "category": "motion",
+      "title": "静止画の回転感",
+      "source_ids": [
+        "M04"
+      ],
+      "source_names": [
+        "周辺ドリフト錯視"
+      ],
+      "status": "designed_not_rendered",
+      "prompt": "回っているのは？",
+      "target_hint": "輪の模様",
+      "scene_design": "回って見えやすい4枚の輪を並べ、1枚だけ実際にゆっくり回転させる。ほかの3枚の図形座標は固定する。",
+      "baseline": {
+        "metric": "angular_speed",
+        "unit": "degrees_per_second",
+        "correct_rule": "nonzero",
+        "target_value": null,
+        "choices": [
+          {
+            "label": "A",
+            "value": 0
+          },
+          {
+            "label": "B",
+            "value": 0
+          },
+          {
+            "label": "C",
+            "value": 0
+          },
+          {
+            "label": "D",
+            "value": 9
+          }
+        ],
+        "correct_label": "D"
+      },
+      "answer_explanation": "4候補に共通する2つの時刻のフレームを重ね、回転した輪に目印を出す。",
+      "variation": {
+        "alternate_prompt": "止まっているのは？",
+        "changeable": "輪の向き・配色順、回転の有無・方向。通常の色違いではなく明暗順を保つ",
+        "phase": "基本形の描画・答え合わせ確認後に増やす",
+        "must_recompute_answer": true,
+        "must_validate_unique_answer": true
+      },
+      "acceptance": {
+        "mathematical_uniqueness": "確認済み",
+        "visual_effect": "未確認",
+        "four_choice_readability": "未確認",
+        "iphone_portrait": "未確認",
+        "iphone_landscape": "未確認",
+        "ranking_eligibility": "描画・実機確認完了まで保留"
+      },
+      "sources": [
+        {
+          "title": "Michael Bach — “Rotating Snakes” Illusion",
+          "url": "https://michaelbach.de/ot/mot-snakes/index.html"
+        }
+      ]
+    },
+    {
+      "id": "Q29",
+      "family_id": "F29",
+      "category": "motion",
+      "title": "滑って見える中央",
+      "source_ids": [
+        "M05"
+      ],
+      "source_names": [
+        "オオウチ錯視"
+      ],
+      "status": "designed_not_rendered",
+      "prompt": "動いているのは？",
+      "target_hint": "中央の長方形の模様",
+      "scene_design": "方向の異なる格子の中に4個の中央模様を置き、1個だけ中央の座標を小さく往復させる。残りの座標は固定する。",
+      "baseline": {
+        "metric": "center_motion_amplitude",
+        "unit": "unit",
+        "correct_rule": "nonzero",
+        "target_value": null,
+        "choices": [
+          {
+            "label": "A",
+            "value": 5
+          },
+          {
+            "label": "B",
+            "value": 0
+          },
+          {
+            "label": "C",
+            "value": 0
+          },
+          {
+            "label": "D",
+            "value": 0
+          }
+        ],
+        "correct_label": "A"
+      },
+      "answer_explanation": "周囲を消し、固定した基準線と中央模様の端を比較する。",
+      "variation": {
+        "alternate_prompt": "止まっているのは？",
+        "changeable": "格子の向き・細かさ、中央の移動量。背景は固定",
+        "phase": "基本形の描画・答え合わせ確認後に増やす",
+        "must_recompute_answer": true,
+        "must_validate_unique_answer": true
+      },
+      "acceptance": {
+        "mathematical_uniqueness": "確認済み",
+        "visual_effect": "未確認",
+        "four_choice_readability": "未確認",
+        "iphone_portrait": "未確認",
+        "iphone_landscape": "未確認",
+        "ranking_eligibility": "描画・実機確認完了まで保留"
+      },
+      "sources": [
+        {
+          "title": "Michael Bach — Relative Motion Illusions – Orthogonal Dotted Lines Sway",
+          "url": "https://michaelbach.de/ot/mot-rmi/index.html"
+        }
+      ]
+    },
+    {
+      "id": "Q30",
+      "family_id": "F30",
+      "category": "motion",
+      "title": "動く枠と中央の点",
+      "source_ids": [
+        "M07"
+      ],
+      "source_names": [
+        "誘導運動"
+      ],
+      "status": "designed_not_rendered",
+      "prompt": "動いているのは？",
+      "target_hint": "中央の点",
+      "scene_design": "4個の枠を往復させ、中央の点は1個だけ実際に動かす。画面外周と小さな固定基準を残す。",
+      "baseline": {
+        "metric": "point_motion_amplitude",
+        "unit": "unit",
+        "correct_rule": "nonzero",
+        "target_value": null,
+        "choices": [
+          {
+            "label": "A",
+            "value": 0
+          },
+          {
+            "label": "B",
+            "value": 5
+          },
+          {
+            "label": "C",
+            "value": 0
+          },
+          {
+            "label": "D",
+            "value": 0
+          }
+        ],
+        "correct_label": "B"
+      },
+      "answer_explanation": "動く枠を消し、画面に固定した基準線と点を比べる。",
+      "variation": {
+        "alternate_prompt": "止まっているのは？",
+        "changeable": "枠の動く向き・速さ、点の移動量。枠と点の座標を分けて管理",
+        "phase": "基本形の描画・答え合わせ確認後に増やす",
+        "must_recompute_answer": true,
+        "must_validate_unique_answer": true
+      },
+      "acceptance": {
+        "mathematical_uniqueness": "確認済み",
+        "visual_effect": "未確認",
+        "four_choice_readability": "未確認",
+        "iphone_portrait": "未確認",
+        "iphone_landscape": "未確認",
+        "ranking_eligibility": "描画・実機確認完了まで保留"
+      },
+      "sources": [
+        {
+          "title": "Gogel (1979) — Induced motion as a function of the speed of the inducing object, measured by means of two methods.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/534153/"
+        }
+      ]
+    },
+    {
+      "id": "Q31",
+      "family_id": "F31",
+      "category": "motion",
+      "title": "窓の中の縞",
+      "source_ids": [
+        "M10"
+      ],
+      "source_names": [
+        "バーバーポール錯視"
+      ],
+      "status": "designed_not_rendered",
+      "prompt": "右へ進むのは？",
+      "target_hint": "縞に付いた小さな印",
+      "scene_design": "4枚の窓に流れる斜め縞を示す。縞に固定した追跡用の印は、右・下・左・上へ1個ずつ動く。印が隠れない観察区間を設ける。",
+      "baseline": {
+        "metric": "marker_direction_code",
+        "unit": "enum_code",
+        "correct_rule": "equals",
+        "target_value": 1,
+        "choices": [
+          {
+            "label": "A",
+            "value": 3
+          },
+          {
+            "label": "B",
+            "value": 4
+          },
+          {
+            "label": "C",
+            "value": 1
+          },
+          {
+            "label": "D",
+            "value": 2
+          }
+        ],
+        "correct_label": "C"
+      },
+      "answer_explanation": "窓を外し、同じ印の軌跡を重ねて方向を示す。",
+      "variation": {
+        "alternate_prompt": "左へ進むのは？",
+        "changeable": "窓の縦横比、縞の角度、移動方向。印のない縞だけで真の方向を当てさせない",
+        "phase": "基本形の描画・答え合わせ確認後に増やす",
+        "must_recompute_answer": true,
+        "must_validate_unique_answer": true
+      },
+      "acceptance": {
+        "mathematical_uniqueness": "確認済み",
+        "visual_effect": "未確認",
+        "four_choice_readability": "未確認",
+        "iphone_portrait": "未確認",
+        "iphone_landscape": "未確認",
+        "ranking_eligibility": "描画・実機確認完了まで保留"
+      },
+      "sources": [
+        {
+          "title": "Dobkins, Lewis & Fine (2006) — Integration of one- and two-dimensional motion signals in infants: evidence from the barber-pole illusion.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16854447/"
+        },
+        {
+          "title": "Anderson (1999) — Stereoscopic occlusion and the aperture problem for motion: a new solution.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/10343841/"
+        }
+      ]
+    },
+    {
+      "id": "Q32",
+      "family_id": "F32",
+      "category": "motion",
+      "title": "動く点と光る印",
+      "source_ids": [
+        "M12"
+      ],
+      "source_names": [
+        "フラッシュラグ錯視"
+      ],
+      "status": "designed_not_rendered",
+      "prompt": "重なるのは？",
+      "target_hint": "動く点と光る印",
+      "scene_design": "4個の点を同じ速さで動かし、印が光り始める描画のうち1組だけ位置を一致させる。他の組は印の表示中も点と重ならない余裕を確保する。 基本形は速度40、点の半径6、印の線幅2、表示80ミリ秒とする。表示中の移動は3.2以内で、正解の点は印と重なり続け、誤答のずれは最小24なので重ならない。 初回は問題の計測開始から600ミリ秒後に全4図で同時に光らせ、その後1800ミリ秒ごとに同時に繰り返す。初回・再提示まで待つ時間も回答時間に含める。点と印は提示のあいだ図内に収まる位置にする。",
+      "baseline": {
+        "metric": "flash_initial_offset",
+        "unit": "unit",
+        "correct_rule": "equals",
+        "target_value": 0,
+        "choices": [
+          {
+            "label": "A",
+            "value": -24
+          },
+          {
+            "label": "B",
+            "value": 24
+          },
+          {
+            "label": "C",
+            "value": 36
+          },
+          {
+            "label": "D",
+            "value": 0
+          }
+        ],
+        "correct_label": "D",
+        "motion_constraints": {
+          "speed": 40,
+          "point_radius": 6,
+          "flash_line_width": 2,
+          "flash_duration_ms": 80,
+          "maximum_travel_during_flash": 3.2,
+          "minimum_wrong_initial_offset": 24,
+          "synchronize": "印の最初の実描画フレームに合わせて基準座標を保存",
+          "first_flash_delay_ms": 600,
+          "repeat_period_ms": 1800,
+          "repeat_synchronization": "4候補すべて同時に光る。同じ単一の時計で開始と反復を管理し、印は実描画フレームで同期する。",
+          "time_accounting": "初回の待ち時間・再提示を待つ時間も合計回答時間に含める。見逃した提示だけを除外しない。"
+        }
+      },
+      "answer_explanation": "実際に最初の印を描いたフレームを保存して、停止画像で重なりを示す。",
+      "variation": {
+        "alternate_prompt": "左にあるのは？",
+        "changeable": "点の向き・速度、印のずれ。実描画フレームで同期し、見逃した時刻に正解を依存させない",
+        "phase": "基本形の描画・答え合わせ確認後に増やす",
+        "must_recompute_answer": true,
+        "must_validate_unique_answer": true
+      },
+      "acceptance": {
+        "mathematical_uniqueness": "確認済み",
+        "visual_effect": "未確認",
+        "four_choice_readability": "未確認",
+        "iphone_portrait": "未確認",
+        "iphone_landscape": "未確認",
+        "ranking_eligibility": "描画・実機確認完了まで保留"
+      },
+      "sources": [
+        {
+          "title": "Michael Bach — Flash-Lag Effect",
+          "url": "https://michaelbach.de/ot/mot-flashLag/index.html"
+        }
+      ]
+    },
+    {
+      "id": "Q33",
+      "family_id": "F33",
+      "category": "motion",
+      "title": "止まったように見える進み方",
+      "source_ids": [
+        "M13"
+      ],
+      "source_names": [
+        "フットステップ錯視"
+      ],
+      "status": "designed_not_rendered",
+      "prompt": "速いのは？",
+      "target_hint": "長方形が進む速さ",
+      "scene_design": "縞の背景に明暗の違う4個の長方形を置く。それぞれ一定速度で進み、1個だけ最も速くする。",
+      "baseline": {
+        "metric": "linear_speed",
+        "unit": "units_per_second",
+        "correct_rule": "max",
+        "target_value": null,
+        "choices": [
+          {
+            "label": "A",
+            "value": 18
+          },
+          {
+            "label": "B",
+            "value": 12
+          },
+          {
+            "label": "C",
+            "value": 14
+          },
+          {
+            "label": "D",
+            "value": 16
+          }
+        ],
+        "correct_label": "A"
+      },
+      "answer_explanation": "背景を消し、同じ経過時間の出発点と到達点を示す。",
+      "variation": {
+        "alternate_prompt": "遅いのは？",
+        "changeable": "縞の間隔、長方形の明暗、実際の一定速度",
+        "phase": "基本形の描画・答え合わせ確認後に増やす",
+        "must_recompute_answer": true,
+        "must_validate_unique_answer": true
+      },
+      "acceptance": {
+        "mathematical_uniqueness": "確認済み",
+        "visual_effect": "未確認",
+        "four_choice_readability": "未確認",
+        "iphone_portrait": "未確認",
+        "iphone_landscape": "未確認",
+        "ranking_eligibility": "描画・実機確認完了まで保留"
+      },
+      "sources": [
+        {
+          "title": "Michael Bach — “Stepping feet” Motion Illusion",
+          "url": "https://michaelbach.de/ot/mot-feetLin/index.html"
+        }
+      ]
+    }
+  ]
+}
+
