@@ -15,7 +15,9 @@
 | ファイル | 用途 |
 | --- | --- |
 | [visual-illusion-atlas.html](./visual-illusion-atlas.html) | 完成版の図解と操作画面 |
+| [visual-illusion-guide.docx](./visual-illusion-guide.docx) | 錯視の種類・理論・出典をまとめたWord原本 |
 | [visual-illusion-guide.md](./visual-illusion-guide.md) | Word文書の文章版 |
+| [visual-illusion-materials.zip](./visual-illusion-materials.zip) | 完成HTML・Word原本・元の編集用コード・作成スクリプトなど全16ファイル |
 | [catalog.json](./catalog.json) | 80項目、説明枠組み、参照資料のデータ |
 | [source/page-template.html](./source/page-template.html) | 分割した編集用HTML |
 | source/atlas.css | 表示スタイル |
@@ -29,4 +31,7 @@
 資料は世界中の全錯視を網羅した目録ではありません。「体験」「条件付き体験」「模式図」を区別しています。効果の感じ方には個人差があり、認知能力や健康への効果は保証しません。
 
 ## 元のファイルについて
-元のWord文書（DOCX）と全素材ZIPは、この変更では元のファイル形式のままGitHubへ転送できていません。Word文書の文章版と、完成HTMLから取り出した編集用コード・データは収録しています。元のDOCXとZIPはChatGPTライブラリに保存されており、別途追加が必要です。
+
+作成した完成HTML・Word文書・資料一式ZIPを、元のファイル形式のまま収録しています。ZIPには元の編集用コード・解説データ・HTMLとWord文書の作成スクリプトも含まれています。
+
+完成HTML・Word文書・ZIPは、保存済みの原本とGit Blob SHAが一致することを確認しています。ZIP内のHTMLとWord文書も、それぞれ単体ファイルと同一です。
