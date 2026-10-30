@@ -181,8 +181,20 @@ test("ten questions, double input ignored, review, home/reload discard, reduced 
 test("Q32 waits for actual flash; motion/resize/background interruptions and reference continuation", async ({
   page,
 }) => {
-  await page.clock.install();
-  await openQuestion(page, "Q32");
+  const epoch = new Date("2026-01-01T00:00:00Z");
+  await page.clock.install({ time: epoch });
+  await page.clock.pauseAt(new Date(epoch.getTime() + 1000));
+  const openControlled = async (id) => {
+    await page.goto(`dev/question-gallery.html?q=${id}`);
+    await expect(page.locator("#load-question")).toBeEnabled();
+    await page.locator("#load-question").click();
+    await page.clock.runFor(32);
+    await expect(page.locator("#app")).toHaveAttribute(
+      "data-phase",
+      "question",
+    );
+  };
+  await openControlled("Q32");
   await expect(page.locator('[data-answer="A"]')).toBeDisabled();
   await page.clock.runFor(560);
   await expect(page.locator('[data-answer="A"]')).toBeDisabled();
@@ -191,7 +203,7 @@ test("Q32 waits for actual flash; motion/resize/background interruptions and ref
   await expect(page.locator('[data-answer="A"]')).toBeEnabled();
   await answer(page);
   await expect(page.locator("#explanation")).toContainText("実提示");
-  await openQuestion(page, "Q28");
+  await openControlled("Q28");
   await page.locator("#pause").click();
   await expect(page.locator("#interrupted")).toBeVisible();
   await page.locator("#resume").click();
