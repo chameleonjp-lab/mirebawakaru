@@ -1,0 +1,1504 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="description" content="80の錯視と関連現象を、図・動き・確かめ方で学ぶ視覚ゲーム制作資料。">
+<title>目の錯覚 図解ガイド</title>
+<style>:root{--ink:#203534;--muted:#607471;--paper:#f5f4ef;--white:#fff;--line:#dce3dd;--teal:#12675e;--teal-dark:#074b44;--soft:#e7f0eb;--coral:#b34e3a;--serif:ui-serif,Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Noto Sans CJK JP","Yu Gothic",Meiryo,sans-serif;color-scheme:light}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.8 var(--sans);-webkit-text-size-adjust:100%}button,input,select{font:inherit}button,select{cursor:pointer}button{color:inherit;background:var(--white);border:1px solid #b9cac2;border-radius:8px;padding:10px 16px;min-height:46px;line-height:1.45;transition:background .15s}button:hover{background:var(--soft)}button:disabled{cursor:default;opacity:.4}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #b86042;outline-offset:3px}a{color:var(--teal);text-underline-offset:3px;overflow-wrap:anywhere}input,select{width:100%;background:var(--white);color:var(--ink);border:1px solid #b9cac2;border-radius:8px;padding:11px 12px;min-height:46px;font-size:16px}label{display:block;font-weight:600;font-size:13px;margin:14px 0 7px}h1,h2,h3,h4,p{margin-top:0}h1{font-size:clamp(30px,4.4vw,52px);font-weight:700;letter-spacing:.01em;line-height:1.35;margin-bottom:20px}h2{font-size:24px;line-height:1.55}h3{font-size:17px;line-height:1.65;margin-bottom:9px}h4{font-size:16px;line-height:1.5}p{margin-bottom:18px}strong{font-weight:700}summary{cursor:pointer;min-height:44px;padding:9px 0;color:var(--teal);font-size:14px;font-weight:600}details[open]>summary{margin-bottom:8px}canvas{display:block;width:100%;height:auto;aspect-ratio:8/5}button[hidden],[hidden]{display:none!important}.wrap{max-width:1240px;margin:0 auto;padding-left:40px;padding-right:40px}.site-header{border-bottom:1px solid var(--line);background:var(--paper)}.head-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:82px}.brand{display:flex;align-items:center;gap:13px;text-decoration:none;color:var(--ink);font-size:16px;letter-spacing:.03em;white-space:nowrap}.brand svg{color:var(--teal)}.brand b{font-weight:500}.edition{font:13px var(--sans);color:var(--muted);letter-spacing:.08em}.intro{padding:44px 0 30px;max-width:800px}.eyebrow{color:var(--teal);font-size:12px;font-weight:600;letter-spacing:.15em;margin-bottom:15px}.intro p{max-width:620px;color:#4f6561;margin-bottom:16px}.scope-line{display:flex;flex-wrap:wrap;gap:10px 20px;font-size:12px;color:var(--muted)}.scope-line span+span{border-left:1px solid #bccac3;padding-left:20px}.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:32px;position:sticky;top:0;z-index:10;background:var(--paper);padding-top:8px}.tab{flex:1;border:0;border-radius:7px 7px 0 0;background:transparent;padding:15px 8px;font-size:14px;color:var(--muted);white-space:nowrap;border-bottom:3px solid transparent}.tab.active{color:var(--teal);border-bottom-color:var(--teal);font-weight:700;background:#eaf0e9}.tab:hover{background:#edf1ea}.panel{padding-bottom:30px}.atlas-layout{display:grid;grid-template-columns:255px minmax(0,1fr);gap:38px;align-items:start}.catalog{position:sticky;top:85px;padding:0 20px 0 0;border-right:1px solid var(--line)}.catalog h2{font-size:16px;margin-bottom:20px}.catalog label{margin-top:17px}.catalog select{padding-right:8px;font-size:14px}.catalog input{font-size:14px}.catalog-note{margin-top:23px}.small{font-size:12px;line-height:1.8;color:var(--muted)}.item-list-wrap{margin-top:18px}.item-list{max-height:330px;overflow:auto;overscroll-behavior:contain;padding:2px 5px 2px 1px}.item-button{display:block;width:100%;text-align:left;font-size:13px;line-height:1.5;padding:10px 8px;border:0;border-radius:5px;margin-bottom:2px;background:transparent}.item-button[aria-current=true]{background:var(--soft);color:var(--teal);font-weight:700}.item-button .code{font-size:11px;margin-right:8px;color:var(--muted);font-variant-numeric:tabular-nums}.empty{margin-top:13px;font-size:14px;color:var(--coral)}.demo-article{min-width:0;background:var(--white);border:1px solid #e2e7e1;border-radius:18px;padding:27px 30px 20px;box-shadow:0 7px 24px #20353405}.demo-heading{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:13px;flex-wrap:wrap}.item-id{color:var(--teal);font:600 13px var(--sans);letter-spacing:.12em;font-variant-numeric:tabular-nums}.badges{display:flex;flex-wrap:wrap;gap:6px}.badges span{font-size:11px;padding:3px 9px;border-radius:4px;background:#eef2ed;color:#4c6660}.badges span[data-schematic=true]{background:#f4ece1;color:#765c3e}.demo-article h2{font-size:26px;margin-bottom:3px;overflow-wrap:anywhere}.english{font-size:12px;color:var(--muted);margin-bottom:20px}.question{font-size:17px;font-weight:600;line-height:1.7;margin-bottom:20px}.stage{position:relative;background:#f7f8fa;border:1px solid #e7e9e5;border-radius:9px;overflow:hidden}.zoom{position:absolute;right:8px;bottom:8px;min-height:36px;padding:6px 10px;font-size:11px;opacity:.92}.stage-status{display:flex;justify-content:space-between;gap:10px;font-size:11px;color:var(--muted);margin:8px 0 15px;min-height:20px}.controls{display:flex;flex-wrap:wrap;gap:8px}.controls button{font-size:13px;flex:0 1 auto}.controls .primary{background:var(--teal);border-color:var(--teal);color:#fff;flex-grow:1}.controls .primary:hover{background:var(--teal-dark)}.controls .primary[aria-pressed=true]{background:#dcece4;color:var(--teal-dark);border-color:#a7c6b7}.slider-wrap{margin-top:16px;padding:10px 14px 7px;background:#f4f6f1;border-radius:7px}.slider-wrap label{margin:0;display:flex;justify-content:space-between;gap:12px;font-size:13px}.slider-wrap input{padding:0;min-height:34px;accent-color:var(--teal);background:transparent;border:0}.slider-wrap output{font-variant-numeric:tabular-nums;font-size:12px;color:var(--muted)}.answer{border-left:3px solid var(--teal);margin:24px 0 7px;padding:13px 17px;background:#edf5f0;border-radius:0 7px 7px 0}.answer h3{font-size:15px}.answer p{font-size:14px;margin-bottom:10px}.answer p:last-child{margin-bottom:0}.explanations{margin-top:29px;display:grid;grid-template-columns:1fr 1fr;gap:22px 25px}.explanations section{min-width:0}.explanations h3{font-size:14px;color:var(--teal)}.explanations p{font-size:14px;margin-bottom:0;line-height:1.9}.source-detail{border-top:1px solid var(--line);margin-top:25px;padding-top:7px}.source-detail p,.source-detail li{font-size:12px;color:var(--muted);overflow-wrap:anywhere}.source-detail ul{padding-left:20px;margin:8px 0 15px}.source-detail li{margin-bottom:9px}.pager{display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--line);margin-top:18px;padding-top:19px}.pager button{font-size:12px;padding:10px 12px;min-height:42px;border:0;background:#f2f5ee}.pager span{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}.prose-panel{max-width:960px;margin:0 auto}.section-intro{max-width:760px;margin-bottom:30px}.section-intro h2{font-size:28px;line-height:1.6}.section-intro p{color:#4c6661;font-size:15px}.prose-panel>h3{margin-top:35px}.prose-panel>p{font-size:15px}.prose-panel>select{max-width:100%;margin-bottom:25px}.theory-card{background:white;border:1px solid var(--line);border-radius:15px;padding:30px}.theory-card h3{font-size:24px;margin:12px 0 16px}.theory-card p{font-size:15px}.theory-card .lead{font-size:17px;font-weight:600}.note{padding-left:16px;border-left:2px solid #9bb5a4;color:var(--muted);font-size:14px}.theory-example{display:grid;grid-template-columns:1fr 1.4fr;gap:20px;align-items:center;padding:20px 0;border-top:1px solid var(--line);margin-top:25px}.theory-example h4{font-size:15px}.theory-example p{font-size:13px}.theory-example canvas{border:1px solid var(--line);border-radius:7px}.example-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.example-links button{font-size:12px;text-align:left}.design-flow{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:25px 0;margin:30px 0}.design-flow span{font-size:12px;color:var(--teal);font-variant-numeric:tabular-nums}.design-flow h3{font-size:17px;margin:9px 0}.design-flow p{font-size:14px;margin:0;color:#4c6661}.table-scroll{overflow:auto;max-width:100%;margin:20px 0 25px}table{border-collapse:collapse;width:100%;font-size:13px;line-height:1.8;min-width:520px}th,td{border-bottom:1px solid var(--line);text-align:left;padding:13px 12px;vertical-align:top}th{background:#e8eee5;font-weight:600;color:var(--teal-dark)}td{background:#fff}.text-link{border:0;background:transparent;border-radius:0;display:block;font-size:12px;text-align:left;color:var(--teal);padding:3px 0;min-height:32px;line-height:1.6;text-decoration:underline;text-underline-offset:3px}.index-section{margin:35px 0}.index-section h3{font-size:18px}.index-section .index-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 24px}.index-entry{display:grid;grid-template-columns:44px 1fr auto;gap:10px;align-items:center;text-align:left;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:13px 3px;background:transparent;font-size:13px}.index-entry .code{color:var(--teal);font-size:11px}.index-entry .kind{font-size:10px;color:var(--muted);white-space:nowrap}.site-footer{margin:30px 0 10px;padding:30px 0 20px;border-top:1px solid var(--line)}.site-footer p{font-size:12px;color:var(--muted);margin:0;line-height:1.9}.skip{position:fixed;left:10px;top:-100px;background:white;padding:10px;z-index:100}.skip:focus{top:10px}dialog{border:1px solid var(--line);border-radius:13px;max-width:min(94vw,1100px);width:1100px;padding:18px;background:var(--white);color:var(--ink);max-height:92vh}dialog::backdrop{background:#15332ac7}.dialog-head{display:flex;justify-content:space-between;gap:15px;align-items:center}.dialog-head button{font-size:13px}.dialog-head strong{font-size:15px}.zoom-scroll{overflow:auto;margin:15px 0;overscroll-behavior:contain}.zoom-scroll canvas{width:max(640px,100%);max-width:none;background:#f7f8fa}.noscript{position:fixed;bottom:0;left:0;right:0;padding:20px;background:white;border-top:2px solid var(--coral);z-index:100}
+@media(min-width:1100px){.item-list-wrap{display:block}.item-list-wrap summary{font-size:12px}.explanations{gap:25px}}
+@media(max-width:850px){.wrap{padding-left:24px;padding-right:24px}.atlas-layout{grid-template-columns:210px minmax(0,1fr);gap:22px}.catalog{padding-right:16px}.demo-article{padding:23px 21px 18px}.explanations{grid-template-columns:1fr;gap:22px}.theory-example{grid-template-columns:1fr}.theory-example canvas{max-width:640px;margin:auto}}
+@media(max-width:660px){html{scroll-padding-top:75px}.wrap{padding-left:18px;padding-right:18px}.head-inner{min-height:68px}.brand{font-size:13px;gap:9px}.brand svg{width:27px;height:27px}.edition{font-size:10px}.intro{padding:28px 0 24px}.intro h1{font-size:30px;margin-bottom:16px;line-height:1.4}.desktop-br{display:none}.intro p{font-size:14px;line-height:1.85}.eyebrow{font-size:10px;margin-bottom:12px}.scope-line{font-size:10px;gap:8px 12px}.scope-line span+span{padding-left:12px}.tabs{margin-left:-5px;margin-right:-5px;margin-bottom:22px;gap:0;padding-top:4px}.tab{font-size:11px;min-height:49px;padding:12px 4px}.atlas-layout{display:block}.catalog{position:static;padding:0 0 20px;border:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 12px}.catalog h2{display:none}.catalog>label{grid-column:1/-1;font-size:11px;margin:8px 0 5px}.catalog label[for=category]{grid-row:1;grid-column:2}.catalog label[for=search]{grid-row:1;grid-column:1}.catalog #search{grid-row:2;grid-column:1}.catalog #category{grid-row:2;grid-column:2}.catalog input,.catalog select{font-size:16px;padding:10px 9px;min-height:46px}.catalog #entrySelect{grid-column:1/-1}.catalog .item-list-wrap{grid-column:1/-1;margin-top:7px}.catalog .item-list-wrap summary{font-size:12px;min-height:37px;padding:8px 0}.catalog-note{grid-column:1/-1;margin:7px 0 0;font-size:11px;line-height:1.8}.item-list{max-height:230px}.item-button{font-size:13px;min-height:44px}.catalog .empty{grid-column:1/-1}.demo-article{padding:20px 16px 17px;border-radius:13px;margin-left:-5px;margin-right:-5px}.demo-article h2{font-size:22px}.demo-heading{margin-bottom:11px}.badges span{font-size:10px;padding:3px 6px}.english{font-size:11px;margin-bottom:16px}.question{font-size:15px;margin-bottom:17px}.stage{margin-left:-9px;margin-right:-9px;border-radius:6px}.zoom{font-size:10px;padding:5px 7px;min-height:32px;right:5px;bottom:5px}.stage-status{font-size:10px;margin-top:7px;gap:6px}.controls{gap:7px}.controls button{padding:11px 10px;font-size:12px;min-height:44px}.controls .primary{flex-basis:100%}.slider-wrap{margin-top:14px}.answer{margin-top:20px;padding:12px 13px}.answer p{font-size:13px}.explanations{margin-top:26px;gap:20px}.explanations p{font-size:14px;line-height:1.9}.explanations h3{font-size:14px}.source-detail li{font-size:12px}.pager button{font-size:11px;padding:10px 8px}.section-intro h2{font-size:24px}.section-intro p{font-size:14px}.section-intro{margin-bottom:23px}.theory-card{padding:20px 17px;border-radius:12px}.theory-card h3{font-size:21px}.theory-card .lead{font-size:15px}.theory-card p{font-size:14px}.theory-example{gap:10px}.example-links{gap:6px}.example-links button{font-size:11px;padding:9px}.design-flow{grid-template-columns:1fr;gap:22px;padding:22px 0;margin:22px 0}.design-flow h3{margin:5px 0}.design-flow p{font-size:14px}.prose-panel>p{font-size:14px}.index-section .index-grid{grid-template-columns:1fr}.index-entry{font-size:13px;grid-template-columns:36px 1fr auto;min-height:50px}.index-entry .kind{font-size:10px}.site-footer{margin-top:12px;padding-top:22px}.site-footer p{font-size:11px}dialog{padding:14px;max-width:96vw}.dialog-head strong{font-size:13px}.dialog-head button{padding:8px 10px;min-height:40px;font-size:12px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}button{transition:none}}
+@media print{.site-header,.tabs,.catalog,.controls,.pager,.zoom,.site-footer{display:none}.wrap{max-width:none;padding:0}.panel[hidden]{display:none}.atlas-layout{display:block}.demo-article{border:0;box-shadow:none}.intro{padding:0}.stage{max-width:600px}.explanations{display:block}.explanations section{margin:20px 0}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">本文へ移動</a>
+<header class="site-header">
+ <div class="wrap head-inner"><a class="brand" href="#G01" aria-label="最初の例へ"><svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><path d="M2 16C9 4 23 4 30 16C23 28 9 28 2 16Z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="16" r="6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="16" r="2" fill="currentColor"/></svg><span>目の錯覚 <b>図解ガイド</b></span></a><span class="edition">2026.10.31</span></div>
+</header>
+<main id="main" class="wrap">
+ <section class="intro">
+  <div class="eyebrow">視覚ゲームを考えるための資料</div>
+  <h1>見え方と、実際の図を<br class="desktop-br">比べてみよう。</h1>
+  <p>長さ、色、動き、立体。<strong>80の視覚現象</strong>を一つずつ確かめられます。気になる例を選び、まず図を見てから答えを開いてください。</p>
+  <div class="scope-line"><span>10の分類</span><span>12の説明枠組み</span><span>全例に図と出典</span></div>
+ </section>
+ <nav class="tabs" aria-label="資料の内容">
+  <button class="tab active" data-panel="atlas" aria-pressed="true">図解で見る</button>
+  <button class="tab" data-panel="theory" aria-pressed="false">仕組みを知る</button>
+  <button class="tab" data-panel="design" aria-pressed="false">ゲームに使う</button>
+  <button class="tab" data-panel="index" aria-pressed="false">一覧と出典</button>
+ </nav>
+ <section id="panel-atlas" class="panel active" aria-label="各現象の図解">
+  <div class="atlas-layout">
+   <aside class="catalog">
+    <h2>例を探す</h2>
+    <label for="search">名前・キーワード</label><input id="search" type="search" placeholder="例：長さ、動き、残像" autocomplete="off">
+    <label for="category">分類</label><select id="category"><option value="all">すべての分類</option></select>
+    <label for="entrySelect">表示する例 <span id="resultCount"></span></label><select id="entrySelect" aria-controls="demoArticle"></select>
+    <div id="emptySearch" class="empty" hidden>一致する例がありません。キーワードを短くするか、分類を「すべて」にしてください。</div>
+    <details class="item-list-wrap"><summary>番号と名前の一覧を開く</summary><div id="itemList" class="item-list"></div></details>
+    <p class="small catalog-note">「体験」は画面で試す例。「条件付き体験」は見る距離や個人差などで変わる例。「模式図」は仕組みを説明する図です。</p>
+   </aside>
+   <article id="demoArticle" class="demo-article" aria-live="off">
+    <div class="demo-heading"><span id="itemId" class="item-id"></span><div class="badges"><span id="categoryBadge"></span><span id="experienceBadge"></span></div></div>
+    <h2 id="itemName"></h2><p id="englishName" class="english"></p>
+    <p id="question" class="question"></p>
+    <div class="stage"><canvas id="demoCanvas" width="1280" height="800" role="img"></canvas><button id="zoomBtn" class="zoom" title="図を大きく表示" aria-label="図を大きく表示">拡大 ↗</button></div>
+    <div class="stage-status"><span id="motionStatus">静止した図です</span><span id="elapsed" aria-hidden="true"></span></div>
+    <div class="controls"><button id="revealBtn" class="primary" aria-pressed="false">答え・確かめ方を見る</button><button id="playBtn" hidden>動きを開始</button><button id="resetBtn">最初から</button><button id="variantBtn" hidden>別の条件</button></div>
+    <div id="sliderWrap" class="slider-wrap" hidden><label for="parameter"><span id="sliderLabel"></span><output id="sliderValue">50</output></label><input id="parameter" type="range" min="0" max="100" value="50"></div>
+    <section id="answerPanel" class="answer" hidden aria-live="polite"><h3>この図で確かめられること</h3><p id="measurementHelp" class="small" hidden></p><p id="fact"></p><p id="check"></p></section>
+    <div class="explanations">
+     <section><h3>どう見える？</h3><p id="observation"></p></section>
+     <section><h3>どう説明されている？</h3><p id="mechanism"></p></section>
+     <section class="game-idea"><h3>ゲームにするなら</h3><p id="gameIdea"></p></section>
+     <section><h3>体験するときの条件</h3><p id="caution"></p></section>
+    </div>
+    <details class="source-detail"><summary>出典と別名</summary><p id="aliases"></p><ul id="sources"></ul></details>
+    <div class="pager"><button id="prevBtn">← 前の例</button><span id="position"></span><button id="nextBtn">次の例 →</button></div>
+   </article>
+  </div>
+ </section>
+ <section id="panel-theory" class="panel prose-panel" hidden aria-label="錯覚の説明枠組み">
+  <div class="section-intro"><div class="eyebrow">理論と仕組み</div><h2>一つの仕組みで、全部は説明できません。</h2><p>以下は現象を理解するための12の整理です。互いに重なりがあり、学術上の唯一の分類ではありません。個々の原因が確定していない例は、そのことを各項目に記しています。</p></div>
+  <label for="theorySelect">説明枠組みを選ぶ</label><select id="theorySelect"></select>
+  <article class="theory-card"><div id="theoryId" class="item-id"></div><h3 id="theoryName"></h3><p id="theorySummary" class="lead"></p><p id="theoryDetail"></p><p id="theoryLimit" class="note"></p><div class="theory-example"><div><h4 id="theoryExampleName"></h4><p id="theoryExampleCaption"></p></div><canvas id="theoryCanvas" width="1280" height="800" role="img"></canvas></div><div id="theoryLinks" class="example-links"></div><details class="source-detail"><summary>この説明の参照先</summary><ul id="theorySources"></ul></details></article>
+ </section>
+ <section id="panel-design" class="panel prose-panel" hidden aria-label="ゲームへの応用">
+  <div class="section-intro"><div class="eyebrow">制作の考え方</div><h2>「何を当てるか」を、先に決める。</h2><p>見え方は人によって変わります。点数を付ける場合は、線の長さ、画面の色の値、動く対象の数など、実際の図から確認できるものを正解にします。以下は本資料からの制作提案です。</p></div>
+  <div class="design-flow"><div><span>01</span><h3>まず判断する</h3><p>「実際に長いのはどちら？」と尋ねる。同じ長さの選択肢も用意する。</p></div><div><span>02</span><h3>根拠を確かめる</h3><p>補助線を重ねる。周囲の模様を消す。同じ位置へ動かして比較する。</p></div><div><span>03</span><h3>条件を変えて試す</h3><p>同じ長さの問題だけを続けず、本当に違う問題も混ぜる。</p></div></div>
+  <h3>最初に作りやすい出題</h3>
+  <div class="table-scroll"><table><thead><tr><th>出題</th><th>使える例</th><th>正解の決め方</th></tr></thead><tbody>
+  <tr><td>実際の長さ・大きさ</td><td><button class="text-link" data-open="G01">G01 ミュラー リヤー</button><button class="text-link" data-open="G03">G03 エビングハウス</button></td><td>線の両端の距離、円の直径を比較する。</td></tr>
+  <tr><td>平行・つながり</td><td><button class="text-link" data-open="G09">G09 ポッゲンドルフ</button><button class="text-link" data-open="G14">G14 カフェウォール</button></td><td>線の傾きや、延長した交点で判定する。</td></tr>
+  <tr><td>画面上の色</td><td><button class="text-link" data-open="C01">C01 明るさの対比</button><button class="text-link" data-open="C02">C02 チェッカーシャドウ</button></td><td>画面に指定した色の値を比べる。</td></tr>
+  <tr><td>本当に動いているか</td><td><button class="text-link" data-open="M04">M04 周辺ドリフト</button><button class="text-link" data-open="M13">M13 足踏み錯視</button></td><td>図形の座標や速さの記録を正解とする。</td></tr>
+  <tr><td>何が変わったか</td><td><button class="text-link" data-open="M23">M23 変化盲</button></td><td>前後で変えた図形の位置・色・個数を確認する。</td></tr>
+  </tbody></table></div>
+  <h3>公平に比べるための工夫</h3><p>難易度は、制限時間だけでなく、周囲の模様の強さや対象の差で調整できます。スマートフォンの画面、見る距離、明るさの設定などによって結果が変わる例は、精密な点数競争から分けると扱いやすくなります。</p>
+  <p>多義図形の「どちらが先に見えたか」には一つの正解がありません。また、残像や立体視が見えたかどうかを成績にすると、体験条件や個人差が点数に入りやすくなります。これらは発見を楽しむ問題に向いています。</p>
+  <h3>この資料からは言えないこと</h3><p>この資料では、一般的な認知能力が向上することや、錯覚が見えなくなることを検証していません。「脳トレの効果」を保証する表現はせず、まずは図の条件を確認して判断するゲームとして設計します。</p>
+ </section>
+ <section id="panel-index" class="panel prose-panel" hidden aria-label="収録一覧と出典">
+  <div class="section-intro"><div class="eyebrow">収録範囲</div><h2>80項目の対応表</h2><p>番号は文書と共通です。ここでの10分類は探しやすくするための編集上の整理で、分類の境界には重なりがあります。新しい錯視や名前のない派生例もあるため、世界中の全例を網羅した一覧ではありません。</p></div>
+  <p class="note">色や長さの錯視に加え、注意・両眼視・撮影時のずれなどの関連現象を含めています。屈折や蜃気楼のように光の進み方自体が変わる現象、視覚以外の錯覚、診断を目的とした現象は収録対象から分けています。</p>
+  <div id="fullIndex"></div>
+  <h3>資料の使い方と作成条件</h3><p>図は本資料のために作図した説明例です。論文の実験条件をそのまま再現したものではありません。出典の図版・写真・プログラムは転載していません。模式図はその現象を実際に体験したことにはなりません。</p>
+  <p>動きは操作したときだけ始まり、一定時間で止まります。別の例へ移ったときや画面を離れたときも停止します。見づらいと感じたときは停止して休んでください。色の比較では、画面の色味を自動で変える設定の影響にも注意してください。</p>
+  <p>参考になる全体資料：<a href="https://michaelbach.de/ot/" target="_blank" rel="noopener noreferrer">Michael Bach の錯覚集</a> ／ <a href="https://michaelbach.de/sci/pubs/BachPolo2006ACNR_illusions.pdf" target="_blank" rel="noopener noreferrer">Bach と Poloschek の Optical Illusions</a>。各例に個別の出典を付けています。参照日：2026年10月31日。</p>
+ </section>
+ <footer class="site-footer"><p>図の番号は文書と共通です。<br>図と解説は、保存したファイルだけで使えます。出典のリンクを開くときはインターネットへの接続が必要です。</p></footer>
+</main>
+<dialog id="zoomDialog"><div class="dialog-head"><strong id="zoomTitle">図の拡大</strong><button id="closeZoom">閉じる</button></div><p class="small">図全体が入らないときは、左右にスクロールできます。</p><div class="zoom-scroll"><canvas id="zoomCanvas" width="1280" height="800" role="img"></canvas></div><div class="controls"><button id="zoomReveal">答えを切り替える</button><button id="zoomPlay" hidden>動きを開始</button></div></dialog>
+<noscript><div class="noscript">この資料の図と操作にはJavaScriptが必要です。JavaScriptが使えるブラウザでHTMLを開いてください。本文の一覧は同梱の文書でも読めます。</div></noscript>
+<script>window.ATLAS_DATA=[{"id":"G01","name":"ミュラー・リヤー錯視","english":"Müller-Lyer illusion","category":"size","aliases":["ミュラー・リェル錯視","矢羽の錯視"],"type":"錯視","experience":"体験","animate":false,"sliderLabel":"矢羽の長さ","question":"上下の横線は、どちらが長く見えますか？","observation":"端についた矢羽の向きが違うだけで、同じ長さの横線が違って見えます。線全体の外形ではなく、矢羽の頂点どうしを結ぶ横線に注目してください。","mechanism":"端の位置を周囲の輪郭とまとめて判断する働きや、角を奥行きの手がかりとして扱う説明などがあります。遠近法による恒常性だけが唯一の原因と確定したわけではなく、矢羽の角度や配置によっても効果は変わります。","check":"確認すると矢羽を消し、両端を共通の補助線で結びます。横線の始点と終点が同じ位置にあることを確かめられます。","game":"矢羽つきの通路の長さを予想してから、飾りを消して答えを確認する。","caution":"比較するのは横線の長さです。矢羽まで含めた図形全体の幅は異なります。","fact":"2本の横線はともに長さ260の論理ピクセルで、x座標190〜450です。","sources":[{"title":"Michael Bach: Müller-Lyer Illusion","url":"https://michaelbach.de/ot/sze-muelue/index.html"}],"theory":["周囲との比較","奥行きの推定","輪郭と傾き"]},{"id":"G02","name":"ポンゾ錯視","english":"Ponzo illusion","category":"size","aliases":["線路の錯視"],"type":"錯視","experience":"体験","animate":false,"sliderLabel":"線路の収束","question":"上と下の横棒は、同じ長さでしょうか？","observation":"奥へ向かって狭まる線の間では、上側の横棒が長く見えることがあります。線路のような背景が、同じ画面上の長さに異なる奥行きの意味を与えます。","mechanism":"奥にあると推定した物の大きさを補う、サイズ恒常性の働きが代表的な説明です。一方、周囲との距離や傾きの処理を重視する説もあり、この単純図だけで奥行き推定だけの効果を切り分けることはできません。","check":"収束する背景を消し、2本の横棒の両端に補助線を通します。端どうしが垂直にそろいます。","game":"遠近のついた道に置かれた足場について、画面上で同じ長さのものを選ぶ。","caution":"画面上の長さと、絵が表す立体世界での長さは別の問いです。","fact":"上下の横棒はともにx座標240〜400、長さ160の論理ピクセルです。","sources":[{"title":"Donaldson & Macpherson: Ponzo Illusion — The Illusions Index","url":"https://www.illusionsindex.org/i/ponzo-illusion"}],"theory":["奥行きの推定","周囲との比較"]},{"id":"G03","name":"エビングハウス錯視","english":"Ebbinghaus illusion","category":"size","aliases":["ティチェナー錯視"],"type":"錯視","experience":"体験","animate":false,"sliderLabel":"","question":"中央の2つの円は、どちらが大きく見えますか？","observation":"大きな円に囲まれた中央の円は小さく、小さな円に囲まれた中央の円は大きく見えることがあります。周囲の円ではなく、中央の塗りつぶした円だけを比較します。","mechanism":"周囲の物との大きさの比較に加え、輪郭間の距離やまとまり方も関係すると考えられています。デルブーフ錯視との近さも指摘されますが、単に大きさの対比だけで全条件が説明できると決まっているわけではありません。","check":"周囲の円を消し、中央の円に同じ直径のものさしを重ねます。中央2つの直径は変化しません。","game":"周囲の障害物のサイズだけが違う2つのゴールについて、入口の大きさを当てる。","caution":"囲む円の大きさと中心からの距離がともに変わる例です。一つの要因だけの実験にはなりません。","fact":"2つの中央円はともに半径25の論理ピクセルです。","sources":[{"title":"Michael Bach: Ebbinghaus Illusion","url":"https://michaelbach.de/ot/cog-Ebbinghaus/index.html"}],"theory":["周囲との比較","まとまりと補完"]},{"id":"G04","name":"デルブーフ錯視","english":"Delboeuf illusion","category":"size","aliases":["同心円の大きさ錯視"],"type":"錯視","experience":"体験","animate":false,"sliderLabel":"外側の輪の大きさ","question":"内側の2つの円は、同じ大きさでしょうか？","observation":"すぐ近くを輪で囲まれた円と、遠くに大きな輪がある円では、内側の円の大きさが違って感じられることがあります。変えているのは外側の輪の大きさです。","mechanism":"内側と外側の輪郭を一緒に扱う同化や、二つの大きさを比べる対比が説明候補です。輪どうしの比率や間隔で見え方が変わるため、囲めば必ず一方向に変化するという単純な規則にはできません。","check":"外側の輪を消し、内側2つの円の直径に同じ長さの補助線を引きます。","game":"器の大きさに惑わされず、同じ大きさの円形アイテムを見つける。","caution":"効果が弱い場合や、輪の比率によって見え方が変わる場合があります。食事量への影響はこの図から判断できません。","fact":"内側の円は常に半径34の論理ピクセルです。調整で変わるのは外側の輪だけです。","sources":[{"title":"Akiyoshi Kitaoka: A catalogue of illusions — Delboeuf illusion","url":"https://www.psy.ritsumei.ac.jp/~akitaoka/cataloge.html"},{"title":"Michael Bach: The Delboeuf Illusion","url":"https://michaelbach.de/ot/cog-Delboeuf/index.html"}],"theory":["周囲との比較","まとまりと補完"]},{"id":"G05","name":"ジャストロー錯視","english":"Jastrow illusion","category":"size","aliases":["弧の大きさ錯視"],"type":"錯視","experience":"体験","animate":false,"sliderLabel":"","question":"2つの曲がった帯は、同じ形・大きさでしょうか？","observation":"同じ形の曲がった帯を少しずらして並べると、下側の帯のほうが大きく見えることがあります。形の長い辺と、隣の形の短い辺が近づく配置に注目します。","mechanism":"隣り合う長い辺と短い辺を局所的に比べ、その違いを形全体の大きさへ持ち込む説明があります。ただし、これは有力な記述の一つで、一般的な視覚の仕組みから十分に説明し尽くされた錯視ではありません。","check":"2つの帯を拡大縮小せず同じ位置に移し、別色の輪郭で重ねます。外側と内側の弧が一致します。","game":"曲がった橋のパーツを見た目で選び、最後に重ねて寸法を確かめる。","caution":"左右のずれや隣り合う辺の間隔に依存します。帯を離すと効果が弱くなる場合があります。","fact":"2つとも同じ半径270・218、同じ角度範囲の円弧から作った同一形状です。","sources":[{"title":"Michael Bach: Jastrow Illusion","url":"https://michaelbach.de/ot/geom-Jastrow/index.html"}],"theory":["周囲との比較","まとまりと補完"]},{"id":"G06","name":"垂直水平錯視","english":"Vertical-horizontal illusion","category":"size","aliases":["フィック錯視","水平垂直錯視"],"type":"錯視","experience":"体験","animate":false,"sliderLabel":"","question":"縦の線と横の線は、どちらが長く見えますか？","observation":"逆さのT字では、同じ長さでも縦の線が長く見えることがあります。横線は縦線によって二つに分けられているので、方向だけでなく分割の違いも含む例です。","mechanism":"方向による長さ判断の偏り、横線が二分される効果、視野や奥行きの解釈などが検討されてきました。L字・T字・十字では条件が違うため、縦の線は常に一定割合長く見えると一般化はできません。","check":"縦線を90度回して横向きにし、横線と上下に並べます。始点と終点がそろいます。","game":"縦横に伸びる通路の長さを予想し、回転させて一致を確かめる。","caution":"T字では方向と二分の要因が混ざります。画面を回すだけではすべての要因を分離できません。","fact":"縦線はy座標80〜300、横線はx座標210〜430で、ともに長さ220です。","sources":[{"title":"Donaldson & Macpherson: Vertical-Horizontal Illusion — The Illusions Index","url":"https://www.illusionsindex.org/i/vertical-horizontal-illusion"}],"theory":["周囲との比較","輪郭と傾き","まとまりと補完"]},{"id":"G07","name":"オッペル・クント錯視","english":"Oppel-Kundt illusion","category":"size","aliases":["充実距離錯視","分割距離錯視"],"type":"錯視","experience":"体験","animate":false,"sliderLabel":"区切りの数","question":"区切りのある側とない側は、同じ幅でしょうか？","observation":"同じ端点間隔でも、途中にいくつもの区切りがある側のほうが広く見えることがあります。区切りの数を変えながら、中央の目印が本当に真ん中に見えるか確かめます。","mechanism":"空間を埋める要素の数や密度が、距離のまとめ方に関わると考えられています。方向や区切り方との相互作用も報告されており、線の数だけに比例して必ず長く見えるという単一の法則では説明できません。","check":"途中の区切りを消し、左右の区間に同じ長さのものさしを置きます。中央の端点はそのままです。","game":"柵や目盛りの密度が異なる2本の橋について、実際の横幅を比較する。","caution":"区切りを極端に密にしたときや、表示を縮小したときは、線が一体化して条件が変わります。","fact":"端点はx座標100・320・540です。左右の幅はどちらも220です。","sources":[{"title":"Landwehr: Bimanual thumb-index finger indications of noncorresponding extents","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC8795064/"},{"title":"Akiyoshi Kitaoka: A catalogue of illusions — Oppel-Kundt illusion","url":"https://www.psy.ritsumei.ac.jp/~akitaoka/cataloge.html"}],"theory":["周囲との比較","まとまりと補完"]},{"id":"G08","name":"ザンダーの平行四辺形錯視","english":"Sander parallelogram illusion","category":"size","aliases":["サンダー錯視"],"type":"錯視","experience":"条件付き体験","animate":false,"sliderLabel":"","question":"太い2本の斜線は、同じ長さでしょうか？","observation":"大きさの違う平行四辺形の中では、同じ長さの斜線が違って見えることがあります。外枠の辺ではなく、中央の頂点につながる太い2本の線を比較してください。","mechanism":"周囲の枠と、比較する線分の向きの両方が判断に関わります。枠の効果は脳活動を調べた研究でも検討されていますが、活動の差が見つかることと、錯視の全原因が特定できることは同じではありません。","check":"枠を消し、斜線を回転・平行移動して横向きに並べます。拡大縮小せずに両端が一致します。","game":"斜めの部屋にかかった2本の橋を、外枠に惑わされず比較する。","caution":"枠の比率や線の向きに効果が左右されます。この図は基本関係を示す独自の作図例です。","fact":"2本の太線の変位は(180,−180)と(180,180)で、長さはいずれも180√2です。","sources":[{"title":"Effects of surrounding frames and inner targeted line segments on event-related potentials in geometric-optical illusions","url":"https://pubmed.ncbi.nlm.nih.gov/36367794/"}],"theory":["周囲との比較","輪郭と傾き","奥行きの推定"]},{"id":"G09","name":"ポッゲンドルフ錯視","english":"Poggendorff illusion","category":"direction","aliases":["遮蔽された斜線の錯視"],"type":"錯視","experience":"体験","animate":false,"sliderLabel":"遮る帯の幅","question":"帯の左右に見える線は、まっすぐつながりますか？","observation":"斜めの直線の途中を帯で隠すと、左右の線がずれた位置にあるように見えることがあります。見えない区間を頭の中で延長し、どこへつながるか予想してください。","mechanism":"遮る輪郭と斜線が作る角度の処理、見えない部分の補完、奥行きとしての解釈などが候補です。複数の成分を含むと考えられており、単に脳が線を延長し間違えるだけで説明が終わるわけではありません。","check":"帯を薄くして、背後に続く直線を描きます。左右の線分の傾きと切片が一致していることが分かります。","game":"壁で隠れたレーザーの延長先を選び、壁を透明にして答えを確かめる。","caution":"帯の幅や斜線の角度によって効果が変わります。確認用の線は新しい推測線ではなく、元の直線の続きです。","fact":"左右の線は、(120,310)と(520,90)を結ぶ1本の直線の可視部分です。","sources":[{"title":"Michael Bach: Poggendorff Illusion","url":"https://michaelbach.de/ot/ang-poggendorff/index.html"}],"theory":["輪郭と傾き","まとまりと補完","奥行きの推定"]},{"id":"G10","name":"ツェルナー錯視","english":"Zöllner illusion","category":"direction","aliases":["ゾルナー錯視"],"type":"錯視","experience":"体験","animate":false,"sliderLabel":"","question":"長い5本の線は、平行に見えますか？","observation":"短い線を交互の向きに交差させると、平行な長い線が交互に開いたり閉じたりするように見えます。短い線の角度が、長い線の方向の判断に影響します。","mechanism":"近くの異なる向きを強調する方向の対比や、交差部の鋭角を広く見積もる処理が説明候補です。傾きを扱う視覚処理の相互作用を示しますが、すべての配置を一つの神経機構だけで説明できるとは限りません。","check":"短い交差線を消します。長い線の始点・終点を同じ横線で結ぶと、同じ傾きで並んでいることが分かります。","game":"斜線模様の床から、本当に平行なレールの組を選ぶ。","caution":"短線と長線の角度、太さ、密度によって効果が弱くなることがあります。","fact":"5本の長線はいずれも変位(100,−220)を持ち、x方向に100ずつ移したものです。","sources":[{"title":"Michael Bach: Tilted Table Illusion — Zöllner illusion","url":"https://michaelbach.de/ot/ang-tiltedTable/index.html"},{"title":"Akiyoshi Kitaoka: A catalogue of illusions — Zöllner illusion","url":"https://www.psy.ritsumei.ac.jp/~akitaoka/cataloge.html"}],"theory":["輪郭と傾き","周囲との比較"]},{"id":"G11","name":"ヘリング錯視","english":"Hering illusion","category":"direction","aliases":["放射線による湾曲錯視"],"type":"錯視","experience":"体験","animate":false,"sliderLabel":"","question":"縦の2本の線は、外側へふくらんで見えますか？","observation":"中央から広がる放射線の上では、まっすぐな2本の線が外側へふくらむように見えることがあります。見えている湾曲が線自体にあるか、背景を消して確かめます。","mechanism":"背景と比較線が交わる各場所で、方向の対比や鋭角の見積もりが変わる説明があります。奥行きの解釈を含む説もあり、この図から特定の一つの理論だけが正しいと結論づけることはできません。","check":"放射線を消し、上下で2本の線の間隔を示します。どちらも直線で間隔も一定です。","game":"放射模様の部屋で、曲がって見えるが実は直線の通路を見つける。","caution":"背景の線数や比較線の位置で湾曲の印象が変わります。見えない人もいます。","fact":"比較線はx座標230と410を固定した垂直線で、間隔は180です。","sources":[{"title":"Michael Bach: Hering Illusion","url":"https://michaelbach.de/ot/ang-hering/index.html"},{"title":"Donaldson & Macpherson: Wundt Illusion — related Hering configuration","url":"https://www.illusionsindex.org/i/wundt-illusion"}],"theory":["輪郭と傾き","奥行きの推定"]},{"id":"G12","name":"ヴント錯視","english":"Wundt illusion","category":"direction","aliases":["ブント錯視"],"type":"錯視","experience":"体験","animate":false,"sliderLabel":"","question":"縦の2本の線は、中央で内側へ曲がって見えますか？","observation":"左右から広がる斜線の背景では、平行な2本の直線が内側へ曲がって見えることがあります。ヘリング錯視と背景の方向関係が異なる組合せを比較できます。","mechanism":"斜線と縦線の交点に生じる方向の対比や、鋭角を実際より広く見積もる傾向が説明候補です。局所的な角度のずれを全体の湾曲として読む考え方ですが、鋭角の拡大そのものの仕組みも研究対象です。","check":"斜線の背景を消し、上下の間隔を同じ補助線で表示します。縦線を曲線へ描き替えてはいません。","game":"背景の向きだけを交換し、同じ通路が外向き・内向きに見える仕掛けを作る。","caution":"ヘリング錯視と見え方を比較するときは、背景以外の線幅や位置をそろえる必要があります。","fact":"比較線はヘリングの例と同じx座標230・410の直線です。","sources":[{"title":"Donaldson & Macpherson: Wundt Illusion — The Illusions Index","url":"https://www.illusionsindex.org/i/wundt-illusion"}],"theory":["輪郭と傾き","周囲との比較"]},{"id":"G13","name":"オービソン錯視","english":"Orbison illusion","category":"direction","aliases":["放射背景上の形の歪み"],"type":"錯視","experience":"体験","animate":false,"sliderLabel":"","question":"太い四角形は、正方形に見えますか？","observation":"方向が変化する背景の線の上では、正方形の角度や辺が歪んだように見えることがあります。背景を消したときに、同じ形がどれほど変わって感じるか比べます。","mechanism":"比較する辺と背景が作る鋭角の拡大や、方向の対比が候補です。二次元の絵から三次元の場面を推定する際の偏りを重視する説明もあり、形の歪みを単一の原因に決めることはできません。","check":"背景を消して、正方形の4つの直角と縦横の同じ辺長を表示します。","game":"歪んで見える正方形のタイルを、背景を切り替えながら探す。","caution":"ここでは静止した基本例を示します。動く点を使う動的オービソン錯視とは提示条件が違います。","fact":"比較図形は(265,110)を左上とする、一辺190の正方形です。","sources":[{"title":"Donaldson & Macpherson: Orbison Illusion — The Illusions Index","url":"https://www.illusionsindex.org/i/orbison-illusion"}],"theory":["輪郭と傾き","奥行きの推定"]},{"id":"G14","name":"カフェウォール錯視","english":"Café wall illusion","category":"direction","aliases":["カフェの壁錯視"],"type":"錯視","experience":"体験","animate":true,"sliderLabel":"列のずれ","question":"タイルの横の目地は、傾いているでしょうか？","observation":"明暗のタイル列を互いにずらすと、水平な目地が交互に傾くように見えることがあります。再生すると列のずれだけが変わり、錯視の強まり方を観察できます。","mechanism":"明暗の境界と目地の配置が、線の向きを判断する手がかりとなると考えられています。明暗を異なる広さで比べる説明などがありますが、目地の明るさや白黒の並びで効果が変わるため、一つの単純な原因だけでは説明できません。","check":"タイルを消し、目地の中心線だけを残します。どの列も同じy座標のまま水平に続いています。","game":"傾いて見える壁を登る場面で、実際には水平な足場を選ぶ。","caution":"目地の幅と明るさが重要です。極端な縮小や画面の補間で効果が変化します。","fact":"タイルは48×48、目地幅3です。横目地は全フレームで水平かつ平行です。","sources":[{"title":"Michael Bach: Café Wall Illusion","url":"https://michaelbach.de/ot/ang-cafewall/index.html"}],"theory":["輪郭と傾き","周囲との比較"]},{"id":"G15","name":"フレーザーの偽渦巻き","english":"Fraser spiral illusion","category":"direction","aliases":["フレーザー錯視","偽の螺旋"],"type":"錯視","experience":"条件付き体験","animate":false,"sliderLabel":"小さな模様の傾き","question":"輪を1本たどると、中心へ進みますか？","observation":"傾いた明暗の小片を円周に並べると、閉じた円の集まりが渦巻きのように見えることがあります。小片の向きと、その小片が並ぶ輪の経路を分けて観察します。","mechanism":"局所の短い模様の傾きが、全体の輪郭の方向判断へ取り込まれることが説明候補です。小さな角度差での同化と、大きな差での対比は区別され、背景や模様の周期も見え方に関わります。","check":"斜めの明暗模様を消し、各帯の中央を通る円を描きます。すべて同じ中心を持ち、閉じています。","game":"渦巻きに見える道から、一周して同じ場所へ戻る環状ルートを選ぶ。","caution":"原典画像を複製せず、ねじれた帯を独自に作図した例です。縮小時には効果が弱い場合があります。","fact":"各帯の中心線は半径30・55・80・105・130・155の同心円で、螺旋は描いていません。","sources":[{"title":"Michael Bach: Fraser’s Spiral","url":"https://michaelbach.de/ot/ang-fraser/index.html"},{"title":"Akiyoshi Kitaoka: A catalogue of illusions — Fraser illusion","url":"https://www.psy.ritsumei.ac.jp/~akitaoka/cataloge.html"}],"theory":["輪郭と傾き","まとまりと補完"]},{"id":"G16","name":"傾き錯視","english":"Tilt illusion","category":"direction","aliases":["同時傾斜対比"],"type":"錯視","experience":"体験","animate":false,"sliderLabel":"周囲の傾き","question":"中央の縞は、どちらも垂直でしょうか？","observation":"中央の縞が同じ向きでも、周りの縞が左右に傾くと、中央は反対向きに傾いて見えることがあります。比較するのは大きな円の中にある、小さな円の縞です。","mechanism":"方向を選んで反応する視覚系の集団どうしの相互作用が代表的な説明です。自然画像の統計を効率よく処理する推定モデルも提案されており、神経レベルと計算の目的の説明は必ずしも排他的ではありません。","check":"周囲の縞を消し、中央の縞と重なる垂直の補助線を表示します。左右の中央縞の方向は変えません。","game":"傾いた背景に囲まれたセンサーの向きを予想して、基準線で確認する。","caution":"長く見続けた後の傾斜残効とは区別します。この例は周囲と中央を同時に見せる錯視です。","fact":"左右の中央縞はどちらも回転角0度の垂直線です。変更するのは周囲の角度だけです。","sources":[{"title":"Michael Bach: Tilt Illusion","url":"https://michaelbach.de/ot/ang-tilt/index.html"}],"theory":["輪郭と傾き","周囲との比較","経験と予測"]},{"id":"G17","name":"シェパードのテーブル","english":"Shepard tables","category":"depth","aliases":["Turning the Tables","テーブルの天板錯視"],"type":"錯視","experience":"体験","animate":true,"sliderLabel":"","question":"2つの天板は、同じ形・大きさでしょうか？","observation":"同じ平行四辺形でも、回転させて脚をつけると、細長い天板と幅広い天板のように見えることがあります。再生すると左の天板の輪郭が回転し、右に重なります。","mechanism":"平面の輪郭を奥行きのあるテーブルとして解釈し、奥へ短く写った長さを補う働きが関係します。画面上の形が同じことと、描かれた立体の天板を同じ形と判断することは異なる問題です。","check":"左の天板を拡大縮小せず回転・平行移動して右へ重ねます。確認ボタンは重なった状態を表示します。","game":"見た目の異なる机から同一パーツを探し、回して組み立てる。","caution":"同じなのは画面上の天板の輪郭です。描かれた立体の実寸まで同じと示す図ではありません。","fact":"両天板は辺ベクトル(160,0)と(60,90)から作る同一平行四辺形で、回転角だけが70度異なります。","sources":[{"title":"Michael Bach: Shepard’s Rotated Tables","url":"https://michaelbach.de/ot/sze-ShepardTables/index.html"}],"theory":["奥行きの推定","経験と予測"]},{"id":"G18","name":"エイムズの部屋","english":"Ames room","category":"depth","aliases":["歪んだ部屋の錯視"],"type":"錯視","experience":"模式図","animate":false,"sliderLabel":"","question":"普通の部屋に見えると、人物の大きさをどう判断しそうですか？","observation":"決まった位置から見たときに普通の部屋に見えるよう、壁や床を変形した装置です。左右の人物までの距離が違うため、同じ身長でも大きさが違うように見えます。","mechanism":"部屋が直角で整った形だという解釈と、限られた視点からの投影が結びつきます。単眼ののぞき穴では両眼視差や移動による手がかりが減る点も重要で、単に奥壁を斜めにすれば同じ装置になるわけではありません。","check":"確認すると上から見た配置の模式図に切り替わり、固定視点から左右の人物までの距離の違いを示します。","game":"固定カメラの部屋で巨人と小人に見えるキャラクターを動かし、俯瞰図で位置を解く。","caution":"平面画面では実物の部屋や両眼視を再現できません。本例は見えと配置の説明図で、厳密な建築用設計図ではありません。","fact":"模式図は同じ身長の人物を遠い側と近い側に置く設定です。正面図の人物の画面上の高さは異なります。","sources":[{"title":"Loss of 3-D shape constancy in interior spaces: the basis of the Ames-room illusion","url":"https://pubmed.ncbi.nlm.nih.gov/9474341/"},{"title":"The Ames room and the misunderstood versions and depictions","url":"https://doi.org/10.1177/03010066241272260"}],"theory":["奥行きの推定","経験と予測"]},{"id":"G19","name":"強制遠近法","english":"Forced perspective","category":"depth","aliases":["フォースト・パースペクティブ","遠近法を利用した配置"],"type":"関連現象","experience":"模式図","animate":false,"sliderLabel":"","question":"同じ見かけの大きさなら、実際の大きさも同じでしょうか？","observation":"物の大きさと距離を組み合わせ、違う大きさの物を同じくらいに写したり、離れた物を接して見せたりする表現技法です。特定の視点に合わせた配置が鍵になります。","mechanism":"中心投影では、見かけの大きさは物の大きさと距離の比に依存します。そのため異なる配置が似た像を作れます。これは投影の幾何そのものを利用する技法で、神経の誤作動だけで起こる現象と一括りにはできません。","check":"確認で横からの図を示します。高さと距離を両方2倍にした2本の物体が、同じ視線の間に収まります。","game":"カメラを固定し、遠くの大きな足場と近くの小さな足場を画面上でつなぐ。","caution":"視点を動かしたり両眼で観察したりすると、奥行きの違いが分かる場合があります。","fact":"確認図の近い棒は距離160・高さ100、遠い棒は距離320・高さ200で、視角は等しくなります。","sources":[{"title":"Kelley & Endler: How do great bowerbirds construct perspective illusions?","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC5319334/"}],"theory":["奥行きの推定","経験と予測"]},{"id":"G20","name":"アナモルフォーシス","english":"Anamorphosis","category":"depth","aliases":["歪像画","アナモルフォーズ"],"type":"関連現象","experience":"模式図","animate":false,"sliderLabel":"横方向の補正","question":"引き伸ばした形を補正すると、何が現れますか？","observation":"特定の斜めの視点や鏡を通して見ると、歪めて描いた像がまとまった形に見える技法です。この例では鍵の形を横へ伸ばし、逆の変換で戻る関係を示します。","mechanism":"観察位置や鏡による投影の変化を前もって逆算して、元の像を歪めます。幾何学的な変換を使う表現であり、普通の形を好む視覚の働きだけが原因ではありません。本例は仕組みを伝える単純な伸縮モデルです。","check":"確認で横の倍率を1に戻します。元の鍵の輪と歯が同じ形に復元されます。","game":"視点を合わせると鍵の印が読める壁画を、探索のヒントにする。","caution":"本例は平面の横伸縮です。斜めからの透視投影や円筒鏡の反射を忠実に再現するものではありません。","fact":"鍵の経路自体は固定で、表示時の横倍率だけを変えています。確認時は横倍率1です。","sources":[{"title":"Michael Bach: Anamorphosis","url":"https://michaelbach.de/ot/sze-anamorph/index.html"}],"theory":["奥行きの推定","まとまりと補完"]},{"id":"G21","name":"月の錯視","english":"Moon illusion","category":"depth","aliases":["地平線の月の錯視"],"type":"錯視","experience":"模式図","animate":false,"sliderLabel":"","question":"地平線に近い円は、空の高い円より大きく感じますか？","observation":"実際の空では、地平線近くの月が高い空の月より大きく見えることがあります。この画面では同じ大きさの円を空と地形のそばに置き、比較の考え方を示します。","mechanism":"地形などの手がかりを使った距離と大きさの推定や、周囲との視角の比較が候補です。複数の説明が研究されており、大気がレンズのように月を大きくするためだと考えるだけでは、この知覚現象は説明できません。","check":"地形を消し、2つの円を同じ高さに並べます。描画した円の半径が等しいことを確認します。","game":"風景の中で巨大に見える月の印を、背景を消して同じサイズの印と対応させる。","caution":"この小さな平面図は、実際の空を見上げる体験を再現しません。写真で望遠撮影した巨大な月とは区別します。","fact":"模式図の2つの月は、どちらも半径28の円です。地形だけを変えています。","sources":[{"title":"Michael Bach: Moon Illusion","url":"https://michaelbach.de/ot/sze-moon/index.html"}],"theory":["奥行きの推定","周囲との比較","経験と予測"]},{"id":"G22","name":"ホロウマスク錯視","english":"Hollow-face illusion","category":"depth","aliases":["凹面顔錯視","ホロウフェイス錯視"],"type":"錯視","experience":"模式図","animate":false,"sliderLabel":"","question":"顔だと分かると、凹凸の解釈はどう偏りそうですか？","observation":"内側へへこんだ顔のマスクを、外側へ出た普通の顔として見てしまう現象です。この例は顔の手がかりと断面を示す模式図で、実物の反転体験を保証するものではありません。","mechanism":"二次元の像だけでは凹凸が一意に決まらず、顔は普通は外側へ出ているという経験や、照明の解釈が判断を偏らせます。形への親しみや両眼視の条件も関わり、単なる明暗の逆転だけとは言い切れません。","check":"確認で顔を横から切った断面を表示し、鼻に相当する部分がマスクの奥へへこんだ設定であることを示します。","game":"凹んだ仮面がこちらを向くように見える演出を、視点を変える謎解きに使う。","caution":"精密な三次元マスクや照明を再現していません。顔の凹凸が反転して見えるかを測る検査には使えません。","fact":"模式図の物体断面は鼻の位置が奥へへこむ凹面、見えの候補は逆向きの凸面として描き分けています。","sources":[{"title":"Michael Bach: Rotating face mask — hollow faces","url":"https://michaelbach.de/ot/fcs-hollowFace/index.html"}],"theory":["経験と予測","奥行きの推定","明暗と照明"]},{"id":"G23","name":"ペンローズの三角形","english":"Penrose triangle","category":"depth","aliases":["不可能三角形","不可能な三本柱"],"type":"錯視","experience":"条件付き体験","animate":false,"sliderLabel":"","question":"3つの角をたどると、手前と奥の関係は両立しますか？","observation":"それぞれの角だけなら立体として読めても、全体をつなぐと奥行きの関係に矛盾が生じる図です。形を一度に眺めるだけでなく、辺から辺へ順にたどってみます。","mechanism":"視覚が局所的な輪郭や面の接続から立体を組み立てると、全体では成立しない接続も一見もっともらしく見えます。これは図形全体の矛盾と局所の自然さの食い違いで、画面上の線そのものが不可能という意味ではありません。","check":"確認で接合部を分け、同じ形に投影できる開いた3本の棒の奥行き差を示します。投影で重なる端が実空間で接続するとは限りません。","game":"決まったカメラ位置でだけ足場がつながる、視点変更型のパズルにする。","caution":"不可能なのは図が暗示する一体の立体です。同じ見かけを一視点から作る、切れた立体模型は作れます。","fact":"例は3本の直交する棒を投影した形です。初めと終わりは画面で重なりますが、三次元座標では一致しません。","sources":[{"title":"Donaldson & Macpherson: Impossible Triangle — The Illusions Index","url":"https://www.illusionsindex.org/i/impossible-triangle"}],"theory":["奥行きの推定","まとまりと補完","経験と予測"]},{"id":"G24","name":"ペンローズの階段","english":"Penrose stairs","category":"depth","aliases":["不可能階段","無限階段"],"type":"錯視","experience":"模式図","animate":false,"sliderLabel":"","question":"上り続けて一周すると、同じ高さへ戻れるでしょうか？","observation":"各部分では上り階段として読めるのに、一周して出発点へ戻ってしまう不可能図形です。この例では、段のつながりと高さの矛盾を見つけるための模式図を示します。","mechanism":"局所の段差や面のつながりは自然に読めても、閉じた経路全体の高さは整合しません。各段の上昇を足し合わせる判断と、絵の接続を追う判断が異なるため、矛盾を知っていても立体らしさが残る場合があります。","check":"確認で階段を一列に開き、上った分だけ終点が高くなることを示します。同じ地点へ閉じる条件と両立しません。","game":"無限に回る階段のどの接続が視点依存かを見抜き、出口を開く。","caution":"本例は高さの矛盾を説明する独自の模式図です。実物の連続した閉路が永久に上昇できるという意味ではありません。","fact":"一周12段すべてを上り段とすると高低差の合計は正です。同じ場所・高さへ戻る閉路の高低差の合計0とは両立しません。","sources":[{"title":"Donaldson & Macpherson: Penrose Stairs — The Illusions Index","url":"https://www.illusionsindex.org/i/penrose-stairs"}],"theory":["奥行きの推定","まとまりと補完","経験と予測"]},{"id":"C01","name":"同時明るさ対比","english":"Simultaneous brightness contrast","category":"light","aliases":["明度対比","明るさの誘導"],"type":"錯視","experience":"体験","animate":false,"sliderLabel":"周囲の明暗差","question":"左右の小さな灰色の正方形は、同じ明るさに見えますか？","observation":"同じ描画色の灰色でも、暗い背景の上では明るく、明るい背景の上では暗く見えることがあります。背景の差を小さくし、見えの差がどう変わるか比べてください。","mechanism":"明るさの知覚には、その場所の入力だけでなく周囲との比較が関わります。早い視覚処理や局所的な対比の寄与を示す研究がありますが、刺激条件によって複数の処理段階が関わるため、すべてを単一の網膜回路で説明することはできません。","check":"周囲を共通の灰色に替え、同じ色の帯で2枚をつなぎます。中央の正方形のRGB値は変えません。","game":"同じ鍵を明暗の違う部屋に置き、色を見抜くと近道が開く。","caution":"同じRGB値は同じ表示指定を意味します。画面の場所による輝度むらや観察環境まで等しいとは限りません。","fact":"2枚の中心部は常にRGB(128,128,128)、90×90の正方形です。","sources":[{"title":"Michael Bach — Brightness induction","url":"https://michaelbach.de/ot/lum-inducedBrightness/index.html"}],"theory":["周囲との比較"]},{"id":"C02","name":"チェッカーシャドウ錯視","english":"Checker-shadow illusion","category":"light","aliases":["アデルソンのチェッカーシャドウ"],"type":"錯視","experience":"条件付き体験","animate":false,"sliderLabel":"","question":"影の外のAと、影の中のBのマスを比べてください。","observation":"影の中の明るいマスBが、影の外の暗いマスAより明るい素材に見えることがあります。この独自作図では、比較する2マスの塗りを同じRGB値にそろえています。","mechanism":"視覚は画像の明暗を、表面の反射の違いと照明・影の違いに分けて解釈しようとします。格子の配置、周囲の対比、影の手掛かりが表面の明るさの判断に関わります。単に光量を測る働きではなく、文脈に依存する推定です。","check":"格子と影を隠してAとBだけを共通の背景上に残し、同じ描画色であることを確認します。","game":"影に入っても変わらない床材を手掛かりに、正しい足場を選ぶ。","caution":"原図の転載ではなく影の配置を簡略化した作図です。原図ほど強く見えない場合があります。","fact":"AとBの塗りはどちらもRGB(138,138,138)。Bは影の描画後にこの値で設定しています。","sources":[{"title":"Michael Bach — Adelson’s Checker-shadow illusion","url":"https://michaelbach.de/ot/lum-adelsonCheckShadow/index.html"}],"theory":["周囲との比較","色と明るさの推定"]},{"id":"C03","name":"ホワイト錯視","english":"White’s illusion","category":"light","aliases":["ムンカー・ホワイト錯視（無彩色）"],"type":"錯視","experience":"体験","animate":false,"sliderLabel":"縞の太さ","question":"左右の縦列にある灰色の断片は、同じ灰色に見えますか？","observation":"白黒の縞のどちらに置かれるかによって、同じ灰色の断片が異なる明るさに見えます。単純に接している黒や白の面積を数えるだけでは、見えの向きを説明しにくい例です。","mechanism":"縞の向き、境界のつながり、面のまとまりなどが判断に関与します。大小さまざまな範囲で明暗を比較して応答を調整する説明や、透明な面・照明の推定による説明が提案されています。単純な側抑制だけでは、見えの向きを十分に予測できません。","check":"白黒の縞だけを外します。残るすべての灰色の断片は同じ描画色です。","game":"同じ材質の通路を縞の背景で別物に見せ、背景を消すスイッチで検証させる。","caution":"C10は色の変化を扱う近縁の効果です。ここでは無彩色の明るさの差に絞っています。","fact":"灰色の断片の内部はすべてRGB(150,150,150)です。","sources":[{"title":"Michael Bach — Munker-White Illusion","url":"https://michaelbach.de/ot/lum-white/index.html"}],"theory":["周囲との比較","色と明るさの推定","輪郭と傾き"]},{"id":"C04","name":"マッハバンド","english":"Mach bands","category":"light","aliases":["マッハ帯"],"type":"錯視","experience":"条件付き体験","animate":false,"sliderLabel":"明暗の勾配の幅","question":"灰色が変わり始める所と変わり終わる所に、細い帯が見えますか？","observation":"平坦な暗部と明部の間を滑らかにつないだだけでも、勾配の端に暗い帯や明るい帯が見えることがあります。帯の強さは控えめで、画面や観察距離にも左右されます。","mechanism":"明暗の分布を大小さまざまな範囲で処理し、境界や帯を検出する働きと関連します。古典的には隣り合う場所の応答を抑え合う側抑制で説明されますが、詳しい帯の生じ方には、勾配の形や複数の範囲での比較・応答の調整を考える必要があります。","check":"下に描画値の断面を出します。平坦・単調な増加・平坦の順で、境界に極端な明暗の帯は加えていません。","game":"滑らかな坂の照明が段差に見える場所を作り、輪郭表示で本当の地形を確認させる。","caution":"グラフはRGB描画値で、実測した輝度ではありません。階調不足や表示圧縮による実際の帯とは区別します。","fact":"各画素はR=G=B。中央の勾配は64から204へ単調に増加し、余分な明暗ピークはありません。","sources":[{"title":"Michael Bach — Mach Bands","url":"https://michaelbach.de/ot/lum-MachBands/index.html"}],"theory":["周囲との比較","輪郭と傾き"]},{"id":"C05","name":"ヘルマン格子","english":"Hermann grid","category":"light","aliases":["ヘルマンの格子錯視"],"type":"錯視","experience":"体験","animate":false,"sliderLabel":"格子の幅","question":"視線を移したとき、直接見ていない交差点に暗い斑点が見えますか？","observation":"白い道路の交差点に、薄暗い斑点が現れることがあります。その場所を直接見ると斑点は弱まり、別の交差点に移ったように感じられます。画面には暗い斑点を描いていません。","mechanism":"周辺視での空間処理や線の配置が関わります。中心と周囲で反対に応答する網膜の仕組みだけでは、線をわずかに曲げると効果が弱まる結果を説明できません。まっすぐな輪郭など、線の幾何学的な条件も含めた検討が必要です。","check":"黒い区画を取り除き、交差点と道路を同じ白い面として表示します。比較用の2領域も同じ白です。","game":"格子に偽の汚れが見える探索面を作り、注視位置で消えること自体を手掛かりにする。","caution":"見える斑点の数や強さを視力・性格の判定に使うことはできません。格子の大きさでも変わります。","fact":"格子の道路も交差点もRGB(255,255,255)。交差点用の暗い色は描画していません。","sources":[{"title":"Michael Bach — Hermann Grid","url":"https://michaelbach.de/ot/lum-herGrid/index.html"},{"title":"Michael Bach — Grid Illusions, curved, Hermann Grid","url":"https://michaelbach.de/ot/lum-herGridCurved/index.html"}],"theory":["周囲との比較","輪郭と傾き"]},{"id":"C06","name":"きらめき格子","english":"Scintillating grid","category":"light","aliases":["きらめく格子錯視","シンチレーティング・グリッド"],"type":"錯視","experience":"体験","animate":false,"sliderLabel":"","question":"格子を見回すと、白い点の中に黒い点が現れたり消えたりしますか？","observation":"灰色の格子上の白い点に、瞬間的な黒い斑点が見えることがあります。画像は静止しており、点の色も固定です。直接見ている点では効果が弱くなる傾向があります。","mechanism":"ヘルマン格子に近い配置ですが、白い円を加えたことで強い明滅感が生じます。眼球運動や注意、輪郭配置が関わると研究されています。両格子の機構がどこまで共通かは確定しておらず、同じ説明で片付けない方が適切です。","check":"灰色の格子と黒い背景を外し、28個の白い円だけを残します。円の内部は一度も黒くしていません。","game":"動かない点が変化したように見える仕掛けを、録画フレーム比較で見破る謎に使う。","caution":"実際に画面を点滅させる必要はありません。小さすぎる表示では効果が変わります。","fact":"28個の円は固定位置にあり、円の内部は常にRGB(255,255,255)です。","sources":[{"title":"Michael Bach — Grid Illusions – Scintillating Grid","url":"https://michaelbach.de/ot/lum-scGrid/index.html"}],"theory":["周囲との比較","輪郭と傾き"]},{"id":"C07","name":"クレイク＝オブライエン＝コーンスウィート錯視","english":"Craik–O’Brien–Cornsweet illusion","category":"light","aliases":["コーンスウィート錯視","COC錯視"],"type":"錯視","experience":"条件付き体験","animate":false,"sliderLabel":"境界の強さ","question":"境界から離れた左半分と右半分は、同じ灰色に見えますか？","observation":"中央の境界にだけ明暗の勾配を置くと、左右の広い面まで違う明るさに見えることがあります。境界から離れた面は同じ灰色で、明暗差を面全体には描いていません。","mechanism":"視覚は、境界の明暗差を使って面全体の明るさを判断します。境目だけの明暗の変化が、面の内部まで明るさが違うように感じさせる例です。境界の情報がどの段階でどのように広がるかについては、一つの処理だけに断定しません。","check":"中央の勾配を覆います。残る左右の広い灰色の面はどちらもRGB(150,150,150)です。","game":"境界だけを変える装置で部屋全体の明るさが変わったように見せ、境界を隠すと解ける。","caution":"強すぎる境界や画面の階調の粗さでは、面全体の差より実際の縁が目立ちます。","fact":"中央72pxの範囲だけに勾配があります。その外側の面の描画値は左右で同一です。","sources":[{"title":"Michael Bach — Craik-O’Brien-Cornsweet illusion","url":"https://michaelbach.de/ot/lum-cobc/index.html"}],"theory":["周囲との比較","補完","色と明るさの推定"]},{"id":"C08","name":"水彩錯視","english":"Watercolor illusion","category":"light","aliases":["ウォーターカラー効果"],"type":"錯視","experience":"条件付き体験","animate":false,"sliderLabel":"輪郭の太さ","question":"二重の波形の内側に、薄い橙色が広がって見えますか？","observation":"暗い紫の輪郭の内側に明るい橙色の輪郭を沿わせると、白い内部まで薄く色づいて見えることがあります。右の単独の橙色の輪郭とも比べてください。内部は白いままです。","mechanism":"隣接する二重輪郭から、明るい方の色が囲まれた面へ広がって見える長距離の色同化です。輪郭の明暗、配置、幅、形状が強さを左右します。面のまとまりや図と地の分離との関係が研究され、単純な色の混色とは異なります。","check":"左側の紫の輪郭を外して、橙色だけにします。内部の白い描画色は変更していません。","game":"塗りつぶしていない地図の領域を輪郭だけで色分けして見せ、境界の除去で検証する。","caution":"薄い効果です。縮小や画面の色再現に左右され、すべての人に同じ色づきが生じるとは限りません。","fact":"輪郭以外の内部と背景はどちらもRGB(255,255,255)。内部に橙色の面は描いていません。","sources":[{"title":"Michael Bach — Watercolor Illusion","url":"https://michaelbach.de/ot/col-watercolor/index.html"}],"theory":["周囲との比較","補完","色と明るさの推定"]},{"id":"C09","name":"ネオン色拡散","english":"Neon color spreading","category":"light","aliases":["ネオンカラー効果"],"type":"錯視","experience":"条件付き体験","animate":false,"sliderLabel":"","question":"青緑の線の間に、薄い円盤や光の膜が見えますか？","observation":"黒い線とつながった色付きの短い線のまわりに、淡い色の面が広がって見えることがあります。色付きの線の間は白く、光る円盤や半透明の面を実際には描いていません。","mechanism":"線の連続性と境界の配置が、色の広がりや透明な面の知覚に関係します。外側の線を消したり接続を崩したりすると効果が弱まることが報告されています。複数の機構が提案されており、単一の説明が確定した現象ではありません。","check":"黒い延長線だけを外します。青緑の線の位置・色と、その間の白い面は同じです。","game":"細い発光線から透明な障壁があるように見せ、線を切って通路を見つける。","caution":"実際の発光や透明度とは区別します。画面の縮小で細線が混ざると、別の実際の色平均が加わります。","fact":"青緑に塗っているのは中心から伸びる細線だけで、線の間は白です。","sources":[{"title":"Michael Bach — Colour Spreading","url":"https://michaelbach.de/ot/col-neon/index.html"}],"theory":["補完","輪郭と傾き","色と明るさの推定"]},{"id":"C10","name":"ムンカーの色同化","english":"Munker color assimilation","category":"light","aliases":["ムンカー錯視","ムンカー・ホワイト錯視（有彩色）"],"type":"錯視","experience":"体験","animate":false,"sliderLabel":"縞の太さ","question":"左右の縦列の緑色の断片は、同じ色に見えますか？","observation":"細い縞と組み合わされた同じ緑色が、左右で違う色調に見えることがあります。間に挟まる縞の色によって見えが変わり、縞を外すと同じ緑色の断片だけが残ります。","mechanism":"細かな色の配置によって対象の見えが周囲の色へ近づく、色同化の例です。縞の幅や色、配置が重要で、単なる広い背景との同時色対比とは区別します。C03のホワイト錯視に近い構成ですが、ここでは色調の変化を扱います。","check":"色の縞を外し、同じ緑の断片だけを共通の背景上に表示します。","game":"同じチーム色の駒を縞の制服で別チームに見せ、縞を外す道具で正体を判定する。","caution":"縮小で線がつぶれると、視覚の錯視だけでなく表示上の色平均も起きます。大きめの表示で確認してください。","fact":"緑の断片の内部はすべてRGB(101,203,166)です。","sources":[{"title":"Michael Bach — Munker Illusion","url":"https://michaelbach.de/ot/col-Munker/index.html"},{"title":"Akiyoshi Kitaoka — Munker illusion","url":"https://www.psy.ritsumei.ac.jp/~akitaoka/Munkere.html"}],"theory":["周囲との比較","色と明るさの推定"]},{"id":"C11","name":"同時色対比","english":"Simultaneous color contrast","category":"color","aliases":["色の対比"],"type":"錯視","experience":"条件付き体験","animate":false,"sliderLabel":"周囲の色の強さ","question":"赤みの背景と青緑の背景に置いた灰色を比べてください。","observation":"同じ灰色でも、広い周囲の色と反対寄りの色味を帯びて見えることがあります。背景の彩りを弱めていくと、左右の灰色の違いも小さくなるかを観察してください。","mechanism":"色は独立したRGBの読み取りではなく、周囲の色信号との比較にも左右されます。色の反対方向の応答や空間的な対比が関わります。長く見つめると時間的な色順応も重なるため、同時対比と順応の寄与は完全には分離できません。","check":"背景の色を共通の灰色に替えます。中央の灰色のRGB値は変更していません。","game":"同じ無彩色の石が別の宝石に見える部屋を作り、中立背景の鑑定台で確認させる。","caution":"補色の方向や強さは色・明るさ・観察者により異なります。「赤の補色は必ず緑」と固定しません。","fact":"中央2枚の塗りはどちらもRGB(160,160,160)です。","sources":[{"title":"Michael Bach — Colour Contrast","url":"https://michaelbach.de/ot/col-context/index.html"},{"title":"Peter Gouras — Color Vision, Webvision","url":"https://webvision.med.utah.edu/book/part-vii-color-vision/color-vision/"}],"theory":["周囲との比較","色と明るさの推定"]},{"id":"C12","name":"色の恒常性","english":"Color constancy","category":"color","aliases":["色恒常性"],"type":"関連現象","experience":"模式図","animate":false,"sliderLabel":"照明の色の違い","question":"照明色を変えて描いた2つの場面で、白いカードの素材を考えてください。","observation":"暖色と寒色の照明を模した場面では、カードに指定したRGB値は異なります。それでも照明を割り引いて同じ白い素材だと解釈できる、という色恒常性の働きを示す作図です。","mechanism":"照明のスペクトルが変わっても、表面の色の見えがある程度保たれる現象です。色順応、周囲の表面との関係、照明の手掛かりなどが関わります。完全な不変性ではなく、曖昧な照明条件では判断が分かれることもあります。","check":"2枚のカードを中立の背景上に取り出し、実際には異なるRGB値を与えたことを表示します。","game":"昼と夕方で色が変わった画像から同じ道具を探す。色以外に形や記号も用意する。","caution":"RGBで照明を近似した模式図であり、物理的な照明や校正された色恒常性実験を再現していません。","fact":"2枚のカードは同じ形ですが、暖色側と寒色側で異なるRGB値を指定しています。","sources":[{"title":"Peter Gouras — Color Vision, section 7: Color Constancy and Double Opponency, Webvision","url":"https://webvision.med.utah.edu/book/part-vii-color-vision/color-vision/"},{"title":"Michael Bach — No Red Strawberries","url":"https://michaelbach.de/ot/col-strawbsNotRed/index.html"}],"theory":["色と明るさの推定","順応","周囲との比較"]},{"id":"C13","name":"陰性残像","english":"Negative afterimage","category":"color","aliases":["負の残像","補色残像"],"type":"関連現象","experience":"条件付き体験","animate":true,"maxSeconds":12,"sliderLabel":"","question":"再生後、中心の＋を無理なく8秒見て、灰色へ切り替わった場所を観察してください。","observation":"紫の円が灰色に替わったあとに、薄い緑寄りの円が見えることがあります。再生中の色の提示は最大8秒で、その後は灰色のままです。残像の色や強さには個人差があります。","mechanism":"同じ場所に同じ色が入り続けると、視覚の応答が変わります（順応）。中立の面へ替えたときに、反対方向の色の偏りとして残像が現れることがあります。目の奥で信号を受け渡す神経細胞が関わるという研究もあり、単に色が目に焼き付くという意味ではありません。","check":"灰色の画面だけを出します。紫の円があった場所にも、緑色の円は描かれていません。","game":"短い残像を任意の演出に使う場合でも、手掛かりは通常表示でも読めるようにする。","caution":"8秒では弱い・見えない場合があります。効果を強めるために長時間続ける必要はありません。停止すると色の提示を終了します。","fact":"8秒以降の観察面はRGB(176,176,176)。緑色の残像をプログラムが描くことはありません。","sources":[{"title":"Michael Bach — Lilac Chaser","url":"https://michaelbach.de/ot/col-lilacChaser/index.html"}],"theory":["順応"]},{"id":"C14","name":"トロクスラー消失","english":"Troxler fading","category":"completion","aliases":["トロクスラー効果"],"type":"関連現象","experience":"条件付き体験","animate":false,"sliderLabel":"斑点のコントラスト","question":"中心の＋を数秒見て、周辺の薄い斑点を追わずに観察してください。","observation":"視線を中心に保つと、周辺のぼんやりした斑点が薄れたり、背景へ溶け込んだりすることがあります。視線を動かすと再び見えやすくなります。表示自体は変化していません。","mechanism":"安定した刺激への順応と、境界を更新する眼球運動などの働きが関わります。弱い周辺刺激の情報が目立たなくなると、周囲の背景に近い見えが優勢になります。盲点のように、その場所に光受容器がないことによる消失ではありません。","check":"各斑点の位置に輪郭を加え、画面上から削除されていないことを確認します。","game":"注視すると消える環境装飾に使い、必要な目標や操作説明をこれだけに依存させない。","caution":"見え方は視線の安定、斑点のコントラスト、距離に依存します。プログラムによるフェードアウトは行いません。","fact":"12個の斑点の位置と透明度は時間で変更せず、すべて静止しています。","sources":[{"title":"Michael Bach — Lilac Chaser","url":"https://michaelbach.de/ot/col-lilacChaser/index.html"}],"theory":["順応","補完"]},{"id":"C15","name":"生理的盲点","english":"Physiological blind spot","category":"completion","aliases":["マリオット盲点"],"type":"関連現象","experience":"条件付き体験","animate":false,"sliderLabel":"＋と点の間隔","question":"左目を閉じ、右目で＋を見ながら、無理のない範囲で画面との距離を変えてください。","observation":"適切な距離では、右側の黒い点が見えなくなることがあります。点を直接見ると再び見えます。点は消しておらず、片目の視野にある生理的な盲点を利用しています。","mechanism":"視神経の線維が眼球を出る視神経乳頭には光受容器がなく、その位置に対応する視野で入力が得られません。普段はもう片方の目の入力や周囲からの補完があるため、明瞭な穴としては気づきにくくなっています。","check":"点の位置を枠と矢印で示します。右の点へ視線を移すと、点が描かれたままであることを確認できます。","game":"任意の観察実験として設置し、盲点を見つけなくても本編を進められる構成にする。","caution":"適切な距離は画面の実寸で変わります。健康状態の検査や診断をするデモではありません。","fact":"黒い点を非表示にする処理はありません。スライダーは点の水平位置だけを変えます。","sources":[{"title":"Michael Bach — Perceive your blind spot","url":"https://michaelbach.de/ot/cog-blindSpot/index.html"}],"theory":["補完"]},{"id":"C16","name":"知覚的フィリングイン","english":"Perceptual filling-in","category":"completion","aliases":["知覚的補填","盲点での補完"],"type":"関連現象","experience":"条件付き体験","animate":false,"sliderLabel":"白い切れ目の幅","question":"C15と同じ片目条件で、青い線の白い切れ目が盲点に入る距離を探してください。","observation":"白い切れ目が盲点に入ると、左右の青い線が続いているように見える場合があります。C15が入力の欠けを扱うのに対し、こちらは欠けた場所に何が見えるかを観察します。","mechanism":"情報が不足する場所の見えは、周囲の色や線の連続性によって補われることがあります。フィリングインは複数の現象を含む呼び名で、脳が画面のように画素を塗るという断定ではありません。ここでは盲点での線の連続に限定しています。","check":"切れ目の実際の境界を点線で示します。青色を埋める処理はしておらず、白い切れ目が残っています。","game":"欠けた模様を補って読む体験を、隠し通路の予測と実形状の確認を分けた謎にする。","caution":"C15の条件が成立していないと体験できません。白い隙間が単に消えるというCG演出とは区別します。","fact":"青い帯には実際に白い切れ目があります。時間がたっても隙間を埋める描画は行いません。","sources":[{"title":"Michael Bach — Perceive your blind spot","url":"https://michaelbach.de/ot/cog-blindSpot/index.html"},{"title":"Thielen et al. (2024) — Amodal completion across the brain: The impact of structure and knowledge","url":"https://europepmc.org/articles/PMC11185268"}],"theory":["補完"]},{"id":"C17","name":"カニッツァの三角形","english":"Kanizsa triangle","category":"completion","aliases":["カニッツァ錯視","主観的輪郭"],"type":"錯視","experience":"体験","animate":false,"sliderLabel":"切り口の向き","question":"3つの欠けた円の手前に、白い三角形が浮かんで見えますか？","observation":"互いに向き合う円の切り口が、描かれていない三角形の辺を作って見えることがあります。切り口を回転させると、同じ位置の円でも三角形のまとまりが弱まります。","mechanism":"離れた境界を連続した輪郭や手前の面としてまとめる、モーダルな補完の代表例です。視覚野での輪郭処理や領域間の相互作用が研究されています。単に三角形を知識として想像するだけでなく、実際の輪郭らしい見えを伴う点が特徴です。","check":"切り口を外向きに回します。円と切り欠きだけを描いており、中央の三角形の面や辺は描いていません。","game":"向きをそろえた欠けた円が示す隠れた三角形を、床のスイッチ配置の手掛かりにする。","caution":"C18のアモーダル補完は、隠れた部分の輪郭が目の前に見える必要がない点で異なります。","fact":"描画しているのは3つの円とその切り欠きだけ。中央の三角形の辺には線を引いていません。","sources":[{"title":"Michael Bach — Kanizsa Illusion","url":"https://michaelbach.de/ot/cog-Kanizsa/index.html"},{"title":"Thielen et al. (2024) — Amodal completion across the brain: The impact of structure and knowledge","url":"https://europepmc.org/articles/PMC11185268"}],"theory":["補完","輪郭と傾き"]},{"id":"C18","name":"アモーダル補完","english":"Amodal completion","category":"completion","aliases":["遮蔽された形の補完"],"type":"関連現象","experience":"体験","animate":true,"sliderLabel":"遮蔽物をずらす","question":"板の後ろの橙色は、1つの円につながっているように感じますか？","observation":"一部が板に隠れていても、橙色の輪郭が後ろでつながる円だと解釈しやすくなります。ただし隠れた形は画像だけから一意には決まらず、別条件では切れた物体も置けます。","mechanism":"見えない部分そのものの色や輪郭を前面に見ることなく、遮蔽された物体を一続きとして捉える現象です。輪郭の良い連続、対称性、物体の知識などが影響します。どの脳領域がどの段階を担うかには、条件による違いや未解決点があります。","check":"板を横へ動かして実際に描いた形を見せます。別条件で隠れた形を替えると、初期像が同じでも実形状は異なります。","game":"遮蔽物の裏を予測して回り込む謎にし、連続しそうな形と実際の形を意図的に食い違わせる。","caution":"初期状態の中央の板があるときだけ、2種類の隠れた形が同じ像になります。推測した形を正解と断定しません。","fact":"板の背後の形は、別条件で完全な円または中央が欠けた円に変わります。初期の可視部分は同じです。","sources":[{"title":"Thielen et al. (2024) — Amodal completion across the brain: The impact of structure and knowledge","url":"https://europepmc.org/articles/PMC11185268"}],"theory":["補完","輪郭と傾き"]},{"id":"C19","name":"エーレンシュタイン錯視","english":"Ehrenstein subjective contours","category":"completion","aliases":["エーレンシュタインの明るい円盤"],"type":"錯視","experience":"条件付き体験","animate":false,"sliderLabel":"放射線の本数","question":"線の端に囲まれた中央に、背景より明るい円盤が見えますか？","observation":"黒い放射線が一定の距離で途切れると、中央に明るい円盤と輪郭が見えることがあります。中心と周囲の白は同じで、実際の円周を加えると印象が変わる場合があります。","mechanism":"系統的に並ぶ線の終端から、手前の面や主観的輪郭が構成される例です。カニッツァの図形やネオン色拡散とも関連します。視覚皮質の輪郭処理が関与する証拠がありますが、中心の明るさを単純な同時対比だけで説明するのは不十分です。","check":"中心に本当の細い円周を加え、主観的な円盤の印象と比べます。白い面の描画色は同じです。","game":"放射状の傷だけから円形の隠しボタンが浮くように見せ、実輪郭の表示で確かめる。","caution":"線の数・太さ・長さ・開口の大きさで印象が変わります。円を加えても変化が弱い場合があります。","fact":"線以外の中心と周囲はRGB(255,255,255)で、中心を明るく塗ってはいません。","sources":[{"title":"Michael Bach — Ehrenstein Illusion","url":"https://michaelbach.de/ot/lum-Ehrenstein/index.html"}],"theory":["補完","輪郭と傾き","周囲との比較"]},{"id":"C20","name":"色順応","english":"Chromatic adaptation","category":"color","aliases":["クロマティック・アダプテーション"],"type":"関連現象","experience":"模式図","animate":true,"sliderLabel":"説明モデルの進み","question":"色の偏った入力と、中立の基準を調整する考え方を比べてください。","observation":"右の四角は、暖色から中立に近づくようプログラムで色を変えています。これは色順応の概念図です。画面が変わることと、観察者自身の色の見えが変わることを区別してください。","mechanism":"色順応は、直前までの色刺激に応じて色への応答や中立の基準が変わる時間的な調整です。色恒常性に寄与し、刺激を外したときの陰性残像とも関連します。C11の同時色対比とは空間と時間の条件が異なり、自然な観察では両方が重なります。","check":"左右の実際のRGB値を表示します。右の変化が描画による説明であり、順応の測定結果ではないことを確認します。","game":"部屋を移ると白の基準が変わるという発想を、任意に切り替えられる仮想の照明フィルタに使う。","caution":"色順応の時間経過や大きさを計測・再現するモデルではありません。誘導刺激を長時間見続ける操作はありません。","fact":"右の色はコードがRGB値を補間しています。ユーザーの順応を読み取っているわけではありません。","sources":[{"title":"Michael Bach — Colour Fan","url":"https://michaelbach.de/ot/col-colorFan/index.html"},{"title":"Peter Gouras — Color Vision, Webvision","url":"https://webvision.med.utah.edu/book/part-vii-color-vision/color-vision/"}],"theory":["順応","色と明るさの推定"]},{"id":"C21","name":"色立体視","english":"Chromostereopsis","category":"color","aliases":["クロモステレオプシス"],"type":"錯視","experience":"条件付き体験","animate":false,"sliderLabel":"背景の明るさ","question":"同じ大きさの赤と青の輪が、前後に分かれて見えますか？","observation":"暗い背景上の赤と青が、同じ平面ではなく前後に離れて見えることがあります。背景の明るさを変えたり片目で見たりすると、奥行きの強さや向きが変わる人もいます。","mechanism":"眼の色収差や両眼の入力の違い、明るさの差などが関わる複合的な現象です。色が違えば必ず一定の奥行きに見えるわけではなく、瞳孔や背景条件、個人の眼の性質によって、効果が弱い・消える・反転する場合があります。","check":"位置と半径を保ったまま輪を共通の灰色にし、色による手掛かりを取り除きます。","game":"前後に浮く装飾や任意の奥行き演出に使い、衝突判定は別の形や影でも分かるようにする。","caution":"個人差が大きい現象です。赤が必ず手前、青が必ず奥とは限りません。点滅は使っていません。","fact":"すべての輪は同じ半径で、両眼用の別画像や3D変換、影を使わず1枚の平面へ描いています。","sources":[{"title":"Michael Bach — Chromostereopsis demonstration","url":"https://michaelbach.de/ot/col-chromostereopsis/index.html"}],"theory":["色と明るさの推定"]},{"id":"C22","name":"ベンハムのこま","english":"Benham’s top","category":"color","aliases":["ベンハムの円盤","パターン誘発主観色"],"type":"錯視","experience":"模式図","animate":true,"sliderLabel":"円盤の向き","question":"白黒の半円と弧の配置を観察してください。再生は構造を示す低速回転です。","observation":"適切な速度で回る白黒模様から、実際には描かれていない色が見えることがある現象です。ここでは白黒円盤の構造だけを低速で示し、主観色を誘発する回転は行いません。","mechanism":"空間的な白黒パターンと時間変化の組合せが、色の処理に偏りを生むと考えられます。色に関わる応答の時間特性や網膜内の相互作用などが提案されていますが、完全に確定した単一の説明ではありません。回転方向や速度で見えも変わります。","check":"円盤を止め、拡大した白黒の構成部分を示します。円盤の画素ではR=G=Bです。","game":"「白黒から色」という発想を物語や回転機構の意匠に使う。必須情報を主観色で符号化しない。","caution":"高速回転・フリッカーによる体験は省いています。画面のフレームレートは実験結果にも影響します。","fact":"円盤は無彩色だけで構成しています。再生速度は構造を見る低速で、真の誘発条件を模していません。","sources":[{"title":"Michael Bach — Benham’s Top","url":"https://michaelbach.de/ot/col-Benham/index.html"}],"theory":["色と明るさの推定"]},{"id":"C23","name":"マッカロー効果","english":"McCollough effect","category":"color","aliases":["方位に随伴する色残効"],"type":"関連現象","experience":"模式図","animate":false,"sliderLabel":"","question":"「縞の向き」と「後に見える色」が結び付く関係を模式図で確認してください。","observation":"異なる向きと色を組み合わせた縞への順応後、白黒の縞に向きに応じた色が見えることがある現象です。このページは関係図だけを示し、色付き縞による誘導を実施しません。","mechanism":"色と輪郭の向きの組合せに依存する残効で、一般的な短い陰性残像とは性質が異なります。長く続く場合があり、単純な受容器の疲れだけでは説明できません。学習や視覚の調整との関係も研究されていますが、仕組みには未解決点があります。","check":"テスト用の縞を拡大し、描いている色が白と黒の2色であることを表示します。色のチップは説明用です。","game":"向きに結び付く記憶という発想を、通常の色表示と回転操作を使う謎に置き換える。","caution":"持続する残効を避けるため誘導体験はありません。短い残像デモC13と同じ時間尺度だと思わないでください。","fact":"色付きの縞の交互提示や長時間の誘導はありません。色チップは無彩色の縞から離して描いています。","sources":[{"title":"Michael Bach — McCollough Effect","url":"https://michaelbach.de/ot/col-McCollough/index.html"}],"theory":["順応","輪郭と傾き"]},{"id":"C24","name":"プルキンエ移行","english":"Purkinje shift","category":"color","aliases":["プルキンエ現象"],"type":"関連現象","experience":"模式図","animate":true,"sliderLabel":"模式図の明所から暗所へ","question":"明所と暗所で、光の波長に対する感度の重みが変わる概念図を見てください。","observation":"暗い場所では、赤い光に比べて青緑寄りの光が相対的に明るく感じられます。これは暗所で青色が鮮やかに見えるという意味ではなく、光の色による明るさの感じ方の変化です。","mechanism":"明るい場所で色を見る錐体と、暗い場所で主に働く桿体では、光の波長への感度が異なります。暗くなると両者の寄与が変わりますが、実際の暗順応には時間と照明条件が必要です。画面を黒く塗るだけでは、この視覚条件を作れません。","check":"2本の感度曲線を同時に示します。曲線は定性的な説明用で、測定データや画面輝度ではありません。","game":"夜に赤い標識が目立ちにくくなる発想を、色だけに依存しない夜間ステージ設計に生かす。","caution":"暗順応の実験は行いません。曲線の高さと幅は模式的で、個人の感度や正確な分光視感効率を示しません。","fact":"スライダーは描画した説明曲線を切り替えるだけで、観察者の暗順応を測定・再現しません。","sources":[{"title":"Wolfe & Ali (2015) — Dark adaptation and purkinje shift: a laboratory exercise in perceptual neuroscience (abstract read)","url":"https://europepmc.org/article/MED/25838803"},{"title":"Michael Kalloniatis & Charles Luu — Light and Dark Adaptation, Webvision","url":"https://webvision.med.utah.edu/book/part-viii-psychophysics-of-vision/light-and-dark-adaptation/"},{"title":"Helga Kolb — Photoreceptors, Webvision","url":"https://webvision.med.utah.edu/book/part-ii-anatomy-and-physiology-of-the-retina/photoreceptors/"}],"theory":["順応","色と明るさの推定"]},{"id":"M01","name":"ファイ現象（狭義）","english":"Pure phi phenomenon","category":"motion","aliases":["純粋ファイ運動"],"type":"錯視","experience":"模式図","animate":false,"sliderLabel":"提示間隔（模式）","question":"「物体が移動」と「動きだけを感じる」は同じ？","observation":"離れた刺激を順に提示すると、適切な条件では、物体が位置を変えたとは見えずに、その間の動きが感じられる。図はその違いを表す模式図。","mechanism":"狭義のファイは、物体の移動に似たベータ運動と区別される。時間間隔や刺激配置が見え方を左右するが、すべての仮現運動をファイと呼ぶ用法もあり、用語に注意が必要。単なる残像だけでは説明しきれない。","check":"コマの物理配置を開き、各刺激は同じ位置で提示されることと、移動する物体の描画がないことを確認する。","game":"無形の気配を表す順次点灯を設計し、物体移動の演出とは区別して検討する。","caution":"本図は刺激列と知覚の違いを示す模式図で、純粋ファイの成立を保証する実験ではない。","fact":"2つの刺激の位置は固定。中央の帯は知覚の説明用の記号。","sources":[{"title":"Steinman, Pizlo & Pizlo (2000) — Phi is not beta, and why Wertheimer’s discovery launched the Gestalt revolution.","url":"https://pubmed.ncbi.nlm.nih.gov/10927113/"}],"theory":["動きの推定","時間の統合"]},{"id":"M02","name":"ベータ運動","english":"Beta apparent motion","category":"motion","aliases":["仮現運動"],"type":"錯視","experience":"条件付き体験","animate":true,"sliderLabel":"コマ間隔","question":"順に現れる点は、同じ1個が動いているように見える？","observation":"異なる位置に順に描かれる点が、一つの物体の移動としてまとまることがある。ゆっくりした提示では、別々の出現や跳び移りとして見えやすい。","mechanism":"時間的に近い位置の変化を同じ対象に対応づけると、描画されていない中間の移動が知覚される。結果は間隔・距離・形の類似性に依存する。狭義のファイ現象が指す「物体なき動き」とは区別する。","check":"描画位置の印とコマ番号を出す。点の中間位置は描かれておらず、離散的な位置だけが順に表示される。","game":"少ないアニメーション枚数で移動を伝える。間隔を変え、跳躍と滑走の印象を使い分ける。","caution":"低い提示頻度に制限した例なので、滑らかな移動に見えないこともある。","fact":"点は6個の決まった位置のいずれかにだけ描かれる。","sources":[{"title":"Steinman, Pizlo & Pizlo (2000) — Phi is not beta, and why Wertheimer’s discovery launched the Gestalt revolution.","url":"https://pubmed.ncbi.nlm.nih.gov/10927113/"}],"theory":["動きの推定","時間の統合","標本化"]},{"id":"M03","name":"逆ファイ運動","english":"Reverse-phi motion","category":"motion","aliases":["逆向き仮現運動"],"type":"錯視","experience":"模式図","animate":false,"sliderLabel":"コマの位置","question":"明暗を反転すると、移動方向の手がかりはどう変わる？","observation":"少しずれた像の明暗を反転して提示すると、条件によって物理的変位とは反対の向きに動いて見える。ここでは反転前後を並べたコマ比較で示す。","mechanism":"運動を検出する初期の処理は、位置の変化だけでなく明暗の符号にも応答する。変位と同時にコントラストの符号を反転すると、運動信号が逆転しうる。輪郭を追跡して得る方向と食い違う場合がある。","check":"同じ特徴の対応線を重ねる。輪郭は右へ移っている一方、明暗の対応から得られうる方向を別の矢印で示す。","game":"明暗反転を伴う視覚効果を扱う際、見かけの流れが逆転しうる点を検討する。","caution":"コマ比較は原理の模式図。連続した明暗反転や高頻度の点滅は実行しない。","fact":"第2コマの輪郭は右にずれ、塗りの明暗だけが反転している。","sources":[{"title":"Michael Bach — Reverse Phi Illusion","url":"https://michaelbach.de/ot/mot-reversePhi/index.html"}],"theory":["動きの推定","時間の統合"]},{"id":"M04","name":"周辺ドリフト錯視","english":"Peripheral drift illusion","category":"motion","aliases":["静止画の回転錯視"],"type":"錯視","experience":"条件付き体験","animate":false,"sliderLabel":"明暗の差","question":"静止している輪が、視線を移すと動いて見える？","observation":"非対称な明暗の並びを持つ輪が、視線を移したときや周辺視で回転するように見えることがある。一定の場所を見続けると、弱まる人もいる。","mechanism":"明るさによる応答の違いと、視線の移動に伴う網膜像の変化が運動検出に偏りを生むと考えられる。非対称な輝度配列が重要で、明るさや動きへの応答が単純な比例にならない性質を使うモデルなどがある。","check":"各輪に固定した目盛りを重ねる。図形の角度や位置は一切更新していない。","game":"動かない背景に微かな流れを感じさせる装飾。重要な操作対象や読み物とは距離を置く。","caution":"見え方には個人差が大きい。回転の強さからストレスや性格は判断できない。","fact":"すべての扇形は静止しており、再生処理はない。","sources":[{"title":"Michael Bach — “Rotating Snakes” Illusion","url":"https://michaelbach.de/ot/mot-snakes/index.html"}],"theory":["動きの推定","注意と周辺視"]},{"id":"M05","name":"オオウチ錯視","english":"Ouchi illusion","category":"motion","aliases":["大内錯視"],"type":"錯視","experience":"条件付き体験","animate":false,"sliderLabel":"長方形の細長さ","question":"中央の模様が背景から離れて滑るように見える？","observation":"縦横で向きの異なる細長い市松模様を重ねると、視線の移動に伴い、中央領域が背景に対して浮いたり滑ったりして見えることがある。","mechanism":"細長い要素の短辺と長辺から得られる運動信号の重みが違うと、全体が同じだけ網膜上を動いても方向の推定に偏りが生じる。中央と周囲で模様の向きが違うため、相対的な移動として感じられるという説明がある。","check":"中央の模様を周囲と同じ向きにそろえ、境界と固定された中心位置を示す。","game":"素材の方向だけで浮遊感を作る。足場の実際の移動と混同しない装飾として使う。","caution":"静止画の例。画面を実際に揺らす処理はない。大きさや表示密度で効果が変わる。","fact":"中央も周囲も完全に固定された矩形の集合。","sources":[{"title":"Michael Bach — Relative Motion Illusions – Orthogonal Dotted Lines Sway","url":"https://michaelbach.de/ot/mot-rmi/index.html"}],"theory":["動きの推定","注意と周辺視"]},{"id":"M06","name":"運動残効","english":"Motion aftereffect","category":"motion","aliases":["滝の錯視"],"type":"錯視","experience":"条件付き体験","animate":true,"sliderLabel":"順応刺激の速さ","question":"動きを見たあと、静止した格子が逆向きに動いて見える？","observation":"流れる模様の中央を短く見た後に静止格子へ切り替えると、格子が反対方向へ動くように感じることがある。この例の運動提示は8秒で終了する。","mechanism":"特定の方向の運動に順応すると、方向ごとの応答の釣り合いが変わり、静止刺激に逆方向の運動が感じられる。「目の疲れ」だけでなく、視覚系の感度調整として捉えられる。条件により効果の強さは異なる。","check":"確認すると直ちに静止格子へ切り替わり、固定座標の線を重ねる。テスト画面に実際の運動はない。","game":"短い流れの後の静かな場面を設計する参考にする。残効を成功条件にしない。","caution":"8秒の弱い刺激なので残効が出ない場合がある。凝視を延長させず、違和感があれば中止する。","fact":"最初の8秒だけ模様が移動し、その後の格子は固定される。","sources":[{"title":"Michael Bach — Motion Aftereffect (Waterfall Illusion)","url":"https://michaelbach.de/ot/mot-adapt/index.html"}],"theory":["順応","動きの推定"],"maxSeconds":14},{"id":"M07","name":"誘導運動","english":"Induced motion","category":"motion","aliases":["誘発運動"],"type":"錯視","experience":"条件付き体験","animate":true,"sliderLabel":"周囲の移動量","question":"枠が動くと、中央の点まで反対向きに動いて見える？","observation":"大きな枠だけが左右に動くと、固定された中央の点が逆向きへ動いたり、枠と点の両方が動いたりして見えることがある。周囲が基準になる例。","mechanism":"対象の運動は画面上の絶対座標だけでなく、周囲との相対関係によっても判断される。大きな囲みを安定した参照枠として扱うと、相対的な位置の変化を中央の対象へ割り当てうる。条件により誘導量は変わる。","check":"動かない十字と方眼を表示する。点は十字に重なり続け、移動しているのは囲みだけと確認できる。","game":"動く窓や雲を使った不安定感の演出。照準や正確な位置判定の場面では参照点を残す。","caution":"周囲の画面枠などが固定基準になると効果は弱まる。錯視量は測定していない。","fact":"中央の点は常に座標320,200にあり、枠だけが正弦波状に移動する。","sources":[{"title":"Gogel (1979) — Induced motion as a function of the speed of the inducing object, measured by means of two methods.","url":"https://pubmed.ncbi.nlm.nih.gov/534153/"}],"theory":["動きの推定"]},{"id":"M08","name":"相対運動とベクション","english":"Relative motion and vection","category":"motion","aliases":["自己運動感覚","視覚性自己運動感"],"type":"関連現象","experience":"条件付き体験","animate":true,"sliderLabel":"流れの速さ","question":"周囲の流れが、自分の前進として感じられる？","observation":"外へ広がる点の流れは、場面が近づいてくるとも、自分が前進しているとも解釈できる。広い視野では視覚だけで自己運動感が生じる場合がある。","mechanism":"画面全体に広がる整った点の流れは、観察者が前進しているときの見え方に似ている。このような流れをオプティックフローと呼び、自己運動を推定する手がかりになる。実際には視覚だけでなく、頭や体の動きを伝える感覚なども合わせて判断される。","check":"固定された画面の枠と各点の放射状経路を出す。描かれて動くのは点で、画面自体は静止している。","game":"移動感を与える背景の流れの設計。速度調整と停止を用意し、酔いやすさを確認する。","caution":"小さな窓では自己運動感が弱い。体験を強めるための全画面化や長時間視聴は求めない。","fact":"点の2次元座標が中心から外へ移動し、枠は静止する。","sources":[{"title":"David Heeger, New York University — Perception Lecture Notes: Visual Motion Perception","url":"https://www.cns.nyu.edu/~david/courses/perception/lecturenotes/motion/motion.html"}],"theory":["動きの推定"],"maxSeconds":10},{"id":"M09","name":"窓問題","english":"Aperture problem","category":"motion","aliases":["開口問題"],"type":"関連現象","experience":"体験","animate":true,"sliderLabel":"移動の速さ","question":"線の一部だけから、本当の移動方向を決められる？","observation":"小さな丸窓の中で斜線を見ると、線に直交する向きへ動くように見えやすい。端点を隠したままでは、同じ局所変化を作る移動方向が複数ある。","mechanism":"直線の一部は、その線に沿った変位の手がかりを持たない。局所的に求まるのは主に線に垂直な速度成分であり、端点や角、周辺との整合性を使って全体の運動を推定する必要がある。これは情報の不定性を表す。","check":"窓の外を開き、線の端点を見せる。両矢印で実際の水平な移動軸と、局所で得られる斜めの成分の軸を示す。","game":"細長い障害物や流線の進行方向を明確にするには、端点・角・目印を見せる。","caution":"窓問題自体は錯視名というより運動推定の制約。ここでは水平移動する線で可視化する。","fact":"斜線全体は水平にだけ移動し、縦方向の座標は変えない。","sources":[{"title":"Anderson (1999) — Stereoscopic occlusion and the aperture problem for motion: a new solution.","url":"https://pubmed.ncbi.nlm.nih.gov/10343841/"}],"theory":["動きの推定"]},{"id":"M10","name":"バーバーポール錯視","english":"Barber-pole illusion","category":"motion","aliases":["理髪店のポール錯視"],"type":"錯視","experience":"条件付き体験","animate":true,"sliderLabel":"窓の縦横比","question":"同じ斜め縞でも、窓の長い方向へ流れて見える？","observation":"斜めの縞が縦長の窓を通ると、主に上下へ流れて見えることがある。窓の縦横比を変えると、縞自体を変えずに見かけの進行方向が変わりうる。","mechanism":"縞の内部から得る運動情報には窓問題がある。一方、窓の縁との交点は明確に移動し、その端点の信号をまとめることで窓の長軸方向に知覚が偏る。遮蔽の解釈や縞の傾きなども結果に影響する。","check":"窓を透かして縞の全体と水平移動の経路を見せる。窓の縁を動く交点も印で表示する。","game":"流れる看板・搬送装置の演出に使う。危険物の実際の進行方向には別の手がかりを付ける。","caution":"縦横比だけで必ず方向が決まるわけではない。端点の見え方で効果は変わる。","fact":"下地の縞は常に水平方向へ平行移動する。","sources":[{"title":"Dobkins, Lewis & Fine (2006) — Integration of one- and two-dimensional motion signals in infants: evidence from the barber-pole illusion.","url":"https://pubmed.ncbi.nlm.nih.gov/16854447/"},{"title":"Anderson (1999) — Stereoscopic occlusion and the aperture problem for motion: a new solution.","url":"https://pubmed.ncbi.nlm.nih.gov/10343841/"}],"theory":["動きの推定"]},{"id":"M11","name":"車輪の逆回転と時間エイリアシング","english":"Wagon-wheel temporal aliasing","category":"motion","aliases":["ワゴンホイール効果","時間的標本化"],"type":"関連現象","experience":"体験","animate":true,"sliderLabel":"実際の回転速度","question":"右の車輪は、左と同じ向きに回っている？","observation":"同じ形のスポークを一定間隔で描くと、実際とは逆向きにゆっくり回ったり、止まったりして見える。左は連続的な表示、右は間引いた表示で比較する。","mechanism":"動画は連続した運動を一定間隔のコマで記録・表示する。コマ間の回転が大きいと、同じ形のどのスポークを対応づけるかが曖昧になり、実際とは逆向きの小さな移動としてまとまることがある。この時間の標本化の曖昧さがエイリアシング。","check":"両方の車輪の同じスポークを橙色にし、元の回転方向を矢印で示す。","game":"回転物が止まって見える謎や映像装置のパズルに使う。回転速度の表示と視認性も検討する。","caution":"この例は表示の間引きによる効果。連続光の下で直接見る逆回転感を同じ機構とは断定しない。","fact":"両車輪の元の角速度は同じ。右だけ毎秒6回の位置で保持表示する。","sources":[{"title":"Michael Bach — Wagon-wheel effect","url":"https://michaelbach.de/ot/mot-wagonWheel/index.html"}],"theory":["標本化","動きの推定"]},{"id":"M12","name":"フラッシュラグ錯視","english":"Flash-lag effect","category":"motion","aliases":["閃光遅延効果"],"type":"錯視","experience":"条件付き体験","animate":true,"sliderLabel":"移動の速さ","question":"短く出る印は、動く点と同じ位置に見える？","observation":"動く点の真下に短時間だけ印を出すと、同じ横位置で描いたのに、印の方が移動方向の後ろにあるように見えることがある。確認で同時刻を固定できる。","mechanism":"動く対象と短時間だけ現れる対象の位置は、時間にまたがる視覚処理の影響を受ける。運動の予測、処理時間の違い、後続情報の統合などの説明があり、一つの原因や単純な一定遅延だけで全条件を説明しない。","check":"印を初めて表示したフレームの横位置を保存し、点と印をその位置に戻して共通の縦ガイドを出す。","game":"動く対象にタイミング表示を重ねる設計で、見かけの位置ずれを検討する。","caution":"小さな印を低頻度で提示。出現フレームで位置を同期し、その後の印は静止する。端末のフレーム落ちで印が省略される場合がある。","fact":"印が出現する最初の描画で、点と印の横座標を一致させて保存。約0.1秒の表示中、印はその座標に留まる。","sources":[{"title":"Michael Bach — Flash-Lag Effect","url":"https://michaelbach.de/ot/mot-flashLag/index.html"}],"theory":["時間の統合","動きの推定"]},{"id":"M13","name":"フットステップ錯視","english":"Footsteps illusion","category":"motion","aliases":["足踏み錯視"],"type":"錯視","experience":"体験","animate":true,"sliderLabel":"縞のコントラスト","question":"2つの長方形は交互に進む？ 同時に進む？","observation":"明るい長方形と暗い長方形を縦縞の上で同時に動かすと、交互に足踏みするように見えることがある。背景の縞を弱めると同期した移動が分かりやすい。","mechanism":"対象の縁と背景の明るさの差が位置によって変わり、運動の手がかりの強さも変わる。明暗が逆の対象では弱くなる時点が交互になるため、速度や停止の印象にずれが生じる。詳細な説明には複数のモデルがある。","check":"縞を無地にし、両方の先端を結ぶ直線を表示する。全時刻で同じ横位置を保っている。","game":"歩調のずれや機械の不安定さを、実際の座標を変えずに演出する。","caution":"色だけでなく輝度差が重要。画面設定で効果が変わるため、同期を判断する主要UIには使わない。","fact":"上下の長方形は、横位置・速度・進行方向が常に等しい。","sources":[{"title":"Michael Bach — “Stepping feet” Motion Illusion","url":"https://michaelbach.de/ot/mot-feetLin/index.html"}],"theory":["動きの推定"]},{"id":"M14","name":"ライラック・チェイサー","english":"Lilac chaser","category":"motion","aliases":["ライラック追跡錯視"],"type":"錯視","experience":"条件付き体験","animate":true,"sliderLabel":"色の濃さ","question":"消えた紫の点の位置に、緑がかった点を感じる？","observation":"中央の十字を短く見ながら、紫の点が順に抜ける輪を見ると、抜けた位置に緑がかった点が現れて移動するように見えることがある。提示は8秒で終わる。","mechanism":"同じ場所の色に順応した後、そこが無彩色に戻ると反対色に近い残像が現れる。欠ける位置が順に移るため、その残像が一つの移動としてつながりうる。周辺刺激の消失が重なる場合もある複合現象。","check":"欠けた位置に灰色の輪郭を重ね、全ての紫の点の固定座標を示す。緑の点は描画していない。","game":"色の記憶や移動する欠落をテーマにした演出の参考。残像が見えることをクリア条件にしない。","caution":"短時間・低めの彩度のため効果が出ないこともある。凝視を延長させない。","fact":"紫の点のうち1個を順に省いているだけで、緑の画素は追加しない。","sources":[{"title":"Michael Bach / Jeremy Hinton — Lilac Chaser","url":"https://michaelbach.de/ot/col-lilacChaser/index.html"}],"theory":["順応","時間の統合","注意と周辺視"],"maxSeconds":10},{"id":"M15","name":"運動誘発盲","english":"Motion-induced blindness","category":"motion","aliases":["MIB","運動誘導消失"],"type":"錯視","experience":"条件付き体験","animate":true,"sliderLabel":"背景の速さ","question":"動く背景の上で、静止した点が一時的に消える？","observation":"中央の十字を短く見ると、動く背景の中の小さな点が一時的に見えなくなることがある。点は常に描いている。背景の運動は8秒で終了する。","mechanism":"一定位置の対象が見え続けるかどうかは、順応、注意、動く背景との競合や表面の解釈などに左右される。運動誘発盲の説明に単一の合意はなく、単純な疲労や網膜の盲点だけで説明することはできない。","check":"動く背景を取り除き、点に固定した輪郭を付ける。点を消すプログラムがないことと座標を確認できる。","game":"存在している物が気づかれにくくなる環境設計の参考。重要な警告の表示には逆に避ける。","caution":"短い提示では起こらないことも多い。点が消えなくても異常や失敗を意味しない。","fact":"3個の点は全フレームで同じ位置・同じ色に描画される。","sources":[{"title":"Michael Bach — Motion-Induced Blindness","url":"https://michaelbach.de/ot/mot-mib/index.html"}],"theory":["注意と周辺視","順応","動きの推定"],"maxSeconds":10},{"id":"M16","name":"運動からの奥行き","english":"Kinetic depth effect","category":"ambiguity","aliases":["運動性奥行き効果","Structure from motion"],"type":"関連現象","experience":"体験","animate":true,"sliderLabel":"回転の速さ","question":"平面を動く点から、立体の円筒が見えてくる？","observation":"点が左右に異なる速さで移動すると、平面上の別々の点よりも、立体の円筒が回転しているようにまとまることがある。静止すると奥行きが弱まりやすい。","mechanism":"時間に沿った位置の対応と速度の関係から、形と奥行きを推定できる。剛体が回るという解釈は、多数の点が独立に動くという解釈より整合的になりうる。ただし陰影などがなければ前後や回転方向は曖昧な場合がある。","check":"生成モデルの手前の点を暖色、奥の点を寒色に分け、共通の回転軸と投影経路を表示する。","game":"点だけから姿を現す敵や地形、動かすと読める暗号を作る。","caution":"動く2次元表示からの奥行き知覚であり、左右の目に別画像を提示する立体視ではない。","fact":"点は円筒表面の3次元座標を、透視のない投影で2次元へ写している。","sources":[{"title":"Michael Bach — Kinetic Depth Effect / Structure-from-motion","url":"https://michaelbach.de/ot/mot-sfm/index.html"}],"theory":["動きの推定","多義的な解釈"]},{"id":"M17","name":"回転シルエットの多義性","english":"Ambiguous rotating silhouette","category":"ambiguity","aliases":["回転方向の反転"],"type":"錯視","experience":"条件付き体験","animate":true,"sliderLabel":"回転の速さ","question":"回転の向きが、途中で逆転したように感じる？","observation":"陰影を省いた立体の投影は、どちら側が手前かが曖昧になり、同じ動画を逆方向の回転として見ることがある。ここでは独自の単純な人形を使う。","mechanism":"平面の輪郭だけでは失われた奥行きの符号を一意に復元できない。手前と奥の割り当てが切り替わると、回転方向の知覚も変わる。遮蔽、陰影、視点などの手がかりを足すと一方の解釈が選ばれやすくなる。","check":"生成モデルで手前にある手足を暖色、奥を寒色にして、隠れていた前後関係を示す。","game":"回転方向で通路が変わるパズルの着想。任意に反転できることを必須操作にしない。","caution":"回転の見え方から利き脳、性格、能力などは判定できない。人形の簡略化で効果が弱い場合がある。","fact":"再生中、元の3次元モデルの回転方向は一定。確認だけが奥行きの色を追加する。","sources":[{"title":"Michael Bach — Silhouette Illusion","url":"https://michaelbach.de/ot/sze-silhouette/index.html"},{"title":"Michael Bach — Kinetic Depth Effect / Structure-from-motion","url":"https://michaelbach.de/ot/mot-sfm/index.html"}],"theory":["多義的な解釈","動きの推定"]},{"id":"M18","name":"ネッカー立方体","english":"Necker cube","category":"ambiguity","aliases":["反転立方体"],"type":"錯視","experience":"体験","animate":false,"sliderLabel":"解釈の手がかり","question":"どの正方形が手前？ 同じ線で入れ替わる？","observation":"線だけで描かれた立方体は、2通りの前後関係で見えることがある。図自体が変わらなくても、手前に見える面が入れ替わり、立体の向きが反転する。","mechanism":"二次元の線から立体を復元する際、隠れ方や陰影の情報が不足しているため複数の整合的な解釈が成立する。知覚の切替には順応・競合・注意などが関係するが、「正しい向き」が線画だけから決まるわけではない。","check":"選んだ面に半透明の面を追加し、その面を手前として解釈する補助を示す。線の座標は変えない。","game":"前後の読み替えで別の道に見える地形や、2つの解釈を切り替える謎に使う。","caution":"切替頻度には個人差がある。一定秒数で反転する、自由に反転できるとは保証しない。","fact":"同じ12本の辺を描く静止図で、確認時だけ面の手がかりを追加する。","sources":[{"title":"Michael Bach — Necker Cube","url":"https://michaelbach.de/ot/sze-Necker/index.html"}],"theory":["多義的な解釈"]},{"id":"M19","name":"ルビンの壺","english":"Rubin vase","category":"ambiguity","aliases":["図と地の反転","ルビンの盃"],"type":"錯視","experience":"体験","animate":false,"sliderLabel":"注目する領域","question":"壺と、向かい合う2つの顔が見える？","observation":"中央を一つの物として捉えると壺に、左右を物として捉えると向かい合う横顔に見える。同じ境界線を、どちらの領域に属する輪郭として見るかが変わる。","mechanism":"視覚は境界のどちら側を「図」としてまとまりにし、どちらを背景にするかを決める。左右対称の壺と横顔の両方に読める形では、この割り当てが競合する。注意は見え方に影響しうるが自由に切り替えられるとは限らない。","check":"壺の領域または左右の顔の領域を着色し、同じ境界を共有していることを確認する。","game":"背景だった空白が道具や人物になる謎、ロゴやアイテムの二重意味に使う。","caution":"二つの読みはどちらも成立する。見える順序から性格などは推測できない。","fact":"壺の外周と2つの横顔の外周は同じ2本の曲線。","sources":[{"title":"J. Donaldson (2017), The Illusions Index, University of Glasgow — Rubin’s Vase","url":"https://www.illusionsindex.org/i/rubin-s-vase"}],"theory":["多義的な解釈"]},{"id":"M20","name":"アヒル・ウサギ図形","english":"Duck-rabbit figure","category":"ambiguity","aliases":["ウサギとアヒル"],"type":"錯視","experience":"体験","animate":false,"sliderLabel":"読み替えのヒント","question":"左の2つの突起は、くちばし？ 耳？","observation":"同じ線画がアヒルの頭にもウサギの頭にも見える。左へ伸びる2つの突起を、アヒルのくちばしと読むか、ウサギの耳と読むかで全体が変わる。","mechanism":"一つの輪郭に複数の物体解釈が対応する多義図形。部分の意味付けが変わると、その部分と整合する全体の対象も変わる。知識や注意が見え方を促す場合はあるが、解釈の切替を一つの確定した神経機構だけで説明しない。","check":"共通の突起だけを色でなぞり、選んだ読みでは「くちばし」「耳」に当たることを示す。","game":"同じアイコンの意味がヒントによって変わる連想謎や、視点の転換を促す物語に使う。","caution":"独自に描いた簡略図で、古典図と同じ強さの多義性は保証しない。","fact":"切替前後で輪郭の全座標は同じ。追加されるのは注釈だけ。","sources":[{"title":"J. Donaldson (2016), The Illusions Index, University of Glasgow — The Duck-Rabbit Ambiguous Figure","url":"https://www.illusionsindex.org/i/duck-rabbit"}],"theory":["多義的な解釈"]},{"id":"M21","name":"シュレーダーの階段","english":"Schröder stairs","category":"ambiguity","aliases":["シュレーダー階段","Schroeder stairs"],"type":"錯視","experience":"条件付き体験","animate":false,"sliderLabel":"面の解釈","question":"階段を上から見ている？ 下から見上げている？","observation":"奥行きの手がかりが乏しい階段の線画は、上面を見ているようにも、下面を見上げているようにも読める。前後関係を入れ替えると、同じ段の向きが変わる。","mechanism":"平行投影の線だけでは、面の手前と奥、表と裏の割り当てが一意に定まらない。線を整合的な立体としてまとめる解釈が複数あるため、多義的な階段になる。陰影や遮蔽を追加すれば解釈を誘導できる。","check":"段の面に色を足し、上面／下面として読む手がかりを切り替える。線の配置はそのまま比較する。","game":"上下の読み替えが進路を変える階段パズル。画面上の見えと移動ルールを対応させる。","caution":"不可能な階段とは別の現象。こちらは一つの投影が複数の奥行き解釈を許す例。","fact":"2本の同型の段形の折れ線を一定のベクトルで結んだ静止線画。","sources":[{"title":"J. Donaldson (2017), The Illusions Index, University of Glasgow — Schroeder’s Stairs","url":"https://www.illusionsindex.org/i/schroeder-s-stairs"}],"theory":["多義的な解釈"]},{"id":"M22","name":"全体・部分の干渉","english":"Navon global-local interference","category":"attention","aliases":["ナヴォン図形","大域優先"],"type":"関連現象","experience":"体験","animate":false,"sliderLabel":"小文字の間隔","question":"大きな文字と小さな文字を別々に読める？","observation":"小さなSを並べて大きなHを作ると、全体の文字と部分の文字が食い違う。見る課題を切り替えると、もう一方の文字が読みの妨げに感じられる場合がある。","mechanism":"視覚は全体の構造と局所の要素を並行して処理する。ナヴォン課題では全体の認識が速く、全体から部分への干渉が生じる条件がある。ただし大きさ、密度、視距離、課題などで優先関係は変わり、万能な法則ではない。","check":"大きなHの骨格と、その構成要素である1つのSを別々の色で示す。","game":"拡大すると別の文字が読める暗号、全体を見る課題と細部を見る課題の切替に使う。","caution":"この表示では反応時間を測らない。個人の認知能力や大域優先の強さを診断できない。","fact":"同じ大きさのSのみを配置して、大きなHの形を作っている。","sources":[{"title":"Gijsbert Stoet / PsyToolkit — Navon task","url":"https://www.psytoolkit.org/experiment-library/navon.html"}],"theory":["注意と周辺視"]},{"id":"M23","name":"変化盲","english":"Change blindness","category":"attention","aliases":["変化の見落とし"],"type":"関連現象","experience":"体験","animate":true,"sliderLabel":"切替までの時間","question":"遮られる前後で、棚のどこが変わった？","observation":"図の一部が短く遮られた前後で一つの記号が変わる。変化の瞬間を直接見られないと、目立つ変更でも見つけにくい場合がある。確認で前後を並べられる。","mechanism":"変化そのものが作る局所的な信号は注意を引くが、遮蔽や画面の切替がそれを隠すと、前後の内容を選択して保持し比較する必要がある。見ることと、すべての詳細を比較できる形で記憶することは同じではない。","check":"前後の図を横に並べ、変わった記号だけに輪を付ける。遮蔽なしの比較で差を確認する。","game":"室内が少し変わる探索謎に使う。重要な状態変化は遮蔽後にも残る手がかりで知らせる。","caution":"見落としは変更の大きさだけでは決まらない。答えを知った後は初見の難しさを再現できない。","fact":"同じ20個の記号のうち1個だけが変わり、他の19個は同じ。","sources":[{"title":"Daniel Simons, Visual Cognition Lab — Research","url":"https://www.simonslab.com/research.html"}],"theory":["注意と周辺視","時間の統合"]},{"id":"M24","name":"非注意性盲目","english":"Inattentional blindness","category":"attention","aliases":["不注意による見落とし"],"type":"関連現象","experience":"条件付き体験","animate":true,"sliderLabel":"主課題の速さ","question":"白い点の中央線通過を数えながら見てみよう。","observation":"注意を使う課題を続けていると、画面の中に現れた別の対象に気づかないことがある。ここでは白い点の通過を数える短い例を示し、確認で別の出来事を見る。","mechanism":"見えている範囲でも、注意と期待によって意識に上る対象が選ばれる。予期しない対象への気づきは、主課題の負荷や対象の類似性などに依存する。変化盲のような前後比較の失敗とは区別される現象。","check":"途中に現れる別の形を含む時刻を静止し、その位置と通過経路に輪を重ねる。","game":"注意を誘導した後に背景の出来事を振り返る演出。必須情報を一度しか出さない設計は避ける。","caution":"現象名や説明を読んだ時点で予期が生まれるため、厳密な実験ではない。成績を診断に使わない。","fact":"橙色の菱形は3〜7秒の間、白い点と同時に実際に描画される。","sources":[{"title":"Daniel Simons, Visual Cognition Lab — Research","url":"https://www.simonslab.com/research.html"}],"theory":["注意と周辺視"],"maxSeconds":10},{"id":"M25","name":"周辺視のクラウディング","english":"Peripheral crowding","category":"attention","aliases":["混雑効果"],"type":"関連現象","experience":"条件付き体験","animate":false,"sliderLabel":"隣の文字との間隔","question":"十字を見たまま、離れたRと挟まれたRを読める？","observation":"左の十字を見たまま右側を意識すると、単独の文字より隣の文字に挟まれた文字の方が読み取りにくい場合がある。目を直接向けると違いは弱まりやすい。","mechanism":"周辺視では、近い位置の特徴を対象ごとに分離して識別する処理が制約される。妨害文字との必要間隔は中心からの距離などに依存し、単に文字が小さくて見えない問題とは区別される。説明には統合や選択のモデルがある。","check":"上下のRを残して周囲の文字を消し、同じ文字・同じ大きさだったことを示す。","game":"周辺に置くHUDやアイテム表示の間隔を設計する。密集した小アイコンを色だけで区別しない。","caution":"表示サイズや視距離で効果が変わる。ここでは視角を校正せず、視線も測定していない。","fact":"上下の中央文字はいずれもRで、字体と大きさは同じ。","sources":[{"title":"Kurzawski et al. (2023) — The Bouma law accounts for crowding in 50 observers.","url":"https://pubmed.ncbi.nlm.nih.gov/37540179/"}],"theory":["注意と周辺視"]},{"id":"M26","name":"パレイドリア","english":"Pareidolia","category":"attention","aliases":["顔の見立て","類像現象"],"type":"関連現象","experience":"体験","animate":false,"sliderLabel":"図の向き","question":"ねじと通気口が、顔の表情に見える？","observation":"顔を描かなくても、2つの丸とその下の穴の配置が顔らしく見えることがある。この例では機械の部品を並べ、向きや解釈による印象を比較する。","mechanism":"顔などの意味ある形への感度は、曖昧な配置にも対象らしいまとまりを見いださせる。顔パレイドリアには顔検出に関わる処理が関与する証拠があるが、知覚の段階や認知的解釈の役割は刺激と課題で異なる。","check":"丸い部分をねじ、下の形を通気口として色分けする。顔らしく読める位置関係はそのまま残す。","game":"風景や建造物に表情を持たせる。後から顔として気づく背景の仕掛けに使う。","caution":"これは意図的に顔らしく配置した作例。曖昧なものに顔を見ること自体は診断にならない。","fact":"構成要素は2つのねじと1つの通気口で、目や口の画像は使っていない。","sources":[{"title":"Saurels, Peluso & Taubert (2024) — A behavioral advantage for the face pareidolia illusion in peripheral vision.","url":"https://pubmed.ncbi.nlm.nih.gov/38693189/"}],"theory":["多義的な解釈","注意と周辺視"]},{"id":"M27","name":"自動運動","english":"Autokinetic effect","category":"attention","aliases":["自動運動錯視"],"type":"錯視","experience":"模式図","animate":false,"sliderLabel":"参照枠の濃さ","question":"動きの基準がほとんどないと、点の静止は判断できる？","observation":"暗く周囲の手がかりが乏しい条件では、静止した小さな光が不規則に動くように見えることがある。ここでは固定点と知覚の報告例を模式的に対比する。","mechanism":"参照となる輪郭が乏しいと、点の安定した位置を決める手がかりが減る。微小な眼球運動とその補正が関与するという説明があるが、複数点が別々に動いて見える結果などから、それだけでは不十分と考えられている。","check":"固定した方眼を重ね、描画される点の座標が変わらないことを示す。点線の軌跡は説明用と区別する。","game":"暗所での定位が不確かになる演出の参考。実際に動く点と、知覚される動きを区別する。","caution":"画面枠が基準になるためブラウザでの正規体験には不向き。暗室化や長い凝視は求めない。","fact":"左の点は一度も移動しない。右の点線は知覚の報告を表す模式図。","sources":[{"title":"Ramachandran et al. (2018) — Effect of Grouping, Segmentation, and Vestibular Stimulation on the Autokinetic Effect.","url":"https://pubmed.ncbi.nlm.nih.gov/29375754/"}],"theory":["動きの推定","注意と周辺視"]},{"id":"M28","name":"クロノスタシス","english":"Chronostasis","category":"attention","aliases":["時計停止錯覚"],"type":"錯視","experience":"模式図","animate":false,"sliderLabel":"時間の拡張（模式）","question":"目を時計に向けた直後の1秒だけ、長く感じる？","observation":"視線を時計に移した直後、秒針が次へ進むまでの時間が長く感じられることがある。ここでは物理的に等しい時間と、主観的な延長を時間軸で示す。","mechanism":"急な視線移動の前後で視覚体験をつなぐ際、新しく見た対象の開始時刻が遡って推定されるという説明がある。原研究では対象の空間的連続性が重要だった。単に脳が全ての時間を一定量遅らせる現象とは異なる。","check":"上の等間隔の目盛りを残し、下の主観的な区間だけが延びることを色で比較する。","game":"時間の不確かさを題材にする物語や、体感と計測を比較するパズルの説明に使う。","caution":"眼球運動と提示時刻を同期測定できないため模式図。実際のタイマーを不正確にする実装ではない。","fact":"物理時間の目盛りは全て等間隔。主観の帯だけを説明用に伸ばしている。","sources":[{"title":"Yarrow et al. (2001) — Illusory perceptions of space and time preserve cross-saccadic perceptual continuity.","url":"https://pubmed.ncbi.nlm.nih.gov/11713528/"}],"theory":["時間の統合","注意と周辺視"]},{"id":"M29","name":"両眼視野闘争","english":"Binocular rivalry","category":"binocular","aliases":["視野闘争"],"type":"関連現象","experience":"模式図","animate":true,"sliderLabel":"模式的な切替の速さ","question":"左右の目に異なる模様を見せ続けると、何が見える？","observation":"左右の目へ両立しにくい画像を別々に提示すると、片方が優勢になったり、混ざったり、見え方が交替したりする。図は入力と知覚を分けた模式図。","mechanism":"両眼からの情報が対応づけにくい場合、通常の融合とは異なる競合が起こる。片眼または特徴の優勢、抑制、混合知覚の時間は観察者や条件で変化する。眼単位と複数の視覚処理段階が関わりうるため単純な交互スイッチではない。","check":"上の左右入力が同時に一定のまま、下の知覚例だけが変わることを接続線と色で確認する。","game":"VRで左右眼に異なるUIを出す際の注意点を学ぶ。重要情報を競合に依存させない。","caution":"通常の画面では画像を左右眼へ分離していない。下の交替は説明用のアニメーションで、実際の闘争ではない。","fact":"上段2つの模様は固定。下段だけがプログラムで切り替わる模式図。","sources":[{"title":"Dieter, Sy & Blake (2016) — Individual differences in sensory eye dominance reflected in the dynamics of binocular rivalry.","url":"https://pubmed.ncbi.nlm.nih.gov/27756700/"}],"theory":["両眼の統合","多義的な解釈"]},{"id":"M30","name":"ランダムドット立体視","english":"Random-dot stereogram","category":"binocular","aliases":["ランダムドット・ステレオグラム"],"type":"関連現象","experience":"模式図","animate":false,"sliderLabel":"対応点の横ずれ","question":"輪郭がない点の集合から、どうやって奥行きを得る？","observation":"左右眼に対応するランダムな点の画像を与え、その一部だけを横へずらすと、単眼では見つけにくい形が奥行きとして現れる。ここでは対応関係を示す。","mechanism":"左右の画像で同じ場所に由来する特徴を対応づけ、その横方向の差から奥行きを推定する。点が多くても全体として整合する対応が必要であり、先に物体の輪郭を認識しなくても両眼視差から形が得られることを示す。","check":"同じ点を色で強調し、中央の領域だけ対応が横へずれていることを線で示す。","game":"点の模様に隠れた奥行きを使う立体表示や、左右画像の対応を探す教育パズルに使う。","caution":"画像を左右眼へ分離しない説明用の表示。無理な寄り目・開散や裸眼立体視の成功を求めない。","fact":"2枚の画像は同じ乱数配列を基にし、中央領域だけ対応点を水平にずらしている。","sources":[{"title":"David Heeger, New York University — Perception Lecture Notes: Depth, Size, and Shape","url":"https://www.cns.nyu.edu/~david/courses/perception/lecturenotes/depth/depth-size.html"}],"theory":["両眼の統合"]},{"id":"M31","name":"プルフリッヒ効果","english":"Pulfrich effect","category":"binocular","aliases":["Pulfrich現象"],"type":"錯視","experience":"模式図","animate":true,"sliderLabel":"眼間の遅れ（模式）","question":"左右の処理時刻が違うと、平面の運動が奥行きになる？","observation":"左右の目の信号に時間差が生じると、横へ動く物体の位置が両眼間でずれ、奥行きのある軌道として見えることがある。図は時間差から視差への変換を示す。","mechanism":"片眼の像を暗くするなどの条件では、その眼の処理が相対的に遅くなる。動く物体の過去と現在の横位置の差が左右の像の横位置の差（両眼視差）として働き、奥行きと結び付く。運動方向を反転すると時間差から生じる視差の符号も変わる。","check":"物体の平面内の軌道と、同時に比較される異なる時刻の位置を重ね、横ずれを矢印で示す。","game":"視覚の遅延と奥行きを組み合わせた装置の説明に使う。通常の立体映像の代用と混同しない。","caution":"眼ごとの提示や減光を行わない模式図。遅延量は説明のため誇張し、個人の視機能を測らない。","fact":"上段は平面内の往復運動。下段の奥行き軌道は知覚を説明する模式図。","sources":[{"title":"Michael Bach — Pulfrich Effect","url":"https://michaelbach.de/ot/lum-Pulfrich/index.html"}],"theory":["両眼の統合","時間の統合"]},{"id":"M32","name":"モアレと空間エイリアシング","english":"Moiré and spatial aliasing","category":"binocular","aliases":["干渉縞","モワレ"],"type":"関連現象","experience":"体験","animate":false,"sliderLabel":"格子の角度差","question":"細い格子から、別の大きな縞が現れる？","observation":"似た間隔の格子を少し傾けて重ねると、元のどちらにもない幅の広い縞が現れる。角度を変えると、大きな縞の向きや間隔が大きく変化する。","mechanism":"間隔の近い細かな線の模様を重ねると、線が重なる場所とずれる場所がゆっくり入れ替わるため、幅の広い縞が現れる。撮影や画面の標本化でも似た模様が生じるが、この例は2枚の格子の重ね合わせで実際にできるパターンで、純粋な知覚錯視とは区別する。","check":"2つの格子を分けた図と重ねた図を並べ、広い縞がどちらか1枚に描かれていたわけではないことを確認する。","game":"回転する二重パネルを使う暗号や動的な模様の設計。細密テクスチャのちらつきの理解にも使う。","caution":"この分類では便宜上ここに置くが両眼視は不要。端末の拡大縮小でも別のモアレが加わりうる。","fact":"同じ間隔の2組の直線を異なる角度で重ねている。","sources":[{"title":"Michael Bach — Moiré Patterns","url":"https://michaelbach.de/ot/lum-moire1/index.html"}],"theory":["標本化"]}];window.THEORIES=[{"id":"T01","name":"周囲との比較","term":"対比と同化","summary":"同じ線や色でも、その周囲に置かれたものによって見え方が変わります。差が強まる場合と、周囲に近づいて見える場合があります。","detail":"視覚は一つの点だけを独立に読むのではなく、周囲との関係を使います。差が強まる見え方を対比、周囲へ近づく見え方を同化と呼びます。網膜の働きだけで説明できるとは限らず、模様の向き、境界、まとまり方なども関係します。","limit":"対比と同化を同じ一つの原因として扱わず、現象ごとの説明を確認します。","examples":["C01","C03","C10","G03"],"representative":"C01"},{"id":"T02","name":"輪郭と傾きの処理","term":"方位に応じた処理と空間的な相互作用","summary":"線の傾きや位置は、近くにある線や交差のしかたの影響を受けます。平行な線が開いて見えたり、直線が曲がって見えたりします。","detail":"視覚の処理には、異なる向きや細かさの模様に応じる仕組みがあります。幾何学的な錯視では、局所的な角度の関係、輪郭のつながり、全体の構図などが候補になります。一つの説明ですべての線の錯視が解けるわけではありません。","limit":"『交差しているから必ずこの方向へ曲がる』という単純な規則にはしません。","examples":["G09","G10","G11","G16"],"representative":"G10"},{"id":"T03","name":"距離を考慮した大きさの判断","term":"大きさの恒常性","summary":"遠くの物が小さく映っても、日常では物自体が縮んだとは感じません。この距離を考慮する判断が、絵の中では大きさのずれにつながります。","detail":"奥へ収束する線、重なり、影などが距離の手がかりになります。同じ画面上の大きさでも、遠い位置にあると解釈した対象を大きく感じる場合があります。ただし、すべての大きさの錯視が距離の推定だけで説明されるわけではありません。","limit":"画面上の長さと、描かれた立体の実際の長さを、設問で区別します。","examples":["G02","G17","G18","G21"],"representative":"G02"},{"id":"T04","name":"照明と物の色を分ける判断","term":"明度恒常性と色恒常性","summary":"光や影が変わっても、同じ物の色をなるべく安定して捉えようとします。絵がその判断を誘うと、同じ画面色でも違って見えることがあります。","detail":"目に入る光には、物の表面の性質と照明の両方が関わります。視覚は周囲の情報も使って両者を分けようとします。影、照明の色、境界の解釈が変わると、同じ画面色を違う表面色として捉える場合があります。","limit":"画面の赤緑青の値が同じことと、実物の反射率が同じことは別です。","examples":["C02","C11","C12"],"representative":"C02"},{"id":"T05","name":"見えない部分を補う","term":"ゲシュタルトのまとまりと知覚的補完","summary":"途切れた線や隠れた物を、まとまりのある形として捉えます。実際には引かれていない輪郭や、遮られた形を感じる場合があります。","detail":"近さ、似ていること、滑らかな連続、閉じた形などは、まとまりの手がかりになります。表面や輪郭が目の前に見える補完と、隠れた部分が続いていると捉える補完は区別します。盲点を埋める働きも、図形の補完とまったく同じとは限りません。","limit":"『脳が絵を足した』だけで終えず、何が描かれ、何が知覚されたかを分けます。","examples":["C15","C16","C17","C18","C19"],"representative":"C17"},{"id":"T06","name":"経験に照らして解釈する","term":"推論としての知覚とベイズ的な説明","summary":"同じ絵には複数の立体や物の解釈がありえます。経験からもっともらしい解釈を選ぶという考え方で、多義図形などを捉えられます。","detail":"不完全な入力を経験や状況に照らして解釈する、という説明の枠組みです。顔は出っ張っているという経験や、図が通常の立体を表すという前提が、くぼんだ顔や不可能図形の見え方に関わります。これは広い説明枠組みであり、個々の錯視の神経の仕組みがすべて確定したという意味ではありません。","limit":"『脳の予測』を、すべての錯視について実証された唯一の原因としては扱いません。","examples":["G22","G23","M18","M19"],"representative":"M18"},{"id":"T07","name":"見続けた刺激に応じて変わる","term":"順応と残効","summary":"同じ色や動きを見続けたあと、別の面に色や逆向きの動きを感じることがあります。刺激に応じて視覚の応答が変わる現象です。","detail":"一定の入力が続くと、それに対する応答のバランスが変わります。その後の見え方への影響を残効と呼びます。色の残像、運動残効、方向に結びついた色の残効では、関わる条件や持続が異なります。単に目の疲れだけと説明するのは不十分です。","limit":"本資料の短い体験で必ず起こるとは限りません。長時間の誘導を必要とする例は模式図にします。","examples":["C13","C20","C23","M06"],"representative":"C13"},{"id":"T08","name":"時間をまたいで動きを組み立てる","term":"仮現運動と時間的統合","summary":"別々の時刻に出た形を、一つの物の移動として感じることがあります。位置と時刻の関係が、見える動きの方向や速さに影響します。","detail":"見えたものを前後の時刻でどう対応づけるかが、動きの判断に関わります。仮現運動には複数の見え方があり、ファイ現象とベータ運動の呼び方も慎重に区別します。瞬間的な位置判断や時間の長さの感じ方には、さらに別の説明が必要です。","limit":"動画が動いて見える理由を、残像だけで説明しません。","examples":["M01","M02","M03","M12","M28"],"representative":"M02"},{"id":"T09","name":"目の動きと静止画像の関係","term":"眼球運動と周辺ドリフト","summary":"画面の画像が止まっていても、目の動きなどで見える情報は変化します。明暗の並び方によって、画像が動くように感じる場合があります。","detail":"静止した模様でも、目の小さな動きや視線の移動と、明るさへの応答の時間差などが組み合わさると、動きの信号として解釈される場合があります。どの要因が重要かは現象によって異なり、説明が完全に確定していない例もあります。","limit":"図をプログラムで動かして、静止画の運動錯視を再現したとは呼びません。","examples":["M04","M05","C14"],"representative":"M04"},{"id":"T10","name":"注意と周辺の情報の限界","term":"注意による選択とクラウディング","summary":"目に入ったものをすべて同時に詳しく読み取れるわけではありません。別の作業への集中や、周囲の混み具合で見落としが起こります。","detail":"変化への気づき、予期しない対象の発見、周辺にある文字の識別は、それぞれ異なる課題です。注意の向け先や、対象の周囲の情報が成績を変えます。これらは長さや色が変わって見える錯視とは区別し、視覚ゲームに関係する現象として収録します。","limit":"見落としたことを、能力の固定的な評価や診断につなげません。","examples":["M22","M23","M24","M25"],"representative":"M25"},{"id":"T11","name":"左右の目からの情報を合わせる","term":"両眼視差と両眼視野闘争","summary":"左右の目に少し違う像が入ることは、奥行きの手がかりになります。大きく異なる像を同時に入れると、見える内容が交替する場合があります。","detail":"左右の像の対応、位置の差、処理の時刻の差によって、奥行きや一つにまとまった見え方が変わります。立体視の図と、左右の目が競合する図は別の現象です。プルフリッヒ効果では、左右の入力に関わる時間差が奥行きの見え方に結びつきます。","limit":"左右別々の刺激が必要な例を、同じ画面を両目で見た状態だけで再現したとは扱いません。","examples":["M29","M30","M31"],"representative":"M31"},{"id":"T12","name":"画像や時刻を間引くと起こるずれ","term":"標本化とエイリアシング","summary":"細かい模様や速い動きを、限られた点や時刻で記録すると、別の模様や逆向きの動きに見えることがあります。","detail":"同じ形が繰り返される車輪では、次のコマのどの部分が前のコマの続きかが曖昧になります。模様の重ね合わせでも、元の模様にはない粗い縞が生じます。撮影や画面で実際に生じたパターンと、人の知覚が作る見え方を区別する必要があります。","limit":"モアレや撮影時の逆回転を、すべて脳の誤りと決めつけません。","examples":["M11","M32"],"representative":"M11"}];window.CATEGORIES=[{"id":"size","name":"長さと大きさ","description":"同じ長さ・直径・面積などの判断が、周りの形で変わる。"},{"id":"direction","name":"傾きと形","description":"平行線、角度、つながり、曲がり方の判断が変わる。"},{"id":"depth","name":"奥行きと不可能図形","description":"平面を立体として読むことや、遠近の判断に関わる。"},{"id":"light","name":"明るさと明暗の境界","description":"周りの明暗や境界で、同じ明るさが違って見える。"},{"id":"color","name":"色と色の変化","description":"照明、周囲の色、順応などで色の見え方が変わる。"},{"id":"completion","name":"輪郭と見えない部分の補完","description":"ない輪郭を感じたり、隠れた部分や見えない場所を補ったりする。"},{"id":"motion","name":"動きと時間的な位置判断","description":"静止画の動き、仮現運動、速度や方向のずれなど。"},{"id":"ambiguity","name":"複数に読める形と立体","description":"同じ入力を、異なる物や奥行きとして解釈できる。"},{"id":"attention","name":"注意と周辺の見え方","description":"見落とし、まとまり、混雑、見える時間の判断など。"},{"id":"binocular","name":"両眼視と画像の標本化","description":"左右の目の対応や、繰り返す模様の記録に関わる。"}];</script>
+<script>(function () {
+  'use strict';
+  const B = '#f7f6f2', INK = '#28313a', GRAY = '#7d8891', LIGHT = '#d4dcda';
+  const TEAL = '#087f73', CORAL = '#bf604e', TAU = Math.PI * 2;
+  const rad = degrees => degrees * Math.PI / 180;
+  const clamp = value => Math.max(0, Math.min(1, Number.isFinite(value) ? value : 0.5));
+
+  function line(c, a, b, color = INK, width = 3, dash = []) {
+    c.save(); c.beginPath(); c.moveTo(a[0], a[1]); c.lineTo(b[0], b[1]);
+    c.strokeStyle = color; c.lineWidth = width; c.lineCap = 'butt'; c.setLineDash(dash); c.stroke(); c.restore();
+  }
+  function path(c, points, color = INK, width = 3, close = false, fill = null) {
+    c.save(); c.beginPath(); points.forEach((p, i) => i ? c.lineTo(p[0], p[1]) : c.moveTo(p[0], p[1]));
+    if (close) c.closePath();
+    if (fill) { c.fillStyle = fill; c.fill(); }
+    if (color) { c.strokeStyle = color; c.lineWidth = width; c.lineJoin = 'round'; c.stroke(); }
+    c.restore();
+  }
+  function circle(c, x, y, r, fill = null, stroke = INK, width = 3) {
+    c.save(); c.beginPath(); c.arc(x, y, r, 0, TAU);
+    if (fill) { c.fillStyle = fill; c.fill(); }
+    if (stroke) { c.strokeStyle = stroke; c.lineWidth = width; c.stroke(); }
+    c.restore();
+  }
+  function text(c, words, x, y, size = 20, color = INK, align = 'center') {
+    c.save(); c.font = `500 ${Math.max(18, size)}px system-ui, -apple-system, "Noto Sans JP", sans-serif`;
+    c.textAlign = align; c.textBaseline = 'middle'; c.fillStyle = color; c.fillText(words, x, y); c.restore();
+  }
+  function arrow(c, a, b, color = INK, width = 2.5, tip = 9) {
+    line(c, a, b, color, width);
+    const theta = Math.atan2(b[1] - a[1], b[0] - a[0]);
+    line(c, b, [b[0] - tip * Math.cos(theta - 0.5), b[1] - tip * Math.sin(theta - 0.5)], color, width);
+    line(c, b, [b[0] - tip * Math.cos(theta + 0.5), b[1] - tip * Math.sin(theta + 0.5)], color, width);
+  }
+  function measure(c, a, b, label, labelAt, color = TEAL) {
+    line(c, a, b, color, 2);
+    const theta = Math.atan2(b[1] - a[1], b[0] - a[0]), dx = 6 * Math.sin(theta), dy = 6 * Math.cos(theta);
+    [a, b].forEach(p => line(c, [p[0] - dx, p[1] + dy], [p[0] + dx, p[1] - dy], color, 2));
+    if (label) text(c, label, labelAt[0], labelAt[1], 18, color);
+  }
+  function wrap(draw) {
+    return function (ctx, state) {
+      const s = Object.assign({ reveal: false, running: false, time: 0, value: 0.5, variant: 0, seed: 0 }, state || {});
+      s.value = clamp(s.value); s.time = Math.max(0, Number(s.time) || 0);
+      ctx.save(); ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'source-over';
+      ctx.setLineDash([]); ctx.fillStyle = B; ctx.fillRect(0, 0, 640, 400);
+      try { draw(ctx, s); } finally { ctx.restore(); }
+    };
+  }
+  function endpointGuides(c, x1, x2, top, bottom) {
+    line(c, [x1, top], [x1, bottom], TEAL, 1.5, [5, 5]);
+    line(c, [x2, top], [x2, bottom], TEAL, 1.5, [5, 5]);
+  }
+
+  const renderers = {};
+
+  renderers.G01 = wrap((c, s) => {
+    const x1 = 190, x2 = 450, wing = 24 + 42 * s.value;
+    [130, 270].forEach((y, i) => {
+      line(c, [x1, y], [x2, y], INK, 5);
+      if (!s.reveal) {
+        const sign = i === 0 ? 1 : -1;
+        [-1, 1].forEach(dy => {
+          line(c, [x1, y], [x1 + sign * wing, y + dy * wing], INK, 3.5);
+          line(c, [x2, y], [x2 - sign * wing, y + dy * wing], INK, 3.5);
+        });
+      }
+    });
+    text(c, 'A', 105, 130); text(c, 'B', 105, 270);
+    if (s.reveal) {
+      endpointGuides(c, x1, x2, 95, 305);
+      measure(c, [x1, 335], [x2, 335], '260 = 260', [320, 365]);
+    }
+  });
+
+  renderers.G02 = wrap((c, s) => {
+    if (!s.reveal) {
+      const topHalf = (170 - 120 * s.value) / 2;
+      [-1, 1].forEach(sign => line(c, [320 + sign * topHalf, 55], [320 + sign * 205, 340], GRAY, 3));
+      for (let i = 1; i <= 7; i++) {
+        const t = (i / 8) ** 1.6, y = 55 + 285 * t, half = topHalf + (205 - topHalf) * t;
+        line(c, [320 - half, y], [320 + half, y], '#a8b0b2', 2);
+      }
+    }
+    [125, 270].forEach(y => line(c, [240, y], [400, y], INK, 9));
+    if (s.reveal) {
+      endpointGuides(c, 240, 400, 95, 300);
+      measure(c, [240, 335], [400, 335], '160 = 160', [320, 365]);
+    }
+  });
+
+  renderers.G03 = wrap((c, s) => {
+    if (!s.reveal) {
+      [[180, 7, 93, 37], [460, 8, 61, 13]].forEach(([x, n, orbit, r]) => {
+        for (let i = 0; i < n; i++) {
+          const a = TAU * i / n + (n === 7 ? Math.PI / 2 : 0);
+          circle(c, x + orbit * Math.cos(a), 195 + orbit * Math.sin(a), r, LIGHT, INK, 2);
+        }
+      });
+    }
+    [180, 460].forEach(x => {
+      circle(c, x, 195, 25, INK, null);
+      if (s.reveal) {
+        line(c, [x - 25, 195], [x - 25, 270], TEAL, 1, [4, 4]);
+        line(c, [x + 25, 195], [x + 25, 270], TEAL, 1, [4, 4]);
+        measure(c, [x - 25, 265], [x + 25, 265], '直径50', [x, 300]);
+      }
+    });
+    text(c, 'A', 180, 350); text(c, 'B', 460, 350);
+  });
+
+  renderers.G04 = wrap((c, s) => {
+    const outer = [44, 70 + 55 * s.value];
+    [175, 465].forEach((x, i) => {
+      if (!s.reveal) circle(c, x, 195, outer[(i + (s.variant % 2)) % 2], null, INK, 3);
+      circle(c, x, 195, 34, INK, null);
+      if (s.reveal) {
+        measure(c, [x - 34, 265], [x + 34, 265], '直径68', [x, 300]);
+        line(c, [x - 34, 195], [x - 34, 270], TEAL, 1, [4, 4]);
+        line(c, [x + 34, 195], [x + 34, 270], TEAL, 1, [4, 4]);
+      }
+    });
+    text(c, 'A', 175, 350); text(c, 'B', 465, 350);
+  });
+
+  function annularSector(c, x, y, fill, stroke = INK, width = 3, dash = []) {
+    c.save(); c.beginPath(); c.arc(x, y, 270, rad(-130), rad(-50));
+    c.arc(x, y, 218, rad(-50), rad(-130), true); c.closePath();
+    if (fill) { c.fillStyle = fill; c.fill(); }
+    c.strokeStyle = stroke; c.lineWidth = width; c.setLineDash(dash); c.stroke(); c.restore();
+  }
+  renderers.G05 = wrap((c, s) => {
+    if (!s.reveal) {
+      annularSector(c, 330, 360, '#c8d0ce');
+      annularSector(c, 297, 460, '#c8d0ce');
+      text(c, 'A', 100, 135); text(c, 'B', 100, 270);
+    } else {
+      annularSector(c, 320, 420, '#e3e9e4', TEAL, 6);
+      annularSector(c, 320, 420, null, CORAL, 2.5, [8, 5]);
+      text(c, '2つの帯を同じ位置に重ねる', 320, 65, 22);
+      text(c, '外側の弧も、内側の弧も一致', 320, 340, 20, TEAL);
+    }
+  });
+
+  renderers.G06 = wrap((c, s) => {
+    if (!s.reveal) {
+      line(c, [210, 300], [430, 300], INK, 5);
+      line(c, [320, 80], [320, 300], INK, 5);
+      text(c, '縦', 360, 170); text(c, '横', 320, 345);
+    } else {
+      line(c, [210, 140], [430, 140], CORAL, 5);
+      line(c, [210, 260], [430, 260], INK, 5);
+      endpointGuides(c, 210, 430, 110, 290);
+      text(c, '元の縦', 115, 140); text(c, '元の横', 115, 260);
+      measure(c, [210, 325], [430, 325], '220 = 220', [320, 360]);
+    }
+  });
+
+  renderers.G07 = wrap((c, s) => {
+    const n = 3 + Math.round(14 * s.value);
+    if (!s.reveal) for (let i = 1; i <= n; i++) {
+      const x = 100 + 220 * i / (n + 1); line(c, [x, 177], [x, 223], INK, 2.5);
+    }
+    [100, 320, 540].forEach((x, i) => {
+      line(c, [x, 162], [x, 238], INK, 4);
+      text(c, ['A', 'B', 'C'][i], x, 275);
+    });
+    if (s.reveal) {
+      measure(c, [100, 320], [320, 320], '220', [210, 350]);
+      measure(c, [320, 320], [540, 320], '220', [430, 350]);
+    }
+  });
+
+  renderers.G08 = wrap((c, s) => {
+    if (!s.reveal) {
+      path(c, [[70, 100], [430, 100], [510, 280], [150, 280]], GRAY, 3, true);
+      line(c, [330, 100], [410, 280], GRAY, 3);
+      line(c, [150, 280], [330, 100], INK, 6);
+      line(c, [330, 100], [510, 280], INK, 6);
+      text(c, 'A', 220, 330); text(c, 'B', 440, 330);
+    } else {
+      const half = 90 * Math.SQRT2;
+      line(c, [320 - half, 140], [320 + half, 140], INK, 5);
+      line(c, [320 - half, 260], [320 + half, 260], CORAL, 5);
+      endpointGuides(c, 320 - half, 320 + half, 110, 290);
+      text(c, 'A', 115, 140); text(c, 'B', 115, 260);
+      text(c, '回転して並べると、両端が一致', 320, 350, 20, TEAL);
+    }
+  });
+
+  renderers.G09 = wrap((c, s) => {
+    const w = 80 + 100 * s.value;
+    line(c, [120, 310], [520, 90], INK, 5);
+    c.save(); c.globalAlpha = s.reveal ? 0.12 : 1;
+    c.fillStyle = '#c5cdcb'; c.fillRect(320 - w / 2, 55, w, 290);
+    c.strokeStyle = GRAY; c.lineWidth = 2; c.strokeRect(320 - w / 2, 55, w, 290); c.restore();
+    if (s.reveal) {
+      line(c, [120, 310], [520, 90], TEAL, 3);
+      circle(c, 120, 310, 5, TEAL, null); circle(c, 520, 90, 5, TEAL, null);
+      text(c, '隠れていた部分も同じ直線', 320, 375, 20, TEAL);
+    }
+  });
+
+  renderers.G10 = wrap((c, s) => {
+    for (let i = 0; i < 5; i++) {
+      const x = 80 + 100 * i;
+      line(c, [x, 310], [x + 100, 90], INK, 4);
+      if (!s.reveal) for (let j = 1; j <= 8; j++) {
+        const t = j / 9, px = x + 100 * t, py = 310 - 220 * t;
+        const d = i % 2 ? [0, 23] : [23, 0];
+        line(c, [px - d[0], py - d[1]], [px + d[0], py + d[1]], INK, 2.5);
+      }
+    }
+    if (s.reveal) {
+      line(c, [60, 310], [500, 310], TEAL, 1.5, [5, 5]);
+      line(c, [160, 90], [600, 90], TEAL, 1.5, [5, 5]);
+      text(c, '同じ傾きの線を等間隔に移動', 320, 365, 20, TEAL);
+    }
+  });
+
+  function heringTargets(c, reveal) {
+    [230, 410].forEach(x => line(c, [x, 65], [x, 335], INK, 5));
+    if (reveal) {
+      measure(c, [230, 95], [410, 95], '180', [320, 70]);
+      measure(c, [230, 305], [410, 305], '180', [320, 335]);
+      text(c, '直線・同じ間隔', 320, 375, 20, TEAL);
+    }
+  }
+  renderers.G11 = wrap((c, s) => {
+    if (!s.reveal) {
+      c.save(); c.beginPath(); c.rect(45, 45, 550, 310); c.clip();
+      for (let i = 0; i < 18; i++) {
+        const a = i * Math.PI / 18, dx = 650 * Math.cos(a), dy = 650 * Math.sin(a);
+        line(c, [320 - dx, 200 - dy], [320 + dx, 200 + dy], '#969fa4', 1.6);
+      }
+      c.restore();
+    }
+    heringTargets(c, s.reveal);
+  });
+  renderers.G12 = wrap((c, s) => {
+    if (!s.reveal) for (let y = 25; y <= 375; y += 25) {
+      path(c, [[70, 200], [320, y], [570, 200]], '#969fa4', 1.6);
+    }
+    heringTargets(c, s.reveal);
+  });
+
+  renderers.G13 = wrap((c, s) => {
+    if (!s.reveal) {
+      c.save(); c.beginPath(); c.rect(50, 50, 540, 300); c.clip();
+      for (let i = 0; i <= 24; i++) {
+        const a = -Math.PI / 2 + i * Math.PI / 48;
+        line(c, [100, 315], [100 + Math.cos(a) * 900, 315 + Math.sin(a) * 900], '#9aa3a6', 1.6);
+      }
+      c.restore();
+    }
+    path(c, [[265, 110], [455, 110], [455, 300], [265, 300]], INK, 5, true);
+    if (s.reveal) {
+      [[265, 110, 1, 1], [455, 110, -1, 1], [455, 300, -1, -1], [265, 300, 1, -1]].forEach(([x, y, a, b]) =>
+        path(c, [[x + 14 * a, y], [x + 14 * a, y + 14 * b], [x, y + 14 * b]], TEAL, 2));
+      measure(c, [265, 335], [455, 335], '190', [360, 365]);
+      measure(c, [225, 110], [225, 300], '190', [185, 205]);
+    }
+  });
+
+  renderers.G14 = wrap((c, s) => {
+    const tile = 48, gap = 3, top = 32, left = 48, right = 592;
+    // The animation changes only row offsets; every mortar y coordinate is fixed.
+    const shift = tile * (s.value + 0.5 * Math.sin(s.time * 0.8));
+    if (!s.reveal) {
+      c.save(); c.beginPath(); c.rect(left, top, right - left, 306); c.clip();
+      c.fillStyle = '#8d9496'; c.fillRect(left, top, right - left, 306);
+      for (let row = 0; row < 6; row++) for (let col = -3; col < 15; col++) {
+        const x = left + col * tile + (row % 2 ? shift : 0);
+        c.fillStyle = col % 2 === 0 ? '#f9faf6' : '#30383c';
+        c.fillRect(x, top + row * (tile + gap), tile, tile);
+      }
+      c.restore();
+      if (!s.running) {
+        // Static reference frames for the two useful phases of the periodic motion.
+        [0, 0.5].forEach((offset, i) => {
+          const px = i ? 400 : 165, py = 347, small = 12;
+          c.save(); c.beginPath(); c.rect(px, py, 72, 25); c.clip();
+          c.fillStyle = '#8d9496'; c.fillRect(px, py, 72, 25);
+          for (let row = 0; row < 2; row++) for (let col = -1; col < 7; col++) {
+            c.fillStyle = col % 2 === 0 ? '#f9faf6' : '#30383c';
+            c.fillRect(px + col * small + (row ? offset * small : 0), py + row * 13, small, small);
+          }
+          c.restore(); text(c, i ? '半枚のずれ' : '整列', px + 36, 389, 18, GRAY);
+        });
+      }
+    } else {
+      for (let row = 0; row < 5; row++) {
+        const y = top + tile + gap / 2 + row * (tile + gap);
+        line(c, [left, y], [right, y], TEAL, 3);
+      }
+      text(c, '横の目地だけを残すと、すべて水平', 320, 380, 18, TEAL);
+    }
+  });
+
+  renderers.G15 = wrap((c, s) => {
+    const cx = 320, cy = 195, radii = [30, 55, 80, 105, 130, 155];
+    if (!s.reveal) {
+      c.save(); c.beginPath(); c.arc(cx, cy, 169, 0, TAU); c.clip();
+      for (let row = -9; row <= 9; row++) for (let col = -9; col <= 9; col++) {
+        c.fillStyle = (row + col) % 2 ? '#e2e5df' : '#f7f6f2';
+        c.fillRect(cx + col * 20, cy + row * 20, 20, 20);
+      }
+      c.restore();
+      radii.forEach(r => {
+        c.save(); c.beginPath(); c.arc(cx, cy, r + 6, 0, TAU); c.arc(cx, cy, r - 6, 0, TAU, true); c.clip('evenodd');
+        c.fillStyle = '#29323a'; c.fillRect(cx - r - 8, cy - r - 8, 2 * r + 16, 2 * r + 16);
+        const n = Math.max(12, Math.round(TAU * r / 16)), tilt = 0.14 + 0.48 * s.value;
+        for (let i = 0; i < n; i++) {
+          const a = TAU * i / n;
+          c.save(); c.translate(cx + r * Math.cos(a), cy + r * Math.sin(a)); c.rotate(a + Math.PI / 2 + tilt);
+          c.fillStyle = '#f7f6f2'; c.fillRect(-4, -18, 8, 36); c.restore();
+        }
+        c.restore();
+      });
+    } else {
+      radii.forEach(r => circle(c, cx, cy, r, null, TEAL, 3));
+      circle(c, cx, cy, 3.5, CORAL, null);
+      text(c, 'すべて閉じた同心円', 320, 380, 20, TEAL);
+    }
+  });
+
+  function grating(c, x, y, radius, angle, spacing, width, color) {
+    c.save(); c.beginPath(); c.arc(x, y, radius, 0, TAU); c.clip();
+    c.fillStyle = B; c.fillRect(x - radius, y - radius, radius * 2, radius * 2);
+    c.translate(x, y); c.rotate(angle);
+    for (let q = -radius * 2; q <= radius * 2; q += spacing) line(c, [q, -radius * 2], [q, radius * 2], color, width);
+    c.restore();
+  }
+  renderers.G16 = wrap((c, s) => {
+    const angle = rad(5 + 30 * s.value);
+    [170, 470].forEach((x, i) => {
+      if (!s.reveal) grating(c, x, 195, 125, (i ? -1 : 1) * angle, 12, 4, '#65717a');
+      circle(c, x, 195, 66, B, null);
+      grating(c, x, 195, 60, 0, 10, 3.5, INK);
+      if (s.reveal) line(c, [x, 105], [x, 285], TEAL, 2, [6, 5]);
+      text(c, i ? 'B' : 'A', x, 350);
+    });
+  });
+
+  const tableShape = [[-110, -45], [50, -45], [110, 45], [-50, 45]];
+  function transformedTable(x, y, angle) {
+    const ca = Math.cos(angle), sa = Math.sin(angle);
+    return tableShape.map(([px, py]) => [x + px * ca - py * sa, y + px * sa + py * ca]);
+  }
+  function table(c, points, context) {
+    if (context) {
+      points.forEach(p => path(c, [[p[0] - 4, p[1]], [p[0] + 4, p[1]], [p[0] + 4, p[1] + 70], [p[0] - 4, p[1] + 70]], INK, 1.5, true, '#aeb9b4'));
+      path(c, points.map(p => [p[0], p[1] + 9]), INK, 2, true, '#adb9b3');
+    }
+    path(c, points, INK, 2.5, true, '#d5dcd6');
+  }
+  renderers.G17 = wrap((c, s) => {
+    const left = transformedTable(180, 185, rad(-70)), right = transformedTable(460, 170, 0);
+    table(c, left, !s.reveal); table(c, right, !s.reveal);
+    let t = (s.time % 8) / 8; t = t <= 0.5 ? 2 * t : 2 - 2 * t; t = t * t * (3 - 2 * t);
+    if (s.reveal) t = 1;
+    const moving = transformedTable(180 + 280 * t, 185 - 15 * t, rad(-70) * (1 - t));
+    if (s.reveal || s.time > 0) {
+      c.save(); c.globalAlpha = 0.16; path(c, moving, null, 0, true, TEAL); c.restore();
+      path(c, moving, TEAL, 4.5, true);
+    }
+    if (!s.running && !s.reveal) {
+      // Both drawn tabletops are the exact start and end outlines of the moving panel.
+      text(c, '再生すると左の天板が回転して右に重なる', 320, 378, 18, GRAY);
+    }
+    if (s.reveal) text(c, '回転・移動だけで輪郭が一致', 320, 360, 20, TEAL);
+  });
+
+  function person(c, x, bottom, height, color = INK) {
+    const r = height * 0.09;
+    circle(c, x, bottom - height + r, r, color, null);
+    line(c, [x, bottom - height + r * 2.4], [x, bottom - height * 0.36], color, Math.max(3, height * 0.045));
+    line(c, [x - height * 0.18, bottom - height * 0.62], [x + height * 0.18, bottom - height * 0.62], color, Math.max(3, height * 0.035));
+    line(c, [x, bottom - height * 0.36], [x - height * 0.13, bottom], color, Math.max(3, height * 0.04));
+    line(c, [x, bottom - height * 0.36], [x + height * 0.13, bottom], color, Math.max(3, height * 0.04));
+  }
+  renderers.G18 = wrap((c, s) => {
+    if (!s.reveal) {
+      text(c, '固定視点からの見え（模式図）', 320, 28, 20);
+      const inner = [[160, 80], [480, 80], [480, 300], [160, 300]];
+      const outer = [[70, 50], [570, 50], [570, 345], [70, 345]];
+      path(c, outer, GRAY, 2, true, '#eef0e9'); path(c, inner, GRAY, 2, true, '#e2e6df');
+      inner.forEach((p, i) => line(c, p, outer[i], GRAY, 2));
+      person(c, 205, 299, 82); person(c, 435, 299, 164);
+      text(c, '同じ身長でも、写る高さは違う', 320, 377, 18, GRAY);
+    } else {
+      text(c, '上から見た配置（模式図）', 320, 28, 20);
+      path(c, [[110, 80], [500, 225], [510, 315], [200, 315]], GRAY, 2.5, true, '#e3e8e2');
+      const eye = [320, 358], far = [150, 105], near = [465, 220];
+      line(c, eye, far, TEAL, 2, [6, 5]); line(c, eye, near, CORAL, 2, [6, 5]);
+      circle(c, far[0], far[1], 9, TEAL, null); circle(c, near[0], near[1], 9, CORAL, null);
+      circle(c, eye[0], eye[1], 7, INK, null);
+      text(c, '遠い側', 155, 60, 19, TEAL); text(c, '近い側', 525, 185, 19, CORAL);
+      text(c, '固定視点', 320, 386, 18); text(c, '人物の身長は同じ', 320, 147, 19);
+    }
+  });
+
+  renderers.G19 = wrap((c, s) => {
+    if (!s.reveal) {
+      text(c, 'カメラに写る像（模式図）', 320, 45, 21);
+      [185, 455].forEach(x => {
+        c.save(); c.fillStyle = '#e4e8e1'; c.fillRect(x - 100, 95, 200, 220); c.restore();
+        circle(c, x, 195, 56, '#a7b5af', INK, 3);
+      });
+      text(c, '同じ見かけでも、大きさと距離は別', 320, 355, 20);
+    } else {
+      text(c, '高さと距離を同じ比率で変える', 320, 35, 20);
+      const eye = [90, 235];
+      line(c, eye, [410, 135], GRAY, 2); line(c, eye, [410, 335], GRAY, 2);
+      line(c, [250, 185], [250, 285], TEAL, 8);
+      line(c, [410, 135], [410, 335], CORAL, 8);
+      circle(c, eye[0], eye[1], 7, INK, null);
+      text(c, '視点', 90, 275, 18); text(c, '高さ100', 265, 150, 18, TEAL); text(c, '高さ200', 465, 110, 18, CORAL);
+      measure(c, [90, 365], [250, 365], '距離160', [170, 390], TEAL);
+      measure(c, [250, 365], [410, 365], '+160', [330, 390], CORAL);
+      text(c, '同じ2本の視線に収まる', 420, 75, 19);
+    }
+  });
+
+  function key(c) {
+    c.save(); c.fillStyle = INK; c.beginPath(); c.arc(-36, 0, 26, 0, TAU); c.arc(-36, 0, 12, 0, TAU, true); c.fill('evenodd');
+    c.fillRect(-10, -7, 75, 14); c.fillRect(38, 5, 11, 21); c.fillRect(54, 5, 11, 30); c.restore();
+  }
+  renderers.G20 = wrap((c, s) => {
+    const horizontal = s.reveal ? 1 : 2.8 - 1.8 * s.value;
+    text(c, '投影の補正を、横伸縮で説明', 320, 50, 20);
+    c.save(); c.translate(320, 185); c.scale(1.5 * horizontal, 1.5); key(c); c.restore();
+    arrow(c, [180, 300], [260, 300], s.reveal ? TEAL : GRAY);
+    arrow(c, [460, 300], [380, 300], s.reveal ? TEAL : GRAY);
+    text(c, s.reveal ? '同じ経路を元の横倍率へ戻す' : '補正を動かして形を確かめる', 320, 355, 20, s.reveal ? TEAL : INK);
+  });
+
+  renderers.G21 = wrap((c, s) => {
+    if (!s.reveal) {
+      text(c, '等しい円による模式図', 320, 30, 20);
+      path(c, [[0, 315], [80, 297], [140, 316], [220, 292], [280, 310], [340, 272], [380, 297], [430, 304], [485, 295], [550, 265], [640, 296], [640, 400], [0, 400]], null, 0, true, '#bcc7bf');
+      path(c, [[336, 300], [336, 263], [354, 247], [372, 263], [372, 300]], GRAY, 2, true, '#e2e7de');
+      line(c, [0, 304], [640, 304], GRAY, 1.5);
+      circle(c, 180, 105, 28, B, INK, 2);
+      circle(c, 460, 270, 28, B, INK, 2);
+    } else {
+      [180, 460].forEach(x => {
+        circle(c, x, 190, 28, B, INK, 2);
+        measure(c, [x - 28, 260], [x + 28, 260], '直径56', [x, 295]);
+      });
+      text(c, '背景を消して、同じ高さで比較', 320, 355, 20, TEAL);
+    }
+  });
+
+  renderers.G22 = wrap((c, s) => {
+    if (!s.reveal) {
+      text(c, '凹面マスクの正面図（模式）', 320, 32, 20);
+      c.save(); c.beginPath(); c.ellipse(320, 195, 92, 128, 0, 0, TAU);
+      const shade = c.createLinearGradient(228, 195, 412, 195); shade.addColorStop(0, '#abb7b2'); shade.addColorStop(0.55, '#eef0e8'); shade.addColorStop(1, '#c4cec7');
+      c.fillStyle = shade; c.fill(); c.strokeStyle = GRAY; c.lineWidth = 2; c.stroke();
+      [[286, 175], [354, 175]].forEach(([x, y]) => { c.beginPath(); c.ellipse(x, y, 15, 7, 0, 0, TAU); c.fillStyle = '#73817b'; c.fill(); });
+      path(c, [[320, 173], [306, 222], [329, 222]], '#97a39b', 4);
+      c.beginPath(); c.moveTo(287, 259); c.quadraticCurveTo(320, 273, 353, 259); c.strokeStyle = '#78867e'; c.lineWidth = 4; c.stroke(); c.restore();
+      text(c, '正面の絵だけでは、凹凸を一意に決めにくい', 320, 370, 18, GRAY);
+    } else {
+      text(c, '物体：凹面', 200, 42, 21, TEAL); text(c, '解釈の候補：凸面', 440, 42, 21, CORAL);
+      line(c, [170, 85], [170, 310], GRAY, 1.5, [5, 5]); line(c, [470, 85], [470, 310], GRAY, 1.5, [5, 5]);
+      const concave = [[170, 95], [184, 135], [188, 173], [235, 197], [188, 219], [184, 260], [170, 300]];
+      const convex = concave.map(([x, y]) => [640 - x, y]);
+      path(c, concave, TEAL, 5); path(c, convex, CORAL, 5);
+      arrow(c, [75, 197], [145, 197], INK); arrow(c, [330, 197], [390, 197], INK);
+      text(c, 'へこむ', 210, 338, 19, TEAL); text(c, '手前へ出る', 440, 338, 19, CORAL);
+      text(c, '顔の断面を横から見た説明図', 320, 380, 18);
+    }
+  });
+
+  // A three-prism open sculpture. Its endpoints differ by (1,1,1), which
+  // projects to zero at the first view. The reveal uses another linear projection.
+  function tribar(c, reveal) {
+    const w = 0.06, size = 285;
+    function project(p) {
+      const depth = p[0] + p[1] + p[2] - 1.5;
+      return [320 + size * (0.5 * p[0] - p[1] + 0.5 * p[2]) + (reveal ? 38 * depth : 0),
+        65 + size * Math.sqrt(3) / 2 * (p[0] - p[2]) - (reveal ? 14 * depth : 0)];
+    }
+    const boxes = [
+      [[0, 1], [-w, w], [-w, w]],
+      [[1 - w, 1 + w], [0, 1], [-w, w]],
+      [[1 - w, 1 + w], [1 - w, 1 + w], [0, 1]]
+    ];
+    const faces = [];
+    boxes.forEach(bounds => {
+      for (let axis = 0; axis < 3; axis++) {
+        const other = [0, 1, 2].filter(a => a !== axis), points = [];
+        [[0, 0], [1, 0], [1, 1], [0, 1]].forEach(bits => {
+          const p = [0, 0, 0]; p[axis] = bounds[axis][1];
+          p[other[0]] = bounds[other[0]][bits[0]]; p[other[1]] = bounds[other[1]][bits[1]]; points.push(p);
+        });
+        faces.push({ points, depth: points.reduce((sum, p) => sum + p[0] + p[1] + p[2], 0) / 4, axis });
+      }
+    });
+    faces.sort((a, b) => a.depth - b.depth).forEach(f => path(c, f.points.map(project), INK, 1.6, true, ['#b9c5be', '#e0e7de', '#87998c'][f.axis]));
+    if (reveal) {
+      const start = project([0, 0, 0]), end = project([1, 1, 1]);
+      line(c, start, end, CORAL, 2, [5, 5]);
+      circle(c, start[0], start[1], 6, TEAL, null); circle(c, end[0], end[1], 6, CORAL, null);
+    }
+  }
+  renderers.G23 = wrap((c, s) => {
+    tribar(c, s.reveal);
+    text(c, s.reveal ? '視点をずらすと、重なった端が離れる' : '3つの接合部を順にたどる', 320, 377, 18, s.reveal ? TEAL : GRAY);
+  });
+
+  renderers.G24 = wrap((c, s) => {
+    if (!s.reveal) {
+      text(c, '不可能な接続を考える模式図', 320, 30, 20);
+      const vertices = [[320, 85], [535, 190], [320, 295], [105, 190]];
+      for (let k = 0; k < 4; k++) {
+        const a = vertices[k], b = vertices[(k + 1) % 4], dx = b[0] - a[0], dy = b[1] - a[1], length = Math.hypot(dx, dy);
+        const nx = -dy / length * 21, ny = dx / length * 21;
+        for (let j = 0; j < 3; j++) {
+          const p = [a[0] + dx * j / 3, a[1] + dy * j / 3], q = [a[0] + dx * (j + 1) / 3, a[1] + dy * (j + 1) / 3];
+          const p1 = [p[0] - nx, p[1] - ny], p2 = [p[0] + nx, p[1] + ny], q1 = [q[0] - nx, q[1] - ny], q2 = [q[0] + nx, q[1] + ny];
+          path(c, [q1, q2, [q2[0], q2[1] + 10], [q1[0], q1[1] + 10]], INK, 1.2, true, '#85978c');
+          path(c, [p1, q1, q2, p2], INK, 1.6, true, j % 2 ? '#d4dfd3' : '#e5ebe1');
+        }
+        arrow(c, [a[0] + dx * 0.35, a[1] + dy * 0.35], [a[0] + dx * 0.65, a[1] + dy * 0.65], INK, 2.5, 9);
+      }
+      text(c, '一周、すべて上り？', 320, 190, 20);
+      text(c, '12段を上って出発点へ戻る、と読むと矛盾', 320, 365, 18, GRAY);
+    } else {
+      text(c, '一列に開くと、終点は高くなる', 320, 55, 21);
+      const points = [[80, 300]];
+      for (let i = 0; i < 12; i++) { points.push([80 + 35 * (i + 1), 300 - 12 * i]); points.push([80 + 35 * (i + 1), 300 - 12 * (i + 1)]); }
+      path(c, points.concat([[500, 345], [80, 345]]), null, 0, true, '#e0e8df');
+      path(c, points, TEAL, 4);
+      line(c, [80, 300], [570, 300], GRAY, 1.5, [5, 5]);
+      measure(c, [550, 156], [550, 300], '+12段', [590, 225], CORAL);
+      text(c, '出発', 80, 365, 18); text(c, '終点', 500, 125, 18);
+      text(c, '同じ高さへは戻れない', 320, 385, 18, TEAL);
+    }
+  });
+
+  window.ILLUSION_RENDERERS = Object.assign(window.ILLUSION_RENDERERS || {}, renderers);
+}());
+
+(function () {
+  'use strict';
+  const W = 640, H = 400, INK = '#253044', MUTED = '#56627a';
+  const TAU = Math.PI * 2;
+  const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+  const rgb = (r, g, b) => `rgb(${Math.round(r)},${Math.round(g)},${Math.round(b)})`;
+  const gray = v => rgb(v, v, v);
+  const mix = (a, b, t) => a.map((v, i) => Math.round(v + (b[i] - v) * t));
+  function rect(c, x, y, w, h, color) { c.fillStyle = color; c.fillRect(x, y, w, h); }
+  function circle(c, x, y, r, color) {
+    c.fillStyle = color; c.beginPath(); c.arc(x, y, r, 0, TAU); c.fill();
+  }
+  function ring(c, x, y, r, color, width = 2) {
+    c.strokeStyle = color; c.lineWidth = width; c.beginPath(); c.arc(x, y, r, 0, TAU); c.stroke();
+  }
+  function line(c, x1, y1, x2, y2, color = INK, width = 2) {
+    c.strokeStyle = color; c.lineWidth = width; c.beginPath(); c.moveTo(x1, y1); c.lineTo(x2, y2); c.stroke();
+  }
+  function text(c, str, x, y, size = 20, color = INK, align = 'left') {
+    c.font = `${size}px "Noto Sans JP", "Yu Gothic", sans-serif`;
+    c.fillStyle = color; c.textAlign = align; c.textBaseline = 'middle'; c.fillText(str, x, y);
+  }
+  function wrap(c, str, x, y, width, size = 18, color = MUTED, leading = 27) {
+    c.font = `${size}px "Noto Sans JP", "Yu Gothic", sans-serif`;
+    let row = '', yy = y;
+    for (const char of str) {
+      if (char === '\n' || (row && c.measureText(row + char).width > width)) {
+        text(c, row, x, yy, size, color); row = char === '\n' ? '' : char; yy += leading;
+      } else row += char;
+    }
+    if (row) text(c, row, x, yy, size, color);
+  }
+  function cross(c, x, y, size = 10, color = INK, width = 3) {
+    line(c, x - size, y, x + size, y, color, width);
+    line(c, x, y - size, x, y + size, color, width);
+  }
+  function arrow(c, x1, y1, x2, y2, color = MUTED, width = 2) {
+    line(c, x1, y1, x2, y2, color, width);
+    const a = Math.atan2(y2 - y1, x2 - x1);
+    line(c, x2, y2, x2 - 10 * Math.cos(a - .45), y2 - 10 * Math.sin(a - .45), color, width);
+    line(c, x2, y2, x2 - 10 * Math.cos(a + .45), y2 - 10 * Math.sin(a + .45), color, width);
+  }
+  function frame(c, x, y, w, h, color = '#9ca7b6', width = 1.5) {
+    c.strokeStyle = color; c.lineWidth = width; c.strokeRect(x, y, w, h);
+  }
+  function heading(c, str, color = INK) { text(c, str, W / 2, 29, 22, color, 'center'); }
+  function footer(c, str, color = MUTED) { text(c, str, W / 2, 374, 18, color, 'center'); }
+  function background(c, color = '#ffffff') { rect(c, 0, 0, W, H, color); }
+  const renderers = {};
+
+  renderers.C01 = function (c, s) {
+    background(c, '#f6f7fa'); heading(c, s.reveal ? '背景をそろえると？' : '中央の2枚を比べる');
+    const v = s.value, low = 112 - 100 * v, high = 144 + 100 * v;
+    rect(c, 35, 70, 280, 258, s.reveal ? '#b4b4b4' : gray(low));
+    rect(c, 325, 70, 280, 258, s.reveal ? '#b4b4b4' : gray(high));
+    if (s.reveal) rect(c, 175, 187, 290, 24, '#808080');
+    rect(c, 130, 154, 90, 90, '#808080'); rect(c, 420, 154, 90, 90, '#808080');
+    footer(c, s.reveal ? '両方とも RGB (128, 128, 128)' : '描画色は同じ。違うのは周囲の明暗。');
+  };
+
+  renderers.C02 = function (c, s) {
+    background(c, '#f4f5f7'); heading(c, s.reveal ? '文脈を外して A と B を比較' : '影の外の A ／ 影の中の B');
+    const x = 80, y = 78, size = 64, ax = x + size, ay = y, bx = x + size * 4, by = y + size * 2;
+    if (!s.reveal) {
+      for (let r = 0; r < 4; r++) for (let col = 0; col < 6; col++)
+        rect(c, x + col * size, y + r * size, size, size, (r + col) % 2 ? '#8a8a8a' : '#e4e4e4');
+      c.save(); c.beginPath(); c.rect(x, y, 384, 256); c.clip();
+      c.fillStyle = 'rgba(0,0,0,.4)'; c.beginPath();
+      c.moveTo(405, 87); c.lineTo(464, 110); c.lineTo(448, 334); c.lineTo(244, 334); c.closePath(); c.fill(); c.restore();
+      // Deliberate equal-RGB target; the surrounding shadow is a separate layer.
+      rect(c, bx, by, size, size, '#8a8a8a');
+      const gr = c.createLinearGradient(427, 0, 493, 0);
+      gr.addColorStop(0, '#50775a'); gr.addColorStop(.5, '#88ad86'); gr.addColorStop(1, '#385b43');
+      rect(c, 427, 76, 66, 100, gr);
+      c.fillStyle = '#a2b99c'; c.beginPath(); c.ellipse(460, 76, 33, 14, 0, 0, TAU); c.fill();
+      c.fillStyle = '#507256'; c.beginPath(); c.ellipse(460, 176, 33, 14, 0, 0, Math.PI); c.fill();
+    } else {
+      rect(c, 60, 60, 520, 286, '#c5c5c5');
+      rect(c, ax, ay, size, size, '#8a8a8a'); rect(c, bx, by, size, size, '#8a8a8a');
+      text(c, '同じ塗りを取り出す', 320, 310, 20, INK, 'center');
+    }
+    text(c, 'A', ax + size / 2, ay + size / 2, 22, '#111111', 'center');
+    text(c, 'B', bx + size / 2, by + size / 2, 22, '#111111', 'center');
+    footer(c, s.reveal ? 'A・B の面は RGB (138, 138, 138)' : '照明と表面を分けて読むための、独自の簡略作図');
+  };
+
+  function stripedTargets(c, s, chromatic) {
+    background(c, '#f7f8fa'); heading(c, s.reveal ? '縞を取り除いた状態' : chromatic ? '同じ緑が、違う色調に見える？' : '縞の中の同じ灰色');
+    const h = Math.round(14 + s.value * 20), top = 76, bottom = 328;
+    const leftX = 166, rightX = 398, target = chromatic ? '#65cba6' : '#969696';
+    c.save(); c.beginPath(); c.rect(60, top, 520, bottom - top); c.clip();
+    if (s.reveal) rect(c, 60, top, 520, bottom - top, '#dddddd');
+    for (let i = 0, yy = top; yy < bottom; yy += h, i++) {
+      if (!s.reveal) rect(c, 60, yy, 520, h, chromatic ? (i % 2 ? '#eb7eb0' : '#445cc6') : (i % 2 ? '#ffffff' : '#141414'));
+      rect(c, i % 2 ? rightX : leftX, yy, 76, h, target);
+    }
+    c.restore();
+    footer(c, s.reveal ? (chromatic ? '緑の断片はすべて RGB (101, 203, 166)' : '灰色の断片はすべて RGB (150, 150, 150)') : '縞の太さでも見え方が変わる');
+  }
+  renderers.C03 = (c, s) => stripedTargets(c, s, false);
+
+  renderers.C04 = function (c, s) {
+    background(c, '#f5f6f8'); heading(c, '勾配の端に、明るい帯・暗い帯が見える？');
+    const ramp = Math.round(90 + 230 * s.value), x1 = Math.round(320 - ramp / 2), x2 = x1 + ramp;
+    const yy = 76, hh = s.reveal ? 156 : 230;
+    rect(c, 60, yy, x1 - 60, hh, '#404040');
+    const g = c.createLinearGradient(x1, 0, x2, 0); g.addColorStop(0, '#404040'); g.addColorStop(1, '#cccccc');
+    rect(c, x1, yy, x2 - x1, hh, g); rect(c, x2, yy, 580 - x2, hh, '#cccccc');
+    if (s.reveal) {
+      text(c, 'RGB描画値の断面（輝度の実測ではない）', 320, 262, 18, MUTED, 'center');
+      line(c, 60, 342, 580, 342, '#a6adba', 1);
+      line(c, 60, 326, x1, 326, '#258366', 3); line(c, x1, 326, x2, 292, '#258366', 3); line(c, x2, 292, 580, 292, '#258366', 3);
+      text(c, '64', 66, 306, 18, INK); text(c, '204', 568, 277, 18, INK, 'right');
+      c.save(); c.setLineDash([5, 5]); line(c, x1, 238, x1, 342, '#95a1b2', 1); line(c, x2, 238, x2, 342, '#95a1b2', 1); c.restore();
+    }
+    footer(c, s.reveal ? '余分なピークを描かず、平坦 → 増加 → 平坦' : '明暗の勾配の幅を変えて比較する');
+  };
+
+  renderers.C05 = function (c, s) {
+    background(c, '#f7f8fb'); heading(c, s.reveal ? '黒い区画を外した状態' : '周辺の交差点を観察');
+    const street = 9 + Math.round(s.value * 15);
+    rect(c, 55, 64, 530, 276, s.reveal ? '#ffffff' : '#101010');
+    if (!s.reveal) {
+      for (let x = 85; x <= 565; x += 60) rect(c, x - street / 2, 64, street, 276, '#ffffff');
+      for (let y = 82; y <= 322; y += 60) rect(c, 55, y - street / 2, 530, street, '#ffffff');
+    } else {
+      frame(c, 55, 64, 530, 276, '#c7cdd6');
+      frame(c, 150, 150, 90, 90, '#a6adba'); frame(c, 400, 150, 90, 90, '#a6adba');
+      text(c, '交差点の白', 195, 275, 20, INK, 'center'); text(c, '道路の白', 445, 275, 20, INK, 'center');
+    }
+    footer(c, s.reveal ? 'どちらも RGB (255, 255, 255)' : '暗い斑点は描いていません。画像は静止しています。');
+  };
+
+  renderers.C06 = function (c, s) {
+    background(c, '#f7f8fb'); heading(c, s.reveal ? '格子を外して白い円だけに' : '白い点の中に、黒い点が見える？');
+    rect(c, 55, 62, 530, 280, s.reveal ? '#6e7787' : '#101010');
+    if (!s.reveal) {
+      for (let i = 0; i < 7; i++) rect(c, 110 + i * 70 - 6, 62, 12, 280, '#8f8f8f');
+      for (let i = 0; i < 4; i++) rect(c, 55, 95 + i * 70 - 6, 530, 12, '#8f8f8f');
+    }
+    for (let row = 0; row < 4; row++) for (let col = 0; col < 7; col++) circle(c, 110 + col * 70, 95 + row * 70, 9, '#ffffff');
+    footer(c, s.reveal ? '28個の白い円。黒い点を描く処理はありません。' : '動いているのは画像ではなく、見えの印象です。');
+  };
+
+  renderers.C07 = function (c, s) {
+    background(c, '#f6f7f9'); heading(c, s.reveal ? '中央の勾配だけを隠す' : '中央から離れた左右の面を比較');
+    rect(c, 60, 78, 520, 244, '#969696');
+    const depth = 8 + 36 * s.value;
+    if (!s.reveal) {
+      const a = c.createLinearGradient(284, 0, 320, 0); a.addColorStop(0, gray(150)); a.addColorStop(1, gray(150 - depth));
+      const b = c.createLinearGradient(320, 0, 356, 0); b.addColorStop(0, gray(150 + depth)); b.addColorStop(1, gray(150));
+      rect(c, 284, 78, 36, 244, a); rect(c, 320, 78, 36, 244, b);
+    } else {
+      rect(c, 281, 65, 78, 270, '#f6f7f9');
+      text(c, '左の面', 170, 200, 20, '#ffffff', 'center'); text(c, '右の面', 470, 200, 20, '#ffffff', 'center');
+    }
+    footer(c, s.reveal ? '左右の広い面は RGB (150, 150, 150)' : '実際の明暗差は中央72pxの範囲だけ');
+  };
+
+  function wavyLoop(c, cx, cy, rx, ry, inset, color, width) {
+    c.strokeStyle = color; c.lineWidth = width; c.lineJoin = 'round'; c.beginPath();
+    for (let j = 0; j <= 240; j++) {
+      const a = j / 240 * TAU, r = 3.2 * Math.sin(12 * a);
+      const x = cx + (rx - inset + r) * Math.cos(a), y = cy + (ry - inset + r) * Math.sin(a);
+      if (j === 0) c.moveTo(x, y); else c.lineTo(x, y);
+    }
+    c.closePath(); c.stroke();
+  }
+  renderers.C08 = function (c, s) {
+    background(c); heading(c, s.reveal ? '紫の外側輪郭を外した状態' : '白い内部が、薄く橙色に見える？');
+    const width = 2.5 + s.value * 2.5;
+    if (!s.reveal) wavyLoop(c, 175, 202, 109, 99, 0, '#713a9b', width);
+    wavyLoop(c, 175, 202, 109, 99, width, '#ed9a35', width);
+    wavyLoop(c, 465, 202, 109, 99, width, '#ed9a35', width);
+    text(c, s.reveal ? '橙の輪郭だけ' : '紫＋内側の橙', 175, 333, 20, INK, 'center');
+    text(c, '橙の輪郭だけ', 465, 333, 20, INK, 'center');
+    footer(c, '両方の内部に、色付きの面は塗っていません。');
+  };
+
+  renderers.C09 = function (c, s) {
+    background(c); heading(c, s.reveal ? '外側の黒い線だけを外す' : '色の線の間に、薄い面が見える？');
+    const cx = 320, cy = 204;
+    for (let i = 0; i < 12; i++) {
+      const a = i / 12 * TAU;
+      line(c, cx, cy, cx + 71 * Math.cos(a), cy + 71 * Math.sin(a), '#169ec2', 4);
+      if (!s.reveal) line(c, cx + 71 * Math.cos(a), cy + 71 * Math.sin(a), cx + 143 * Math.cos(a), cy + 143 * Math.sin(a), '#151515', 4);
+    }
+    footer(c, '色付きなのは細線だけ。線の間は白です。');
+  };
+  renderers.C10 = (c, s) => stripedTargets(c, s, true);
+
+  renderers.C11 = function (c, s) {
+    background(c, '#f7f8fa'); heading(c, s.reveal ? '背景の色を取り除く' : '同じ灰色に、色味がついて見える？');
+    const a = mix([185, 185, 185], [224, 82, 98], s.value), b = mix([185, 185, 185], [68, 185, 197], s.value);
+    rect(c, 35, 70, 280, 260, s.reveal ? '#c4c4c4' : rgb(...a));
+    rect(c, 325, 70, 280, 260, s.reveal ? '#c4c4c4' : rgb(...b));
+    rect(c, 130, 155, 90, 90, '#a0a0a0'); rect(c, 420, 155, 90, 90, '#a0a0a0');
+    footer(c, '中央2枚は RGB (160, 160, 160)');
+  };
+
+  renderers.C12 = function (c, s) {
+    background(c, '#f4f5f8'); heading(c, s.reveal ? 'カードを中立背景に取り出す' : '照明色の違いを模した2つの場面');
+    const amt = .35 + s.value * .65;
+    const warm = mix([232, 232, 232], [250, 219, 186], amt), cool = mix([232, 232, 232], [186, 219, 250], amt);
+    const scenes = [{cx:165,tint:[255,200,143],card:warm,name:'暖色の照明'}, {cx:475,tint:[143,200,255],card:cool,name:'寒色の照明'}];
+    for (const d of scenes) {
+      const x = d.cx - 135;
+      if (!s.reveal) {
+        rect(c, x, 72, 270, 255, rgb(...mix([214, 214, 214], d.tint, .28 + .3 * s.value)));
+        rect(c, x + 15, 227, 240, 83, rgb(...mix([153, 153, 153], d.tint, .15)));
+        const colors = [[125, 87, 59], [48, 111, 127], [130, 74, 108]];
+        colors.forEach((col, i) => rect(c, x + 19 + i * 80, 245, 65, 45, rgb(...mix(col, d.tint, .2))));
+        rect(c, d.cx - 40, 118, 102, 126, rgb(...mix([100,100,100], d.tint, .15)));
+      }
+      rect(c, d.cx - 51, 106, 102, 126, rgb(...d.card));
+      if (s.reveal) frame(c, d.cx - 51, 106, 102, 126, '#c0c5cf');
+      text(c, d.name, d.cx, 350, 20, INK, 'center');
+      if (s.reveal) { text(c, `RGB (${d.card.join(', ')})`, d.cx, 273, 18, INK, 'center'); text(c, '同じ形・異なる描画色', d.cx, 303, 18, MUTED, 'center'); }
+    }
+    footer(c, '照明と色恒常性の模式図。物理的な照明実験ではありません。');
+  };
+
+  renderers.C13 = function (c, s) {
+    // No inducer before manual play, while paused, or after the first eight seconds.
+    background(c, '#b0b0b0');
+    const inducing = s.running && s.time < 8 && !s.reveal;
+    const initial = s.time === 0 && !s.running && !s.reveal;
+    if (inducing) circle(c, 320, 195, 70, '#c84bb4');
+    if (initial) { ring(c, 320, 195, 70, '#858585', 2); text(c, '開始前：輪郭だけ', 320, 300, 20, '#303030', 'center'); }
+    cross(c, 320, 195, 8, '#222222', 3);
+    heading(c, inducing ? `中心の＋を見る　残り ${Math.max(1, Math.ceil(8 - s.time))} 秒` : initial ? '再生で開始：色の提示は最大8秒' : '今は灰色だけを表示しています', '#292929');
+    if (s.reveal) {
+      frame(c, 232, 107, 176, 176, '#6c6c6c', 1);
+      text(c, '円の場所も RGB (176, 176, 176)', 320, 322, 20, '#292929', 'center');
+    }
+    if (inducing) { rect(c, 120, 333, 400, 6, '#969696'); rect(c, 120, 333, 400 * clamp(s.time / 8, 0, 1), 6, '#5e5e5e'); }
+    footer(c, inducing ? '停止すると色の提示を終了します。' : '緑の円は描いていません。見えない場合もあります。', '#353535');
+  };
+
+  renderers.C14 = function (c, s) {
+    background(c, '#bcbcbc'); heading(c, '中心の＋を見て、薄い周辺の斑点を観察', '#343434');
+    const alpha = .11 + .38 * s.value;
+    for (let i = 0; i < 12; i++) {
+      const a = i / 12 * TAU, x = 320 + 164 * Math.cos(a), y = 207 + 118 * Math.sin(a);
+      const g = c.createRadialGradient(x, y, 0, x, y, 24);
+      g.addColorStop(0, `rgba(162,91,169,${alpha})`); g.addColorStop(.55, `rgba(162,91,169,${alpha * .6})`); g.addColorStop(1, 'rgba(162,91,169,0)');
+      circle(c, x, y, 24, g);
+      if (s.reveal) ring(c, x, y, 26, '#626875', 2);
+    }
+    cross(c, 320, 207, 9, '#303030', 3);
+    footer(c, s.reveal ? '輪郭を加えて位置を確認。斑点は残っています。' : 'プログラムによる消去やフェードはありません。', '#343434');
+  };
+
+  renderers.C15 = function (c, s) {
+    background(c); heading(c, '左目を閉じ、右目で左の＋を見る');
+    const x = 170 + 180 + 100 * s.value;
+    cross(c, 170, 195, 13, '#121212', 4); circle(c, x, 212, 13, '#121212');
+    if (s.reveal) {
+      c.save(); c.setLineDash([6, 5]); frame(c, x - 32, 180, 64, 64, '#7f8fa6', 2); c.restore();
+      arrow(c, x + 56, 130, x + 9, 181, '#5c6b82', 2);
+      text(c, '点はここに残る', 420, 103, 20, INK, 'center');
+      line(c, 170, 280, x, 280, '#8d98a8', 1.5);
+      line(c, 170, 272, 170, 288, '#8d98a8', 1.5); line(c, x, 272, x, 288, '#8d98a8', 1.5);
+    }
+    text(c, '注視する', 170, 315, 20, INK, 'center'); text(c, '直接見ない', x, 315, 20, INK, 'center');
+    footer(c, '無理のない距離で調整。画面の点を消す処理はありません。');
+  };
+
+  renderers.C16 = function (c, s) {
+    background(c); heading(c, '白い切れ目が盲点に入ると、線は続く？');
+    cross(c, 170, 195, 13, '#121212', 4);
+    rect(c, 315, 197, 265, 30, '#267cad');
+    const gap = 26 + s.value * 52, gx = 425 - gap / 2;
+    rect(c, gx, 186, gap, 52, '#ffffff');
+    if (s.reveal) {
+      c.save(); c.setLineDash([5,5]); frame(c, gx, 185, gap, 54, '#ce763b', 2); c.restore();
+      arrow(c, 425, 119, 425, 180, '#ce763b', 2);
+      text(c, '実際の白い切れ目', 425, 98, 20, INK, 'center');
+      text(c, '左右の帯だけを描画', 425, 290, 20, INK, 'center');
+    }
+    text(c, '右目で＋を注視', 170, 316, 20, INK, 'center');
+    footer(c, '左目を閉じ、C15と同じ距離の調整を使います。');
+  };
+
+  function pacman(c, x, y, radius, middle, half, rotation) {
+    circle(c, x, y, radius, '#161616');
+    c.fillStyle = '#ffffff'; c.beginPath(); c.moveTo(x, y);
+    c.arc(x, y, radius + 1, middle - half + rotation, middle + half + rotation); c.closePath(); c.fill();
+  }
+  renderers.C17 = function (c, s) {
+    background(c); heading(c, s.reveal ? '切り口を外向きに回す' : '中央に、白い三角形が見える？');
+    const points = [[320,99],[174,292],[466,292]], rot = s.reveal ? Math.PI : (s.value - .5) * Math.PI;
+    points.forEach((p, i) => {
+      const others = points.filter((_, j) => i !== j);
+      const aa = others.map(q => Math.atan2(q[1] - p[1], q[0] - p[0]));
+      const mid = Math.atan2(Math.sin(aa[0]) + Math.sin(aa[1]), Math.cos(aa[0]) + Math.cos(aa[1]));
+      const half = Math.acos(clamp(Math.cos(aa[0] - aa[1]), -1, 1)) / 2;
+      pacman(c, p[0], p[1], 47, mid, half, rot);
+    });
+    footer(c, '描いているのは欠けた3つの円。中央の辺は描いていません。');
+  };
+
+  renderers.C18 = function (c, s) {
+    background(c, '#f5f6f8'); heading(c, s.reveal ? '遮蔽物を外して、実際の形を確認' : '板の後ろで、1つの円につながる？');
+    circle(c, 320, 201, 105, '#de9140');
+    const broken = s.variant % 2 !== 0;
+    if (broken) rect(c, 282, 88, 76, 226, '#f5f6f8');
+    const moving = s.time > 0 ? 135 * (1 - Math.cos(Math.min(s.time, 20) * .6)) / 2 : 0;
+    const panelX = s.reveal ? 500 : 270 + (s.value - .5) * 260 + moving;
+    rect(c, panelX, 77, 100, 248, '#5b6f8a');
+    line(c, panelX + 2, 77, panelX + 2, 325, '#d4dbe4', 3);
+    if (s.reveal) {
+      text(c, broken ? '中央が切れている' : '完全な円', 320, 337, 20, INK, 'center');
+      text(c, '板', 550, 201, 20, '#ffffff', 'center');
+    }
+    footer(c, s.reveal ? '別条件では、見えなかった中央の形が変わります。' : '隠れた部分の形は、初期像だけでは一意に決まりません。');
+  };
+
+  renderers.C19 = function (c, s) {
+    background(c); heading(c, s.reveal ? '本当の細い円周を加えた状態' : '線の端が、明るい円盤を作る？');
+    const n = 4 + 4 * Math.round(s.value * 2);
+    for (const [cx,cy] of [[205,139],[435,139],[205,281],[435,281]]) {
+      for (let i = 0; i < n; i++) {
+        const a = i / n * TAU;
+        line(c, cx + 25 * Math.cos(a), cy + 25 * Math.sin(a), cx + 60 * Math.cos(a), cy + 60 * Math.sin(a), '#191919', 3);
+      }
+      if (s.reveal) ring(c, cx, cy, 25, '#191919', 1.5);
+    }
+    footer(c, '中心も外側も同じ白。明るい面は加えていません。');
+  };
+
+  renderers.C20 = function (c, s) {
+    background(c, '#f4f6fa'); heading(c, '色順応の概念図：色の変化は描画による説明');
+    const t = s.time > 0 ? clamp(s.time / 7, 0, 1) : s.value;
+    const input = [222,160,124], output = mix(input, [186,186,186], t);
+    text(c, '色の偏った入力', 132, 82, 20, INK, 'center');
+    text(c, '中立へ近づくモデル', 505, 82, 20, INK, 'center');
+    rect(c, 60, 112, 145, 140, rgb(...input)); rect(c, 432, 112, 145, 140, rgb(...output));
+    arrow(c, 219, 183, 268, 183, '#6f7f95', 3); arrow(c, 372, 183, 421, 183, '#6f7f95', 3);
+    circle(c, 320, 183, 43, '#e4eaf2');
+    text(c, '応答の', 320, 169, 19, INK, 'center'); text(c, '再調整', 320, 196, 19, INK, 'center');
+    if (s.reveal) {
+      text(c, `RGB ${input.join(', ')}`, 132, 281, 18, INK, 'center'); text(c, `RGB ${output.join(', ')}`, 505, 281, 18, INK, 'center');
+      rect(c, 238, 298, 68, 35, rgb(...input)); rect(c, 334, 298, 68, 35, rgb(...output));
+      frame(c, 238, 298, 68, 35, '#8f9caf'); frame(c, 334, 298, 68, 35, '#8f9caf');
+      text(c, '入力', 272, 347, 18, MUTED, 'center'); text(c, '出力', 368, 347, 18, MUTED, 'center');
+    } else {
+      text(c, 'RGB補間の説明モデル', 320, 288, 20, INK, 'center');
+      text(c, '観察者の順応を測定していません', 320, 325, 20, MUTED, 'center');
+    }
+    footer(c, '時間的な順応の考え方。実際の順応速度や量の再現ではありません。');
+  };
+
+  renderers.C21 = function (c, s) {
+    const bg = Math.round(8 + Math.pow(s.value, 3) * 230), lightInk = bg < 110 ? '#eef2f8' : '#202a3a';
+    background(c, gray(bg)); heading(c, s.reveal ? '色をそろえ、位置と大きさを確認' : '赤と青の輪が、前後に離れて見える？', lightInk);
+    const mono = bg < 110 ? '#bcbcbc' : '#545454';
+    for (let row = 0; row < 2; row++) for (let i = 0; i < 5; i++) {
+      ring(c, 112 + i * 104, 138 + row * 126, 36, s.reveal ? mono : (i + row) % 2 ? '#244af0' : '#f12637', 10);
+      if (s.reveal) { line(c, 104 + i * 104, 138 + row * 126, 120 + i * 104, 138 + row * 126, lightInk, 1); line(c, 112 + i * 104, 130 + row * 126, 112 + i * 104, 146 + row * 126, lightInk, 1); }
+    }
+    footer(c, s.reveal ? 'すべて半径36。影・立体変換・左右眼用画像なし。' : '背景や片目で見え方が変わることがあります。個人差あり。', lightInk);
+  };
+
+  function benhamDisk(c, cx, cy, angle) {
+    c.save(); c.translate(cx, cy); c.rotate(angle);
+    circle(c, 0, 0, 133, '#ffffff');
+    c.fillStyle = '#141414'; c.beginPath(); c.moveTo(0,0); c.arc(0,0,133,Math.PI / 2,Math.PI * 1.5); c.closePath(); c.fill();
+    for (let group = 0; group < 4; group++) for (let j = 0; j < 3; j++) {
+      c.strokeStyle = '#141414'; c.lineWidth = 5; c.beginPath();
+      c.arc(0,0,26 + group * 24 + j * 8, -Math.PI / 2 + group * Math.PI / 4 + .06, -Math.PI / 2 + (group + 1) * Math.PI / 4 - .06); c.stroke();
+    }
+    ring(c, 0, 0, 133, '#6c6c6c', 2); c.restore();
+  }
+  renderers.C22 = function (c, s) {
+    background(c, '#f4f4f4'); heading(c, 'ベンハム型円盤：構造だけを低速で示す');
+    const angle = s.reveal ? 0 : s.value * TAU + s.time * .12;
+    benhamDisk(c, 212, 205, angle);
+    text(c, '白黒の配置', 462, 93, 22, INK, 'center');
+    wrap(c, '適切な時間変化では主観色が生じることがあります。', 380, 137, 225, 20, INK, 30);
+    if (s.reveal) {
+      rect(c, 402, 235, 60, 58, '#ffffff'); frame(c, 402, 235, 60, 58, '#9b9b9b'); rect(c, 490, 235, 60, 58, '#141414');
+      text(c, 'R = G = B', 475, 318, 20, INK, 'center');
+    } else wrap(c, 'この再生は低速です。色を誘発する実演は行いません。', 380, 245, 225, 20, MUTED, 30);
+    footer(c, '高速回転やフリッカーを使わない模式図です。');
+  };
+
+  function grating(c, x, y, w, h, vertical) {
+    rect(c, x, y, w, h, '#ffffff');
+    c.save(); c.beginPath(); c.rect(x,y,w,h); c.clip();
+    if (vertical) { for (let xx = x; xx < x+w; xx+=24) rect(c,xx,y,12,h,'#111111'); }
+    else { for (let yy = y; yy < y+h; yy+=24) rect(c,x,yy,w,12,'#111111'); }
+    c.restore(); frame(c,x,y,w,h,'#8b95a6',1);
+  }
+  renderers.C23 = function (c, s) {
+    background(c, '#f5f6f9'); heading(c, 'マッカロー効果：向きと色の結び付きの模式図');
+    text(c, '縦のテスト縞', 175, 79, 20, INK, 'center'); text(c, '横のテスト縞', 465, 79, 20, INK, 'center');
+    grating(c, 103, 107, 144, 130, true); grating(c, 393, 107, 144, 130, false);
+    if (s.reveal) {
+      rect(c, 160, 281, 70, 47, '#ffffff'); frame(c,160,281,70,47,'#8b95a6'); rect(c, 410, 281, 70, 47, '#111111');
+      text(c, '白：255,255,255', 195, 348, 18, INK, 'center'); text(c, '黒：17,17,17', 445, 348, 18, INK, 'center');
+    } else {
+      arrow(c, 175, 250, 175, 283, '#7b899d', 2); arrow(c, 465, 250, 465, 283, '#7b899d', 2);
+      circle(c, 142, 309, 15, '#80bcae'); circle(c, 432, 309, 15, '#c48db3');
+      text(c, '残効色の例', 167, 310, 19, INK); text(c, '残効色の例', 457, 310, 19, INK);
+      text(c, '色チップは説明用。実際の残効ではありません。', 320, 348, 18, MUTED, 'center');
+    }
+    footer(c, '誘導用の色付き縞や、長時間の交互提示は行いません。');
+  };
+
+  renderers.C24 = function (c, s) {
+    background(c, '#f5f7fa'); heading(c, '波長への感度の重みが変わる：定性的な模式図');
+    const p = s.time > 0 ? clamp(s.time / 8, 0, 1) : s.value;
+    const darkColor = '#277f91', lightColor = '#ac792d';
+    text(c, '暗所寄り：桿体系', 185, 70, 20, darkColor, 'center'); text(c, '明所寄り：錐体系', 465, 70, 20, lightColor, 'center');
+    line(c, 76, 305, 580, 305, '#8491a4', 2); arrow(c, 76, 305, 76, 102, '#8491a4', 2);
+    text(c, '感度', 42, 112, 18, MUTED, 'center');
+    function curve(center, width, color, opacity) {
+      c.save(); c.globalAlpha = opacity; c.strokeStyle = color; c.lineWidth = 4; c.beginPath();
+      for (let x = 90; x <= 570; x+=2) { const y = 305 - 182 * Math.exp(-.5 * Math.pow((x-center)/width,2)); if (x===90)c.moveTo(x,y);else c.lineTo(x,y); }
+      c.stroke(); c.restore();
+    }
+    curve(274,70,darkColor,s.reveal ? 1 : .25 + .75*p); curve(352,80,lightColor,s.reveal ? 1 : 1-.75*p);
+    if (s.reveal) {
+      c.save(); c.setLineDash([5,5]); line(c,274,123,274,305,darkColor,1.5); line(c,352,123,352,305,lightColor,1.5); c.restore();
+      arrow(c, 344, 100, 282, 100, '#6c7789', 2);
+    }
+    text(c, '短波長寄り', 133, 332, 18, MUTED, 'center'); text(c, '長波長寄り', 524, 332, 18, MUTED, 'center');
+    footer(c, '曲線は測定値ではありません。画面上で暗順応を起こす実験なし。');
+  };
+
+  const safe = {};
+  for (const [id, draw] of Object.entries(renderers)) {
+    safe[id] = function (ctx, state) {
+      const input = state || {};
+      const s = { reveal: !!input.reveal, running: !!input.running,
+        time: Math.max(0, Number.isFinite(input.time) ? input.time : 0),
+        value: clamp(Number.isFinite(input.value) ? input.value : .5, 0, 1),
+        variant: Number.isFinite(input.variant) ? Math.floor(input.variant) : 0,
+        seed: Number.isFinite(input.seed) ? input.seed : 0 };
+      ctx.save();
+      try { ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'source-over'; ctx.setLineDash([]); draw(ctx, s); }
+      finally { ctx.restore(); }
+    };
+  }
+  Object.assign(window.ILLUSION_RENDERERS || (window.ILLUSION_RENDERERS = {}), safe);
+})();
+
+(function () {
+  'use strict';
+  const R = {}, PI = Math.PI, TAU = PI * 2;
+  // Capture the first displayed flash frame, not an ideal continuous-time crossing.
+  // Per-context data only; the renderer owns no clock or animation loop.
+  const flashFrames = new WeakMap();
+  const C = {bg:'#f5f7fa', ink:'#233648', muted:'#617487', pale:'#d9e2e9', teal:'#287e7a', orange:'#cf6545', blue:'#4b78aa'};
+  const val = s => Math.max(0, Math.min(1, Number.isFinite(s.value) ? s.value : .5));
+  const time = s => Math.max(0, s.time || 0);
+  const mod = (x,m) => ((x % m) + m) % m;
+  const rand = (i,seed=1) => { const x=Math.sin(i*127.1+seed*311.7)*43758.5453; return x-Math.floor(x); };
+  function text(c,t,x,y,size=20,color=C.ink,align='center') {c.fillStyle=color;c.font=`${size}px "Noto Sans JP", "Noto Sans CJK JP", sans-serif`;c.textAlign=align;c.textBaseline='middle';c.fillText(t,x,y);}
+  function line(c,x1,y1,x2,y2,color=C.ink,w=2,dash=[]) {c.save();c.strokeStyle=color;c.lineWidth=w;c.setLineDash(dash);c.beginPath();c.moveTo(x1,y1);c.lineTo(x2,y2);c.stroke();c.restore();}
+  function circle(c,x,y,r,fill,stroke,w=2) {c.beginPath();c.arc(x,y,r,0,TAU);if(fill){c.fillStyle=fill;c.fill();}if(stroke){c.strokeStyle=stroke;c.lineWidth=w;c.stroke();}}
+  function rect(c,x,y,w,h,fill,stroke,sw=2) {if(fill){c.fillStyle=fill;c.fillRect(x,y,w,h);}if(stroke){c.strokeStyle=stroke;c.lineWidth=sw;c.strokeRect(x,y,w,h);}}
+  function arrow(c,x1,y1,x2,y2,color=C.orange,w=3) {line(c,x1,y1,x2,y2,color,w);const a=Math.atan2(y2-y1,x2-x1);line(c,x2,y2,x2-11*Math.cos(a-.45),y2-11*Math.sin(a-.45),color,w);line(c,x2,y2,x2-11*Math.cos(a+.45),y2-11*Math.sin(a+.45),color,w);}
+  function cross(c,x,y,r=8,color=C.ink,w=2) {line(c,x-r,y,x+r,y,color,w);line(c,x,y-r,x,y+r,color,w);}
+  function polygon(c,pts,fill,stroke,w=2) {c.beginPath();pts.forEach((p,i)=>i?c.lineTo(...p):c.moveTo(...p));c.closePath();if(fill){c.fillStyle=fill;c.fill();}if(stroke){c.strokeStyle=stroke;c.lineWidth=w;c.stroke();}}
+  function title(c,t){text(c,t,320,28,21);}
+  function footer(c,t){text(c,t,320,376,18,C.muted);}
+  function grid(c,x,y,w,h,step=30,color=C.pale){for(let a=x;a<=x+w;a+=step)line(c,a,y,a,y+h,color,1);for(let b=y;b<=y+h;b+=step)line(c,x,b,x+w,b,color,1);}
+  function neutral(c,label='静止した比較画面') {rect(c,95,70,450,260,'#e1e4e6');grid(c,95,70,450,260,30,'#aab2b7');cross(c,320,200);title(c,label);}
+  function stopped(s,limit=8) {return time(s)>=limit || (time(s)>0 && !s.running);}
+  function register(id,fn){R[id]=(c,s)=>{c.save();rect(c,0,0,640,400,C.bg);c.lineCap='round';c.lineJoin='round';fn(c,s);c.restore();};}
+
+  register('M01',(c,s)=>{
+    title(c,'純粋ファイとベータの違い：模式図');
+    const delay=Math.round(40+val(s)*260);
+    [130,320,510].forEach((x,i)=>{rect(c,x-78,80,156,105,'#e8edf2',C.pale);text(c,['刺激 A','間の印象','刺激 B'][i],x,62,18);});
+    circle(c,130,132,19,C.ink);circle(c,510,132,19,C.ink);
+    if(!s.reveal){c.save();c.globalAlpha=.17;for(let i=0;i<9;i++)circle(c,280+i*10,132,15,C.ink);c.restore();text(c,'動きの感じ',320,166,18);}
+    else {text(c,'物体の描画なし',320,132,18,C.orange);line(c,70,210,570,210,C.pale,2);[130,510].forEach(x=>{line(c,x,82,x,230,C.orange,2,[5,5]);circle(c,x,210,5,C.orange);});}
+    text(c,'ファイ：対象が移ったという印象を伴わない動き',320,253,19);
+    text(c,'ベータ：同じ対象が A → B へ移ったように見える',320,290,19);
+    line(c,135,328,505,328,C.pale,2);rect(c,160,316,26,24,C.ink);const tx=240+val(s)*220;rect(c,tx,316,26,24,C.ink);arrow(c,192,328,tx-8,328,C.muted,2);text(c,`提示間隔の概念値 ${delay} ms`,320,352,18,C.muted);
+    footer(c,'この図は点滅実験ではなく、知覚の区別を表す。');
+  });
+
+  register('M02',(c,s)=>{
+    title(c,'離れた位置だけを順に表示');
+    const step=.45+.4*val(s),n=Math.floor(time(s)/step)%6;
+    if(s.reveal){for(let i=0;i<6;i++){circle(c,140+i*72,200,23,null,C.pale,2);text(c,String(i+1),140+i*72,250,18,C.muted);}line(c,140,200,500,200,C.pale,2,[4,6]);}
+    circle(c,140+n*72,200,19,C.teal);text(c,`1コマ ${Math.round(step*1000)} ms`,320,300,19,C.muted);
+    footer(c,s.reveal?'輪郭の場所だけに描画。中間位置は描いていない。':'再生して、別の出現と1つの移動の印象を比べる。');
+  });
+
+  register('M03',(c,s)=>{
+    title(c,'逆ファイ：コマごとの比較（模式図）');
+    const shift=12+Math.round(val(s)*24);
+    [70,350].forEach(x=>rect(c,x,83,220,210,'#aab0b5',C.pale));
+    text(c,'コマ A',180,61,20);text(c,'コマ B：明暗を反転',460,61,20);
+    rect(c,140,143,60,75,'#37414a');rect(c,420+shift,143,60,75,'#f1f2f3');
+    circle(c,170,178,10,'#f1f2f3');circle(c,450+shift,178,10,'#37414a');
+    line(c,112,250,248,250,'#626e79',2);line(c,392,250,528,250,'#626e79',2);
+    if(s.reveal){[140,200].forEach(x=>{line(c,x,130,x,255,C.orange,2,[5,4]);line(c,x+280,130,x+280,255,C.orange,2,[5,4]);arrow(c,x+280,263,x+280+shift,263,C.orange,2);});}
+    arrow(c,130,322,250,322,C.orange);text(c,'輪郭の変位 →',190,350,19,C.orange);
+    arrow(c,510,322,390,322,C.blue);text(c,'知覚しうる向き ←',450,350,19,C.blue);
+    footer(c,'高速点滅は行わない。左右は同じ特徴の対応を示す。');
+  });
+
+  register('M04',(c,s)=>{
+    title(c,'この模様は、まったく動いていない');
+    const amp=.35+.65*val(s),base=[28,100,242,179];
+    [[190,130],[450,130],[190,285],[450,285]].forEach(([x,y],j)=>{
+      for(let i=0;i<48;i++){const a=i*TAU/48,b=(i+1)*TAU/48;const v=Math.round(135+(base[(j%2?47-i:i)%4]-135)*amp);c.beginPath();c.arc(x,y,61,a,b);c.arc(x,y,28,b,a,true);c.closePath();c.fillStyle=`rgb(${v},${v},${v})`;c.fill();}
+      if(s.reveal){cross(c,x,y,10,C.orange);for(let k=0;k<8;k++){const a=k*TAU/8;line(c,x+64*Math.cos(a),y+64*Math.sin(a),x+71*Math.cos(a),y+71*Math.sin(a),C.orange,3);}circle(c,x,y,72,null,C.orange,1);}
+    });
+    footer(c,s.reveal?'固定の中心と目盛り。図形の位置・角度は更新しない。':'自然に視線を移す。見え方の強さには個人差がある。');
+  });
+
+  register('M05',(c,s)=>{
+    title(c,'中央と周囲で、長方形の向きが異なる');
+    const a=18+val(s)*18,b=7;
+    function checks(vertical){for(let y=50;y<350;y+=vertical?a:b)for(let x=80;x<560;x+=vertical?b:a){const i=Math.floor((x-80)/(vertical?b:a)),j=Math.floor((y-50)/(vertical?a:b));rect(c,x,y,vertical?b:a,vertical?a:b,(i+j)%2?'#e7ecee':'#324753');}}
+    c.save();c.beginPath();c.rect(80,50,480,300);c.clip();checks(false);c.restore();
+    if(!s.reveal){c.save();c.beginPath();c.arc(320,200,97,0,TAU);c.clip();checks(true);c.restore();}
+    if(s.reveal){circle(c,320,200,97,null,C.orange,3);cross(c,320,200,10,C.orange);}
+    footer(c,s.reveal?'模様の向きをそろえると、相対的な滑りの手がかりが減る。':'画面を揺らす処理はない。自然な視線移動で観察する。');
+  });
+
+  register('M06',(c,s)=>{
+    if(stopped(s)||s.reveal){neutral(c,'比較：格子は静止している');footer(c,'必要なだけ休む。8秒以上の順応は行わない。');return;}
+    title(c,s.running?'中央を楽に見る：8秒で静止格子へ':'再生すると流れる模様を8秒だけ表示');
+    c.save();c.beginPath();c.rect(95,75,450,250);c.clip();
+    const d=time(s)*(18+val(s)*38);
+    for(let x=95;x<545;x+=2){const lum=Math.round(168+38*Math.sin((x-d)*TAU/76));rect(c,x,75,2,250,`rgb(${lum},${lum},${lum})`);}
+    c.restore();cross(c,320,200,7,C.ink);rect(c,95,343,450,5,C.pale);rect(c,95,343,450*Math.min(1,time(s)/8),5,C.teal);
+    footer(c,s.running?`あと ${Math.max(0,Math.ceil(8-time(s)))} 秒。停止すると直ちに静止格子へ。`:'短い弱めの刺激なので、残効が出ない場合もある。');
+  });
+
+  register('M07',(c,s)=>{
+    title(c,'周囲の枠だけを動かす');const x=320+Math.sin(time(s)*.8)*(20+val(s)*55);
+    if(s.reveal){grid(c,70,70,500,260,30);cross(c,320,200,22,C.orange);line(c,320,60,320,340,C.orange,2,[5,5]);}
+    rect(c,x-200,88,400,224,null,C.teal,5);for(let i=-3;i<=3;i++)line(c,x+i*50,88,x+i*50,108,C.teal,4);
+    circle(c,320,200,13,C.orange);footer(c,s.reveal?'点の座標は常に (320, 200)。動いているのは枠。':'中央の点が、枠と反対へ動くように見えることがある。');
+  });
+
+  register('M08',(c,s)=>{
+    title(c,'中心から外へ広がるオプティックフロー');const seed=s.seed||1;
+    rect(c,70,66,500,270,'#26394c');
+    c.save();c.beginPath();c.rect(70,66,500,270);c.clip();
+    for(let i=0;i<100;i++){const a=rand(i,seed)*TAU,base=.06+rand(i+120,seed)*.9;const r=.06*Math.exp(mod(Math.log(base/.06)+time(s)*(.2+.26*val(s)),Math.log(1/.06)));circle(c,320+250*r*Math.cos(a),201+136*r*Math.sin(a),1.5+r*2,'#c3d9e2');}
+    if(s.reveal)for(let i=0;i<8;i++){const a=i*TAU/8;arrow(c,320+90*Math.cos(a),201+48*Math.sin(a),320+185*Math.cos(a),201+100*Math.sin(a),'#e0a082',2);}
+    c.restore();rect(c,70,66,500,270,null,s.reveal?C.orange:C.pale,3);cross(c,320,201,6,'#f0f3f5');
+    footer(c,s.reveal?'画面の枠は静止し、点だけが外へ移動している。':'小窓では自己運動感が弱い。違和感があれば停止する。');
+  });
+
+  register('M09',(c,s)=>{
+    title(c,'窓の内側だけでは、線の全方向は分からない');const dx=48*Math.sin(time(s)*(.5+.5*val(s)));
+    if(s.reveal){grid(c,90,55,460,280,35);line(c,180+dx,330,460+dx,50,C.teal,8);circle(c,180+dx,330,6,C.orange);circle(c,460+dx,50,6,C.orange);}
+    else {circle(c,320,190,100,'#e2e8ed');c.save();c.beginPath();c.arc(320,190,100,0,TAU);c.clip();line(c,180+dx,330,460+dx,50,C.teal,8);c.restore();}
+    circle(c,320,190,100,null,C.ink,3);
+    if(s.reveal){arrow(c,420,302,490,302,C.orange,3);arrow(c,490,302,420,302,C.orange,3);text(c,'実際は水平',455,331,18,C.orange);arrow(c,275,160,325,210,C.blue,3);arrow(c,325,210,275,160,C.blue,3);text(c,'局所の成分',213,230,18,C.blue);}
+    footer(c,s.reveal?'端点を見せると、水平方向の移動を追える。':'再生して観察。確認すると隠れていた線の端が現れる。');
+  });
+
+  register('M10',(c,s)=>{
+    title(c,'窓の長軸と、見かけの流れ');const v=val(s),w=80+260*v*v,h=285-150*v*v,x=320-w/2,y=200-h/2,shift=mod(time(s)*28,48);
+    function stripes(alpha){c.save();c.globalAlpha=alpha;for(let k=-550;k<1050;k+=48)line(c,k+shift,-100,k+shift-500,400,C.teal,18);c.restore();}
+    if(s.reveal){c.save();c.beginPath();c.rect(65,55,510,285);c.clip();stripes(.23);c.restore();}
+    rect(c,x,y,w,h,'#e4ebeb');c.save();c.beginPath();c.rect(x,y,w,h);c.clip();stripes(1);c.restore();rect(c,x,y,w,h,null,C.ink,4);
+    if(s.reveal){arrow(c,460,315,545,315,C.orange,3);text(c,'縞の実移動',500,343,18,C.orange);for(let k=-300;k<1000;k+=48){const xx=k+shift-y;if(xx>x&&xx<x+w)circle(c,xx,y,4,C.orange);}}
+    footer(c,s.reveal?'同じ縞を窓で切り取ると、端の交点の動きが手がかりになる。':'縦長・横長で印象を比べる。下地は水平に移動。');
+  });
+
+  register('M11',(c,s)=>{
+    title(c,'同じ回転を、異なる時間間隔で表示');const speed=.4+.45*val(s),t=time(s),a=t*TAU*speed,b=Math.floor(t*6)/6*TAU*speed;
+    function wheel(x,ang,mark){circle(c,x,215,96,null,C.ink,4);for(let i=0;i<8;i++){const q=ang+i*TAU/8;line(c,x,215,x+91*Math.cos(q),215+91*Math.sin(q),i===0&&mark?C.orange:C.ink,i===0&&mark?6:4);}circle(c,x,215,10,C.ink);}
+    wheel(170,a,true);wheel(470,b,s.reveal);text(c,'連続的に更新',170,70,20);text(c,'毎秒6コマ',470,70,20);text(c,`${(speed*60).toFixed(1)} 回転／分`,320,332,19,C.muted);
+    if(s.reveal){arrow(c,105,100,220,100,C.orange,3);arrow(c,405,100,520,100,C.orange,3);text(c,'橙色は同じスポーク',320,354,18,C.orange);}
+    footer(c,s.reveal?'右も元の回転方向は一定。目印で真の対応を確かめる。':'同形のスポークでは、別のスポークとの対応が曖昧になる。');
+  });
+
+  register('M12',(c,s)=>{
+    title(c,'短く出る印と、動く点の横位置');
+    const rate=.9+.4*val(s),t=time(s),phase=t*rate,cycle=Math.floor(phase/PI);
+    let x=320+170*Math.sin(phase),flash=mod(phase,PI)<rate*.1;
+    let record=flashFrames.get(c);
+    if(!record||t<record.lastTime||rate!==record.rate||s.seed!==record.seed||s.variant!==record.variant){
+      record={lastTime:t,rate,seed:s.seed,variant:s.variant,active:false,cycle:-1,captureX:320,hasCapture:false};
+      flashFrames.set(c,record);
+    }
+    if(!s.reveal){
+      if(flash&&(!record.active||cycle!==record.cycle)){record.captureX=x;record.hasCapture=true;record.cycle=cycle;}
+      record.active=flash;record.lastTime=t;
+    }
+    let markX=record.captureX;
+    if(s.reveal){x=markX;flash=true;line(c,x,95,x,305,C.orange,2,[6,5]);}
+    line(c,130,168,510,168,C.pale,2);circle(c,x,168,16,C.teal);if(flash)rect(c,markX-9,223,18,45,C.orange);
+    cross(c,320,318,6,C.ink);text(c,s.reveal?(record.hasCapture?'印が出たフレームの位置に戻す':'初期位置の比較（出現記録なし）'):'印は約2〜4秒ごとに短く表示',320,76,19,C.muted);
+    footer(c,s.reveal?'出現フレームでは、点と印が同じ横位置で始まる。':'印は出現位置に留まり、点だけが移動を続ける。');
+  });
+
+  register('M13',(c,s)=>{
+    title(c,'同じ速度の2つの長方形');const contrast=s.reveal?0:val(s),x=100+320*(1-Math.cos(time(s)*.65))/2;
+    rect(c,70,70,500,260,'#abb3b6');for(let i=0;i<36;i++){const lum=Math.round(170+(i%2?65:-115)*contrast);rect(c,70+i*14,70,14,260,`rgb(${lum},${lum},${lum})`);}
+    if(s.reveal)line(c,x+28,118,x+28,276,C.orange,3);
+    rect(c,x,125,56,34,'#2d3c46');rect(c,x,235,56,34,'#eee2af');
+    if(s.reveal){line(c,x,115,x,284,C.orange,2,[5,4]);line(c,x+56,115,x+56,284,C.orange,2,[5,4]);}
+    footer(c,s.reveal?'先端も後端も、上下で常に同じ横座標。':'縞のコントラストを下げると同期が分かりやすい。');
+  });
+
+  register('M14',(c,s)=>{
+    rect(c,0,0,640,400,'#c6c7c9');const t=time(s),idle=!s.running&&t===0;
+    if(stopped(s)){title(c,'終了：無彩色の静止画面');cross(c,320,200,7,'#51565b');footer(c,'残像が消えるまで楽に視線を動かし、休む。');return;}
+    title(c,idle?'再生後、中央を8秒以内で楽に見る':'紫の点の「抜けた位置」を観察');const gap=Math.floor(t/.27)%12;
+    for(let i=0;i<12;i++){const a=i*TAU/12-PI/2,x=320+111*Math.cos(a),y=205+111*Math.sin(a);
+      if(idle){circle(c,x,y,18,null,'#8e9297',2);continue;}
+      if(i!==gap){const g=c.createRadialGradient(x,y,2,x,y,24);g.addColorStop(0,`rgba(173,77,163,${.35+.4*val(s)})`);g.addColorStop(1,'rgba(173,77,163,0)');circle(c,x,y,24,g);}
+      if(s.reveal)circle(c,x,y,21,null,i===gap?'#45484d':'#a0a3a7',i===gap?3:1);
+    }
+    cross(c,320,205,7,'#3e4349');footer(c,s.reveal?'緑の点は描画せず、1か所を灰色の背景に戻している。':idle?'初期画面は配置だけ。再生時に紫の刺激を表示。':`あと ${Math.ceil(8-t)} 秒で無彩色画面へ。`);
+  });
+
+  register('M15',(c,s)=>{
+    const end=stopped(s),showField=!s.reveal&&!end,t=time(s);title(c,end?'終了：静止した3つの点':'背景が動いても、3つの点は描き続ける');
+    rect(c,85,55,470,285,showField?'#25354a':'#e7e9eb');
+    if(showField){c.save();c.beginPath();c.rect(85,55,470,285);c.clip();c.translate(320,200);c.rotate(t*(.07+.18*val(s)));for(let x=-250;x<260;x+=29)for(let y=-250;y<260;y+=29)cross(c,x,y,4,'#62839e',2);c.restore();}
+    [[215,140],[425,140],[320,285]].forEach(([x,y])=>{circle(c,x,y,6,'#e3c76d');if(s.reveal||end)circle(c,x,y,17,null,C.orange,2);});cross(c,320,200,7,showField?'#edf1f6':C.ink);
+    footer(c,end?'背景を除去。消失の有無は診断や成績ではない。':s.reveal?'背景を隠し、点の固定座標を示す。':'8秒以内。長く見続けず、見えなくても延長しない。');
+  });
+
+  register('M16',(c,s)=>{
+    title(c,'点の運動から円筒の奥行きが立ち上がる');const angle=.35+time(s)*(.3+.45*val(s)),seed=s.seed||2;
+    const points=[];for(let i=0;i<160;i++){const a=rand(i,seed)*TAU+angle;points.push({x:320+145*Math.cos(a),y:76+246*rand(i+200,seed),z:Math.sin(a)});}
+    points.sort((a,b)=>a.z-b.z);points.forEach(p=>circle(c,p.x,p.y,3.5,s.reveal?(p.z>0?C.orange:C.blue):C.teal));
+    if(s.reveal){line(c,320,53,320,340,C.muted,2,[5,6]);c.beginPath();c.ellipse(320,330,145,18,0,0,TAU);c.strokeStyle=C.pale;c.lineWidth=2;c.stroke();text(c,'暖色＝手前　寒色＝奥',320,352,18);}
+    footer(c,s.reveal?'色は生成モデルの前後。平面上の点に深さの手がかりを追加。':'同じ点の明るさだけでは、前後が曖昧になることもある。');
+  });
+
+  register('M17',(c,s)=>{
+    title(c,'陰影のない回転人形：独自の簡略例');const a=.55+time(s)*(.35+.5*val(s));
+    const pts={neck:[0,137,0],hip:[0,235,0],lh:[-86,173,20],rh:[78,158,-20],lf:[-55,321,35],rf:[52,313,-35]};
+    function p(q){return [320+q[0]*Math.cos(a)+q[2]*Math.sin(a),q[1],-q[0]*Math.sin(a)+q[2]*Math.cos(a)];}
+    const seg=[['neck','lh'],['neck','rh'],['hip','lf'],['hip','rf']].map(([u,v])=>[p(pts[u]),p(pts[v])]);seg.sort((x,y)=>x[1][2]-y[1][2]);
+    seg.forEach(([u,v])=>line(c,u[0],u[1],v[0],v[1],s.reveal?(v[2]>0?C.orange:C.blue):C.ink,22));line(c,320,140,320,235,C.ink,34);circle(c,320,102,27,C.ink);
+    if(s.reveal){text(c,'暖色＝手前　寒色＝奥',320,348,18);}
+    line(c,205,337,435,337,C.pale,2);footer(c,s.reveal?'前後の色を加えた生成モデル。元の回転方向は一定。':'回転の見え方から、性格や「利き脳」は判定できない。');
+  });
+
+  register('M18',(c,s)=>{
+    title(c,'手前の面は、どちらにも読める');const A=[[190,145],[360,145],[360,315],[190,315]],B=A.map(([x,y])=>[x+95,y-75]);
+    if(s.reveal)polygon(c,val(s)<.5?A:B,'#dfb09a',null);
+    [A,B].forEach(p=>polygon(c,p,null,C.ink,4));for(let i=0;i<4;i++)line(c,...A[i],...B[i],C.ink,4);
+    if(s.reveal){const p=val(s)<.5?A:B;circle(c,p[0][0],p[0][1],7,C.orange);text(c,'選んだ面を強調',480,320,18,C.orange);}
+    footer(c,s.reveal?'線の位置は同じ。色を付けた面が解釈の手がかりになる。':'固定された線画。どちらか一方だけが正解ではない。');
+  });
+
+  function vasePath(c){c.beginPath();c.moveTo(230,65);c.bezierCurveTo(235,95,260,105,261,124);c.bezierCurveTo(266,139,249,146,267,154);c.bezierCurveTo(274,158,265,164,261,170);c.bezierCurveTo(268,176,261,186,256,192);c.bezierCurveTo(259,217,238,228,235,258);c.bezierCurveTo(229,293,210,315,202,326);c.lineTo(438,326);c.bezierCurveTo(430,315,411,293,405,258);c.bezierCurveTo(402,228,381,217,384,192);c.bezierCurveTo(379,186,372,176,379,170);c.bezierCurveTo(375,164,366,158,373,154);c.bezierCurveTo(391,146,374,139,379,124);c.bezierCurveTo(380,105,405,95,410,65);c.closePath();}
+  register('M19',(c,s)=>{
+    title(c,'同じ境界が、壺と横顔の両方になる');const faces=s.reveal&&val(s)>=.5;
+    rect(c,85,52,470,290,faces?'#79a8a8':C.ink);vasePath(c);c.fillStyle=s.reveal&&!faces?'#e1ab91':'#f1f1ec';c.fill();
+    if(s.reveal){if(faces){circle(c,219,142,5,C.ink);circle(c,421,142,5,C.ink);text(c,'横顔',146,288,20,'#f5f7fa');text(c,'横顔',493,288,20,'#f5f7fa');}else text(c,'壺',320,258,25,C.ink);}
+    footer(c,s.reveal?'図と地の割り当てを変える。境界曲線は変更しない。':'中央の白い部分と、左右の暗い部分を順に意識する。');
+  });
+
+  function duckPath(c){c.beginPath();c.moveTo(390,134);c.bezierCurveTo(350,109,308,117,280,135);c.lineTo(159,91);c.bezierCurveTo(135,86,130,105,159,120);c.lineTo(266,167);c.lineTo(146,157);c.bezierCurveTo(127,159,136,180,160,184);c.lineTo(264,194);c.bezierCurveTo(267,256,300,282,360,280);c.bezierCurveTo(407,279,432,255,444,234);c.bezierCurveTo(459,232,465,222,450,213);c.bezierCurveTo(444,171,423,150,390,134);c.closePath();}
+  register('M20',(c,s)=>{
+    title(c,'アヒル／ウサギ：同じ突起を読み替える');duckPath(c);c.fillStyle='#e9e9df';c.fill();c.strokeStyle=C.ink;c.lineWidth=4;c.stroke();circle(c,354,169,6,C.ink);line(c,432,236,417,239,C.ink,3);
+    if(s.reveal){const rabbit=val(s)>=.5;line(c,160,103,265,146,C.orange,7);line(c,150,170,255,184,C.orange,7);arrow(c,150,300,200,202,C.orange,3);text(c,rabbit?'耳として読む':'くちばしとして読む',176,330,20,C.orange);text(c,rabbit?'ウサギ →':'← アヒル',415,310,20,C.teal);}
+    footer(c,s.reveal?'色の付いた2本の部分が、両方の解釈に使われる。':'原典画像を使わない独自の簡略線画。見え方には個人差。');
+  });
+
+  register('M21',(c,s)=>{
+    title(c,'階段の上側／下側を読み替える');const A=[[120,260],[120,218],[174,218],[174,176],[228,176],[228,134],[282,134],[282,92],[336,92]],B=A.map(([x,y])=>[x+130,y+65]);
+    if(s.reveal){const flip=val(s)>=.5;for(let i=1;i<A.length-1;i+=2){const q=flip?i-1:i;polygon(c,[A[q],A[q+1],B[q+1],B[q]],flip?'#a8c8cc':'#e5b49e',null);}}
+    [A,B].forEach(p=>{c.beginPath();p.forEach((q,i)=>i?c.lineTo(...q):c.moveTo(...q));c.lineWidth=3;c.strokeStyle=C.ink;c.stroke();});for(let i=0;i<A.length;i++)line(c,...A[i],...B[i],C.ink,3);
+    text(c,'A',96,263,22,C.orange);text(c,'B',489,158,22,C.teal);if(s.reveal)text(c,val(s)<.5?'面の候補を強調':'別の面の候補を強調',430,329,19);
+    footer(c,'静止線画の奥行きの多義性。不可能階段とは区別する。');
+  });
+
+  register('M22',(c,s)=>{
+    title(c,'大きな文字を読む／小さな文字を読む');const step=29+val(s)*10,x0=320-step*3,y0=87;
+    for(let y=0;y<7;y++)for(let x=0;x<7;x++)if(x===0||x===6||y===3)text(c,'S',x0+x*step,y0+y*step,26,C.ink);
+    if(s.reveal){line(c,x0,y0,x0,y0+6*step,C.orange,3,[5,5]);line(c,x0+6*step,y0,x0+6*step,y0+6*step,C.orange,3,[5,5]);line(c,x0,y0+3*step,x0+6*step,y0+3*step,C.orange,3,[5,5]);circle(c,x0,y0,22,null,C.teal,3);text(c,'全体 H',105,185,21,C.orange);text(c,'部分 S',535,185,21,C.teal);}
+    footer(c,'反応時間は測定しない。全体優先は大きさや課題でも変わる。');
+  });
+
+  function token(c,i,x,y,r,changed){const k=changed?(i+1)%4:i%4;const color=[C.teal,C.blue,C.orange,'#987b45'][i%4];if(k===0)circle(c,x,y,r,color);else if(k===1)rect(c,x-r,y-r,r*2,r*2,color);else if(k===2)polygon(c,[[x,y-r-1],[x+r+1,y+r],[x-r-1,y+r]],color);else polygon(c,[[x,y-r-2],[x+r+2,y],[x,y+r+2],[x-r-2,y]],color);}
+  function shelf(c,x,y,w,h,target,change,highlight){const cw=w/5,ch=h/4;rect(c,x,y,w,h,'#e8edf0',C.pale);for(let j=1;j<4;j++)line(c,x,y+j*ch,x+w,y+j*ch,'#b7c5cf',2);for(let i=0;i<20;i++){const xx=x+(i%5+.5)*cw,yy=y+(Math.floor(i/5)+.5)*ch;token(c,i,xx,yy,Math.min(cw,ch)*.23,change&&i===target);if(highlight&&i===target)circle(c,xx,yy,Math.min(cw,ch)*.4,null,C.orange,3);}}
+  register('M23',(c,s)=>{
+    title(c,'遮られる前後で、1つの記号が変わる');const target=((s.seed||1)*7+(s.variant||0)*3)%20;
+    if(s.reveal){shelf(c,30,91,275,245,target,false,true);shelf(c,335,91,275,245,target,true,true);text(c,'前',167,64,20);text(c,'後',472,64,20);footer(c,'輪で囲んだ1個だけが違う。残る19個の描画は同じ。');return;}
+    const d=2.8+val(s)*2.2,t=time(s),n=Math.floor(t/d),q=t%d,mask=Math.min(1,q/.5,(d-q)/.5);shelf(c,85,68,470,270,target,n%2===1,false);
+    if(t>0&&mask<1){c.save();c.globalAlpha=1-mask;rect(c,85,68,470,270,'#b8c1c8');c.restore();}
+    footer(c,'穏やかな遮蔽を挟む。確認すると2枚を並べて比較できる。');
+  });
+
+  register('M24',(c,s)=>{
+    title(c,'白い点が中央の線を横切る回数を数える');const t=s.reveal?5:Math.min(time(s),10),rate=.6+.5*val(s);
+    rect(c,65,60,510,280,'#26384a');line(c,320,75,320,325,'#7891a5',2,[6,7]);
+    for(let i=0;i<4;i++){const x=320+205*Math.sin(t*rate+i*1.65),y=95+i*64;circle(c,x,y,12,'#edf2f4');circle(c,320+190*Math.sin(t*(rate+.2)+i*1.5+1.2),y+27,10,'#5b858f');}
+    if(t>=3&&t<=7){const x=95+(t-3)/4*450,y=203;polygon(c,[[x,y-24],[x+24,y],[x,y+24],[x-24,y]],C.orange);if(s.reveal){circle(c,x,y,40,null,'#f2c0a3',3);arrow(c,112,280,530,280,'#f2c0a3',2);}}
+    footer(c,s.reveal?'3〜7秒に橙色の菱形が通過。今は5秒の状態を表示。':time(s)>=10?'10秒で終了。確認して別の出来事を振り返る。':'初見の予期を完全には統制できないため、実験ではない。');
+  });
+
+  register('M25',(c,s)=>{
+    title(c,'左の十字を見たまま、右の文字を意識する');cross(c,112,200,11,C.ink,3);const gap=28+val(s)*42;
+    text(c,'R',455,123,34,C.ink);text(c,'R',455,270,34,C.ink);
+    if(!s.reveal){text(c,'T',455-gap,270,34,C.ink);text(c,'H',455+gap,270,34,C.ink);}else{circle(c,455,123,29,null,C.orange,2);circle(c,455,270,29,null,C.orange,2);line(c,112,200,455,123,C.pale,2,[5,5]);line(c,112,200,455,270,C.pale,2,[5,5]);}
+    footer(c,s.reveal?'上下とも同じR。周囲の文字を取り除いた。':'直接Rへ目を向けると、周辺視の比較ではなくなる。');
+  });
+
+  register('M26',(c,s)=>{
+    title(c,'機械の部品が、顔に見えることがある');c.save();c.translate(320,200);c.rotate((val(s)-.5)*TAU);
+    rect(c,-137,-125,274,250,'#dce3df',C.muted,4);
+    [[-69,-48],[69,-48]].forEach(([x,y])=>{circle(c,x,y,31,'#a1b1b2',s.reveal?C.orange:C.ink,3);line(c,x-14,y,x+14,y,C.ink,5);});
+    rect(c,-75,47,150,48,s.reveal?'#75a2a0':C.ink);for(let i=-55;i<=55;i+=22)line(c,i,56,i,87,'#cbd7d4',5);c.restore();
+    if(s.reveal){text(c,'2つのねじ',118,80,19,C.orange);text(c,'通気口',521,315,19,C.teal);}
+    footer(c,s.reveal?'部品の名前を変えても、顔らしい配置は残っている。':'目と口の画像は使わず、部品の配置だけで印象を作る。');
+  });
+
+  register('M27',(c,s)=>{
+    title(c,'自動運動：固定点と知覚の報告例（模式図）');rect(c,50,82,250,235,'#1d2935');const alpha=s.reveal?1:val(s)*.65;
+    c.save();c.globalAlpha=alpha;grid(c,65,97,220,205,25,'#667b8d');c.restore();circle(c,175,200,4,'#b9c3cb');
+    rect(c,340,82,250,235,'#e9edf1',C.pale);c.beginPath();c.moveTo(465,200);c.bezierCurveTo(487,169,410,140,426,193);c.bezierCurveTo(440,228,495,250,514,205);c.bezierCurveTo(539,167,467,165,482,218);c.setLineDash([5,6]);c.strokeStyle=C.orange;c.lineWidth=3;c.stroke();c.setLineDash([]);
+    text(c,'固定された点',175,341,19);text(c,'知覚されうる軌跡の例',465,341,18);
+    if(s.reveal){cross(c,175,200,16,'#e3ac8f');text(c,'位置は一定',175,285,18,'#c8d4df');}
+    footer(c,'右の軌跡は説明用。暗室や長時間の凝視は求めない。');
+  });
+
+  register('M28',(c,s)=>{
+    title(c,'クロノスタシス：時間の伸びの模式図');const start=145,unit=110,stretch=25+val(s)*55;
+    text(c,'物理時間',75,126,18);text(c,'主観の例',75,236,18);
+    line(c,start,142,585,142,C.ink,2);line(c,start-stretch,272,585,272,C.ink,2);
+    for(let i=0;i<4;i++){line(c,start+i*unit,127,start+i*unit,157,C.ink,3);text(c,`${i}秒`,start+i*unit,101,18,C.muted);}
+    for(let i=0;i<4;i++){const x=i===0?start-stretch:start+i*unit;line(c,x,257,x,287,C.ink,3);}
+    rect(c,start,163,unit,25,'#8bb3b2');rect(c,start-stretch,293,unit+stretch,25,'#dfab8f');text(c,'同じ1秒',start+unit/2,204,19,C.teal);text(c,'最初の区間を長く感じる',305,337,19,C.orange);
+    arrow(c,start-stretch,70,start,70,C.orange,2);text(c,'視線移動',80,50,18,C.muted);
+    if(s.reveal){line(c,start,115,start,324,C.teal,2,[5,5]);line(c,start+unit,115,start+unit,324,C.teal,2,[5,5]);}
+    footer(c,'上段は等間隔。下段の伸びは説明用で、実測値ではない。');
+  });
+
+  function grating(c,x,y,r,vertical,color,alpha=1){c.save();c.globalAlpha=alpha;c.beginPath();c.arc(x,y,r,0,TAU);c.clip();rect(c,x-r,y-r,r*2,r*2,'#e2e8ed');for(let d=-r;d<=r;d+=16)vertical?rect(c,x+d,y-r,7,r*2,color):rect(c,x-r,y+d,r*2,7,color);c.restore();}
+  register('M29',(c,s)=>{
+    title(c,'両眼視野闘争：分離提示の模式図');grating(c,185,132,66,true,C.teal);grating(c,455,132,66,false,C.orange);text(c,'左眼への入力',185,51,19);text(c,'右眼への入力',455,51,19);
+    const q=(Math.sin(time(s)*(.35+.35*val(s)))+1)/2;grating(c,320,280,54,true,C.teal);grating(c,320,280,54,false,C.orange,q);
+    arrow(c,185,205,268,253,C.muted,2);arrow(c,455,205,372,253,C.muted,2);text(c,'知覚の交替・混合を模した表示',320,350,18);
+    if(s.reveal){rect(c,94,66,182,132,null,C.blue,2);rect(c,364,66,182,132,null,C.blue,2);text(c,'同時に一定',110,298,18,C.blue);text(c,'入力は変えない',524,298,18,C.blue);}
+    footer(c,'左右眼へ実際には分離しない。下段の変化は模式アニメ。');
+  });
+
+  register('M30',(c,s)=>{
+    title(c,'ランダムドット：左右の対応の模式図');const N=28,cell=7,xs=[72,372],y=92,shift=1+Math.round(val(s)*2),seed=s.seed||7;
+    const bit=(x,y,extra=0)=>rand(y*53+x,seed+extra)>.5;
+    for(let side=0;side<2;side++)for(let yy=0;yy<N;yy++)for(let xx=0;xx<N;xx++){
+      let sx=xx,extra=0;
+      if(side===1&&yy>=8&&yy<20){if(xx>=8+shift&&xx<20+shift)sx=xx-shift;else if(xx>=8&&xx<8+shift)extra=31;}
+      const b=bit(sx,yy,extra);rect(c,xs[side]+xx*cell,y+yy*cell,cell,cell,b?'#334854':'#e8edef');
+    }
+    text(c,'左眼用の画像',170,63,19);text(c,'右眼用の画像',470,63,19);
+    if(s.reveal){rect(c,xs[0]+56,y+56,84,84,null,C.orange,3);rect(c,xs[1]+56+shift*cell,y+56,84,84,null,C.orange,3);const yy=y+12.5*cell,xx=xs[0]+12.5*cell,xx2=xs[1]+(12.5+shift)*cell;circle(c,xx,yy,7,C.orange);circle(c,xx2,yy,7,C.orange);line(c,xx,yy,xx2,yy,C.orange,2,[4,5]);text(c,`中央だけ ${shift*cell} px の対応ずれ`,320,328,20,C.orange);}
+    else text(c,'この画面は左右眼へ分離していない',320,328,19,C.muted);
+    footer(c,'確認で対応を可視化。無理な裸眼立体視を求めない。');
+  });
+
+  register('M31',(c,s)=>{
+    title(c,'プルフリッヒ効果：時間差 → 位置差（模式図）');const t=time(s)+.8,delay=.1+.4*val(s),x=320+175*Math.sin(t*.85),old=320+175*Math.sin((t-delay)*.85);
+    line(c,120,102,520,102,C.pale,3);circle(c,x,102,12,C.ink);text(c,'平面上の物体',84,72,18,C.ink,'left');
+    line(c,120,181,520,181,C.pale,2);line(c,120,241,520,241,C.pale,2);circle(c,x,181,11,C.teal);circle(c,old,241,11,C.orange);text(c,'先の信号',92,181,18,C.teal,'right');text(c,'遅れた信号',92,241,18,C.orange,'right');
+    if(s.reveal){line(c,x,117,x,258,C.teal,2,[4,4]);line(c,old,223,old,258,C.orange,2,[4,4]);arrow(c,old,270,x,270,C.orange,2);}
+    c.beginPath();c.ellipse(320,318,134,18,0,0,TAU);c.strokeStyle=C.muted;c.lineWidth=2;c.setLineDash([5,5]);c.stroke();c.setLineDash([]);circle(c,320+134*Math.sin(t*.85),318+18*Math.cos(t*.85),6,C.blue);text(c,'奥行き軌道の知覚例',320,352,18,C.muted);
+    footer(c,'模式図。眼ごとの減光や立体提示は行っていない。');
+  });
+
+  function lattice(c,x,y,w,h,ang,which=2){c.save();c.beginPath();c.rect(x,y,w,h);c.clip();rect(c,x,y,w,h,'#e5ebeb');c.translate(x+w/2,y+h/2);for(let layer=0;layer<2;layer++){if(which<2&&layer!==which)continue;c.save();c.rotate(layer?ang:0);c.strokeStyle=layer?'#507d81':'#52636d';c.lineWidth=2;for(let a=-550;a<550;a+=9){c.beginPath();c.moveTo(a,-500);c.lineTo(a,500);c.stroke();}c.restore();}c.restore();}
+  register('M32',(c,s)=>{
+    title(c,'2枚の格子から現れる大きな縞');const a=(1+val(s)*13)*PI/180;
+    if(s.reveal){lattice(c,22,95,184,235,a,0);lattice(c,228,95,184,235,a,1);lattice(c,434,95,184,235,a,2);text(c,'格子 A',114,65,20);text(c,'格子 B',320,65,20);text(c,'重ね合わせ',526,65,20);}
+    else lattice(c,70,61,500,285,a,2);
+    footer(c,s.reveal?'大きな縞は重ね合わせで生じる。両眼視は必要ない。':`格子の角度差 ${(a*180/PI).toFixed(1)}°。静止した2枚の直線群。`);
+  });
+
+  Object.assign(window.ILLUSION_RENDERERS || (window.ILLUSION_RENDERERS = {}), R);
+})();
+</script>
+<script>(function(){
+'use strict';
+const data=window.ATLAS_DATA,theories=window.THEORIES,categories=window.CATEGORIES;
+const $=id=>document.getElementById(id),byId=Object.fromEntries(data.map(x=>[x.id,x]));
+let current=data[0],filtered=data.slice(),raf=0,last=0,theoryCurrent=theories[0];
+const state={reveal:false,running:false,time:0,value:.5,variant:0,seed:17};
+const canvases=[$('demoCanvas'),$('zoomCanvas')];
+function text(id,value){$(id).textContent=value||'';}
+function el(tag,cls,txt){const e=document.createElement(tag);if(cls)e.className=cls;if(txt!==undefined)e.textContent=txt;return e;}
+function linkList(node,sources){node.replaceChildren();const seen=new Set();sources.forEach(source=>{if(seen.has(source.url))return;seen.add(source.url);const li=el('li'),a=el('a','',source.title);a.href=source.url;a.target='_blank';a.rel='noopener noreferrer';li.append(a);node.append(li);});}
+function stop(){state.running=false;last=0;if(raf){cancelAnimationFrame(raf);raf=0;}updateControls();draw();}
+function updateControls(){
+ $('revealBtn').setAttribute('aria-pressed',String(state.reveal));text('revealBtn',state.reveal?'答えを閉じて図に戻る':'答え・確かめ方を見る');
+ $('answerPanel').hidden=!state.reveal;$('playBtn').hidden=!current.animate;$('zoomPlay').hidden=!current.animate;
+ const playText=state.running?'動きを停止':(state.time>0?'動きを再開':'動きを開始');text('playBtn',playText);text('zoomPlay',playText);
+ text('motionStatus',current.animate?(state.running?'再生中 · いつでも停止できます':state.time>0?'停止中 · 「最初から」でやり直せます':'停止中 · ボタンで動きを開始します'):(current.experience==='模式図'?'仕組みを説明する模式図です':'画像自体は動いていません'));
+ text('elapsed',current.animate?`${state.time.toFixed(1)} 秒`:'');
+}
+function paint(canvas,entry,s){
+ const ctx=canvas.getContext('2d');ctx.save();ctx.setTransform(2,0,0,2,0,0);ctx.clearRect(0,0,640,400);ctx.fillStyle='#f7f8fa';ctx.fillRect(0,0,640,400);
+ const renderer=window.ILLUSION_RENDERERS[entry.id];
+ if(!renderer)throw new Error('描画が見つかりません: '+entry.id);
+ ctx.save();renderer(ctx,s);ctx.restore();ctx.restore();
+ canvas.setAttribute('aria-label',`${entry.id} ${entry.name}。${entry.question}${s.reveal?' 答え: '+entry.fact:''}`);
+}
+function draw(){paint(canvases[0],current,state);if($('zoomDialog').open)paint(canvases[1],current,state);text('elapsed',current.animate?`${state.time.toFixed(1)} 秒`:'');}
+function tick(now){if(!state.running)return;if(last)state.time+=Math.max(0,(now-last)/1000);last=now;const limit=Number(current.maxSeconds)||20;if(state.time>=limit){state.time=limit;stop();draw();return;}draw();raf=requestAnimationFrame(tick);}
+function togglePlay(){if(!current.animate)return;if(state.running){stop();return;}const limit=Number(current.maxSeconds)||20;if(state.time>=limit)state.time=0;state.running=true;last=performance.now();updateControls();raf=requestAnimationFrame(tick);}
+function reveal(){state.reveal=!state.reveal;updateControls();draw();}
+function reset(){stop();state.time=0;state.reveal=false;state.value=.5;state.variant=0;$('parameter').value='50';text('sliderValue','50');updateControls();draw();}
+function choose(id,updateHash=true){
+ if(!byId[id])return;stop();current=byId[id];state.time=0;state.reveal=false;state.value=.5;state.variant=0;
+ text('itemId',current.id);text('categoryBadge',categories.find(c=>c.id===current.category)?.name||current.category);text('experienceBadge',current.experience);$('experienceBadge').dataset.schematic=String(current.experience==='模式図');
+ text('itemName',current.name);text('englishName',current.english);text('question',current.question);text('fact',current.fact);text('check',current.check);text('observation',current.observation);text('mechanism',current.mechanism);text('gameIdea',current.game);text('caution',current.caution);text('aliases',current.aliases?.length?'別名・関連する呼び方：'+current.aliases.join('、'):'別名の記載はありません。');linkList($('sources'),current.sources);
+ text('measurementHelp',/RGB/i.test(current.fact)?'色の数値は、赤・緑・青の強さを0〜255で表した指定値です（RGB）。':/ピクセル|座標|ベクトル/.test(current.fact)?'数値は図を作るための共通の目盛りです。画面の大きさに合わせて図全体を拡大縮小します。':'');$('measurementHelp').hidden=!$('measurementHelp').textContent;
+ $('sliderWrap').hidden=!current.sliderLabel;text('sliderLabel',current.sliderLabel);$('parameter').value='50';text('sliderValue','50');
+ const variantLabels={G04:'周囲の円を入れ替える',C18:'隠れた形を切り替える',M23:'変わる場所を替える'};$('variantBtn').hidden=!variantLabels[current.id];text('variantBtn',variantLabels[current.id]||'別の条件');
+ $('entrySelect').value=current.id;text('zoomTitle',current.id+' '+current.name);
+ const ix=filtered.findIndex(x=>x.id===id);text('position',`${ix>=0?ix+1:data.indexOf(current)+1} / ${ix>=0?filtered.length:data.length}`);$('prevBtn').disabled=ix===0;$('nextBtn').disabled=ix===filtered.length-1;
+ document.querySelectorAll('.item-button').forEach(b=>b.setAttribute('aria-current',String(b.dataset.id===id)));
+ if(updateHash){try{history.replaceState(null,'','#'+id);}catch(_){}}
+ updateControls();draw();
+}
+function applyFilters(autoChoose=false){
+ const q=$('search').value.trim().toLocaleLowerCase('ja'),cat=$('category').value;
+ filtered=data.filter(e=>(cat==='all'||e.category===cat)&&(!q||[e.id,e.name,e.english,...(e.aliases||[]),e.observation,e.mechanism,...(e.theory||[])].join(' ').toLocaleLowerCase('ja').includes(q)));
+ $('entrySelect').replaceChildren();$('itemList').replaceChildren();text('resultCount',`（${filtered.length}件）`);$('emptySearch').hidden=filtered.length>0;$('entrySelect').disabled=filtered.length===0;
+ filtered.forEach(e=>{const option=el('option','',e.id+' '+e.name);option.value=e.id;$('entrySelect').append(option);const b=el('button','item-button');b.type='button';b.dataset.id=e.id;b.setAttribute('aria-current',String(e.id===current.id));b.append(el('span','code',e.id),document.createTextNode(e.name));b.onclick=()=>choose(e.id);$('itemList').append(b);});
+ if(filtered.length){if(autoChoose&&!filtered.some(x=>x.id===current.id))choose(filtered[0].id);else if(filtered.some(x=>x.id===current.id)){$('entrySelect').value=current.id;const i=filtered.findIndex(x=>x.id===current.id);text('position',`${i+1} / ${filtered.length}`);$('prevBtn').disabled=i===0;$('nextBtn').disabled=i===filtered.length-1;}}
+ else{$('prevBtn').disabled=true;$('nextBtn').disabled=true;text('position','検索結果なし');stop();}
+}
+function panel(name){stop();document.querySelectorAll('.panel').forEach(p=>{const active=p.id==='panel-'+name;p.hidden=!active;p.classList.toggle('active',active);});document.querySelectorAll('.tab').forEach(b=>{const active=b.dataset.panel===name;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});if(name==='theory')showTheory(theoryCurrent.id);}
+function openEntry(id){$('search').value='';$('category').value='all';applyFilters(false);panel('atlas');choose(id);$('demoArticle').scrollIntoView({block:'start',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});}
+function showTheory(id){
+ theoryCurrent=theories.find(t=>t.id===id)||theories[0];const t=theoryCurrent,e=byId[t.representative];
+ text('theoryId',t.id);text('theoryName',t.name);text('theorySummary',t.summary);text('theoryDetail',t.detail+' この整理で扱う用語：'+t.term+'。');text('theoryLimit',t.limit);text('theoryExampleName',e.id+' '+e.name);text('theoryExampleCaption',e.observation+' 下の例のボタンを開くと、動き・答え・調整を試せます。');$('theorySelect').value=t.id;
+ paint($('theoryCanvas'),e,{reveal:false,running:false,time:0,value:.5,variant:0,seed:17});
+ $('theoryLinks').replaceChildren();t.examples.forEach(id=>{const b=el('button','',id+' '+byId[id].name);b.type='button';b.onclick=()=>openEntry(id);$('theoryLinks').append(b);});linkList($('theorySources'),t.examples.flatMap(id=>byId[id].sources));
+}
+categories.forEach(c=>{const o=el('option','',c.name);o.value=c.id;$('category').append(o);});
+theories.forEach(t=>{const o=el('option','',t.id+' '+t.name);o.value=t.id;$('theorySelect').append(o);});
+categories.forEach(c=>{const sec=el('section','index-section');sec.append(el('h3','',c.name));const grid=el('div','index-grid');data.filter(e=>e.category===c.id).forEach(e=>{const b=el('button','index-entry');b.type='button';b.append(el('span','code',e.id),el('span','',e.name),el('span','kind',e.experience));b.onclick=()=>openEntry(e.id);grid.append(b);});sec.append(grid);$('fullIndex').append(sec);});
+$('search').addEventListener('input',()=>applyFilters(true));$('category').addEventListener('change',()=>applyFilters(true));$('entrySelect').addEventListener('change',e=>choose(e.target.value));
+$('revealBtn').onclick=reveal;$('zoomReveal').onclick=reveal;$('playBtn').onclick=togglePlay;$('zoomPlay').onclick=togglePlay;$('resetBtn').onclick=reset;
+$('parameter').addEventListener('input',e=>{if(['C20','C24'].includes(current.id)){stop();state.time=0;}state.value=Number(e.target.value)/100;text('sliderValue',e.target.value);draw();});
+$('variantBtn').onclick=()=>{stop();state.variant++;state.time=0;state.reveal=false;state.value=.5;$('parameter').value='50';text('sliderValue','50');updateControls();draw();};
+$('prevBtn').onclick=()=>{const i=filtered.findIndex(x=>x.id===current.id);if(i>0)choose(filtered[i-1].id);};$('nextBtn').onclick=()=>{const i=filtered.findIndex(x=>x.id===current.id);if(i<filtered.length-1)choose(filtered[i+1].id);};
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>panel(b.dataset.panel));document.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>openEntry(b.dataset.open));$('theorySelect').onchange=e=>showTheory(e.target.value);
+$('zoomBtn').onclick=()=>{$('zoomDialog').showModal();paint($('zoomCanvas'),current,state);};$('closeZoom').onclick=()=>$('zoomDialog').close();
+document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});window.addEventListener('pagehide',stop);window.addEventListener('hashchange',()=>{const id=location.hash.slice(1);if(byId[id])openEntry(id);});
+applyFilters(false);choose(byId[location.hash.slice(1)]?location.hash.slice(1):data[0].id,false);
+window.ATLAS_TEST={getState:()=>({...state,current:current.id,filtered:filtered.map(x=>x.id)}),choose,openEntry,draw,paint,stop,theories,data};
+})();
+</script>
+</body></html>
