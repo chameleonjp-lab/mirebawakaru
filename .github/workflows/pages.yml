@@ -1,0 +1,87 @@
+name: Verify and publish review page
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    name: Numeric, browser and artifact checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: "24.19.0"
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium webkit
+      - run: npm test
+      - run: npm run test:browser
+      - run: npm run build
+      - name: Test publication artifact on repository subpath
+        run: |
+          node scripts/serve.mjs --root dist --prefix /mirebawakaru/ --port 4174 &
+          TEST_BASE_URL=http://127.0.0.1:4174/mirebawakaru/ npm run test:browser
+          PAGE_URL=http://127.0.0.1:4174/mirebawakaru/ GITHUB_ACTIONS= node scripts/verify-published.mjs
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: dist
+  deploy:
+    name: Deploy tested main and verify loaded bytes
+    if: ${{ github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && needs.verify.result == 'success' }}
+    needs: [verify]
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    concurrency:
+      group: pages-production
+      cancel-in-progress: false
+      queue: max
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: "24.19.0"
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0 # v5
+        with:
+          name: github-pages
+          path: downloaded
+      - run: mkdir -p dist && tar -xf downloaded/artifact.tar -C dist
+      - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+      - name: Reject stale main immediately before deployment
+        id: fresh
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/check-main.mjs
+      - name: Deploy tested artifact
+        id: deployment
+        if: ${{ steps.fresh.outputs.allowed == 'true' }}
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
+      - name: Verify actual public HTML, scripts, CSS, JSON and interactions
+        if: ${{ steps.fresh.outputs.allowed == 'true' && steps.deployment.outcome == 'success' }}
+        env:
+          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: npm run verify:published

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="light" />
+    <meta name="build-sha" content="development" />
+    <meta
+      name="description"
+      content="基本33問の図・4択・動き・答え合わせを確かめる、保存なしの確認用ページ。"
+    />
+    <title>ミレバワカル｜基本33問の確認用</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="../game/styles.css" />
+  </head>
+  <body data-gallery="true">
+    <header>
+      <a href="../" id="brand">ミレバワカル <span>確認用</span></a
+      ><button id="home">ホーム</button>
+    </header>
+    <main id="app" data-phase="loading">
+      <p id="loading">問題データを読み込んでいます…</p>
+      <div id="errors" role="alert" hidden></div>
+      <section id="home-screen" hidden>
+        <p class="eyebrow">見え方と、実際の図を比べよう</p>
+        <h1>その直感、<br />図で確かめる。</h1>
+        <p>
+          基本33問の仕組みを確認するページです。<br />図を見て4択に答え、あとで根拠を確かめます。
+        </p>
+        <div class="notice">
+          成績は保存・送信しません。<br />採用判断とiPhone実機確認は保留です。
+        </div>
+        <label class="toggle"
+          ><input id="reduce-motion" type="checkbox" />
+          動きを減らす（静止27問だけ）</label
+        ><button id="start" class="primary">10問を試す →</button
+        ><a class="button" id="gallery-link" href="../dev/question-gallery.html"
+          >Q01〜Q33を指定して確認</a
+        >
+        <details>
+          <summary>あそびかた・確認の範囲</summary>
+          <p>
+            4候補を同時に比べ、A〜Dで回答します。観察して待つ時間も計時します。正解数を優先し、同点なら合計時間が短い方が上位、整数ミリ秒も同じなら同点です。
+          </p>
+          <p>
+            10問後に答え合わせできます。回転・背景化・描画遅延は中断となり、続行後の時間は参考です。色調整で見え方が変わります。診断や能力の測定には使えません。
+          </p>
+        </details>
+        <p class="links">
+          <a href="../visual-illusion-atlas.html">元の図解資料</a> ·
+          <a href="../docs/question-bank/questions-v1.md">問題原稿</a> ·
+          <a href="../docs/verification/base-33.md">確認結果</a>
+        </p>
+        <p id="version" class="muted"></p>
+      </section>
+      <section id="gallery-controls" hidden>
+        <div class="gallery-row">
+          <label
+            >問題<select
+              id="question-select"
+              aria-label="問題ID"
+            ></select></label
+          ><label
+            >候補順<select
+              id="order-select"
+              aria-label="候補順"
+            ></select></label
+          ><button id="load-question" class="primary">この問題を確認</button>
+        </div>
+        <p class="muted compact" id="acceptance-state"></p>
+      </section>
+      <section id="question" hidden>
+        <div class="question-layout">
+          <div class="question-copy">
+            <div class="question-meta">
+              <span id="question-id"></span><span id="counter"></span
+              ><span class="badge">確認用</span>
+            </div>
+            <h2 id="prompt"></h2>
+            <p id="hint"></p>
+          </div>
+          <div id="stage">
+            <canvas
+              id="scene"
+              role="img"
+              aria-label="A・B・C・Dの4候補"
+            ></canvas>
+          </div>
+          <div class="answer-controls">
+            <p id="status" class="compact" aria-live="polite"></p>
+            <div id="answers" aria-label="回答">
+              <button data-answer="A" disabled>A</button
+              ><button data-answer="B" disabled>B</button
+              ><button data-answer="C" disabled>C</button
+              ><button data-answer="D" disabled>D</button>
+            </div>
+            <div class="question-actions">
+              <button id="pause">中断・停止</button
+              ><button id="next" class="primary" hidden>次の問題 →</button>
+            </div>
+          </div>
+        </div>
+        <div id="review-panel" hidden>
+          <p id="feedback" class="feedback"></p>
+          <div class="review-actions">
+            <button id="proof" aria-pressed="false">背景を外して確かめる</button
+            ><button id="overlay" hidden>同じ位置で重ねる</button
+            ><button id="retry" hidden>この問題をやり直す</button>
+          </div>
+          <p id="explanation"></p>
+          <p id="metrics" class="muted"></p>
+          <div id="review-nav" hidden>
+            <button id="review-prev">← 前</button
+            ><button id="review-next">次 →</button
+            ><button id="back-result">結果へ</button>
+          </div>
+          <details>
+            <summary>作図条件・出典</summary>
+            <p id="scene-design"></p>
+            <ul id="sources"></ul>
+          </details>
+        </div>
+      </section>
+      <section id="interrupted" role="alert" hidden>
+        <span class="eyebrow">中断しました</span>
+        <h2 id="interruption-reason"></h2>
+        <p>
+          確定済みの回答はその場に残し、現在の問題を最初から描き直します。続行後の合計時間は参考です。
+        </p>
+        <button id="resume" class="primary">確認を続ける</button
+        ><button id="restart-interrupted">最初から</button>
+      </section>
+      <section id="result" hidden>
+        <p class="eyebrow">今回の結果・保存しません</p>
+        <h1 id="score"></h1>
+        <p id="total-time" class="result-time"></p>
+        <p id="result-notes"></p>
+        <p>
+          正解数を優先。同点なら合計時間を比較し、<br />正解数と整数ミリ秒が同じなら同点です。
+        </p>
+        <button id="review-open" class="primary">10問の答え合わせ →</button
+        ><button id="restart">もう一度</button>
+      </section>
+    </main>
+    <noscript>この確認用ページにはJavaScriptが必要です。</noscript>
+    <script type="module" src="../game/main.js"></script>
+  </body>
+</html>

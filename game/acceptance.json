@@ -1,0 +1,963 @@
+{
+  "version": 1,
+  "purpose": "確認用。自動検査は実機・錯視の採用合格を意味しない。",
+  "questions": [
+    {
+      "questionId": "Q01",
+      "variantId": "base",
+      "versions": {
+        "bank": 1,
+        "rules": 1,
+        "renderer": 1
+      },
+      "checks": {
+        "manuscript": "pass",
+        "render": "pass",
+        "visual": "pending",
+        "portrait": "pending",
+        "landscape": "pending",
+        "motion": "not_applicable",
+        "browser_portrait": "pass",
+        "browser_landscape": "pass"
+      },
+      "conclusion": "hold",
+      "reason": "原稿・作図・自動ブラウザ検査は通過。人による錯視の見え方・iPhone実機の縦横が未確認のため採用保留。",
+      "evidence": "docs/verification/base-33.md",
+      "checkedAt": "2026-10-31 JST",
+      "environment": "Node 24.19.0 / Playwright 1.64.1 Chromium 156.0.8078.4・WebKit 27.2 / Linux",
+      "viewports": [
+        "402x700",
+        "393x852",
+        "852x393"
+      ]
+    },
+    {
+      "questionId": "Q02",
+      "variantId": "base",
+      "versions": {
+        "bank": 1,
+        "rules": 1,
+        "renderer": 1
+      },
+      "checks": {
+        "manuscript": "pass",
+        "render": "pass",
+        "visual": "pending",
+        "portrait": "pending",
+        "landscape": "pending",
+        "motion": "not_applicable",
+        "browser_portrait": "pass",
+        "browser_landscape": "pass"
+      },
+      "conclusion": "hold",
+      "reason": "原稿・作図・自動ブラウザ検査は通過。人による錯視の見え方・iPhone実機の縦横が未確認のため採用保留。",
+      "evidence": "docs/verification/base-33.md",
+      "checkedAt": "2026-10-31 JST",
+      "environment": "Node 24.19.0 / Playwright 1.64.1 Chromium 156.0.8078.4・WebKit 27.2 / Linux",
+      "viewports": [
+        "402x700",
+        "393x852",
+        "852x393"
+      ]
+    },
+    {
+      "questionId": "Q03",
+      "variantId": "base",
+      "versions": {
+        "bank": 1,
+        "rules": 1,
+        "renderer": 1
+      },
+      "checks": {
+        "manuscript": "pass",
+        "render": "pass",
+        "visual": "pending",
+        "portrait": "pending",
+        "landscape": "pending",
+        "motion": "not_applicable",
+        "browser_portrait": "pass",
+        "browser_landscape": "pass"
+      },
+      "conclusion": "hold",
+      "reason": "原稿・作図・自動ブラウザ検査は通過。人による錯視の見え方・iPhone実機の縦横が未確認のため採用保留。",
+      "evidence": "docs/verification/base-33.md",
+      "checkedAt": "2026-10-31 JST",
+      "environment": "Node 24.19.0 / Playwright 1.64.1 Chromium 156.0.8078.4・WebKit 27.2 / Linux",
+      "viewports": [
+        "402x700",
+        "393x852",
+        "852x393"
+      ]
+    },
+    {
+      "questionId": "Q04",
+      "variantId": "base",
+      "versions": {
+        "bank": 1,
+        "rules": 1,
+        "renderer": 1
+      },
+      "checks": {
+        "manuscript": "pass",
+        "render": "pass",
+        "visual": "pending",
+        "portrait": "pending",
+        "landscape": "pending",
+        "motion": "not_applicable",
+        "browser_portrait": "pass",
+        "browser_landscape": "pass"
+      },
+      "conclusion": "hold",
+      "reason": "原稿・作図・自動ブラウザ検査は通過。人による錯視の見え方・iPhone実機の縦横が未確認のため採用保留。",
+      "evidence": "docs/verification/base-33.md",
+      "checkedAt": "2026-10-31 JST",
+      "environment": "Node 24.19.0 / Playwright 1.64.1 Chromium 156.0.8078.4・WebKit 27.2 / Linux",
+      "viewports": [
+        "402x700",
+        "393x852",
+        "852x393"
+      ]
+    },
+    {
+      "questionId": "Q05",
+      "variantId": "base",
+      "versions": {
+        "bank": 1,
+        "rules": 1,
+        "renderer": 1
+      },
+      "checks": {
+        "manuscript": "pass",
+        "render": "pass",
+        "visual": "pending",
+        "portrait": "pending",
+        "landscape": "pending",
+        "motion": "not_applicable",
+        "browser_portrait": "pass",
+        "browser_landscape": "pass"
+      },
+      "conclusion": "hold",
+      "reason": "原稿・作図・自動ブラウザ検査は通過。人による錯視の見え方・iPhone実機の縦横が未確認のため採用保留。",
+      "evidence": "docs/verification/base-33.md",
+      "checkedAt": "2026-10-31 JST",
+      "environment": "Node 24.19.0 / Playwright 1.64.1 Chromium 156.0.8078.4・WebKit 27.2 / Linux",
+      "viewports": [
+        "402x700",
+        "393x852",
+        "852x393"
+      ]
+    },
+    {
+      "questionId": "Q06",
+      "variantId": "base",
+      "versions": {
+        "bank": 1,
+        "rules": 1,
+        "renderer": 1
+      },
+      "checks": {
+        "manuscript": "pass",
+        "render": "pass",
+        "visual": "pending",
+        "portrait": "pending",
+        "landscape": "pending",
+        "motion": "not_applicable",
+        "browser_portrait": "pass",
+        "browser_landscape": "pass"
+      },
+      "conclusion": "hold",
+      "reason": "原稿・作図・自動ブラウザ検査は通過。人による錯視の見え方・iPhone実機の縦横が未確認のため採用保留。",
+      "evidence": "docs/verification/base-33.md",
+      "checkedAt": "2026-10-31 JST",
+      "environment": "Node 24.19.0 / Playwright 1.64.1 Chromium 156.0.8078.4・WebKit 27.2 / Linux",
+      "viewports": [
+        "402x700",
+        "393x852",
+        "852x393"
+      ]
+    },
+    {
+      "questionId": "Q07",
+      "variantId": "base",
+      "versions": {
+        "bank": 1,
+        "rules": 1,
+        "renderer": 1
+      },
+      "checks": {
+        "manuscript": "pass",
+        "render": "pass",
+        "visual": "pending",
+        "portrait": "pending",
+        "landscape": "pending",
+        "motion": "not_applicable",
+        "browser_portrait": "pass",
+        "browser_landscape": "pass"
+      },
+      "conclusion": "hold",
+      "reason": "原稿・作図・自動ブラウザ検査は通過。人による錯視の見え方・iPhone実機の縦横が未確認のため採用保留。",
+      "evidence": "docs/verification/base-33.md",
+      "checkedAt": "2026-10-31 JST",
+      "environment": "Node 24.19.0 / Playwright 1.64.1 Chromium 156.0.8078.4・WebKit 27.2 / Linux",
+      "viewports": [
+        "402x700",
+        "393x852",
+        "852x393"
+      ]
+    },
+    {
+      "questionId": "Q08",
+      "variantId": "base",
+      "versions": {
+        "bank": 1,
+        "rules": 1,
+        "renderer": 1
+      },
+      "checks": {
+        "manuscript": "pass",
+        "render": "pass",
+        "visual": "pending",
+        "portrait": "pending",
+        "landscape": "pending",
+        "motion": "not_applicable",
+        "browser_portrait": "pass",
+        "browser_landscape": "pass"
+      },
+      "conclusion": "hold",
+      "reason": "原稿・作図・自動ブラウザ検査は通過。人による錯視の見え方・iPhone実機の縦横が未確認のため採用保留。",
+      "evidence": "docs/verification/base-33.md",
+      "checkedAt": "2026-10-31 JST",
+      "environment": "Node 24.19.0 / Playwright 1.64.1 Chromium 156.0.8078.4・WebKit 27.2 / Linux",
+      "viewports": [
+        "402x700",
+        "393x852",
+        "852x393"
+      ]
+    },
+    {
+      "questionId": "Q09",
+      "variantId": "base",
+      "versions": {
+        "bank": 1,
+        "rules": 1,
+        "renderer": 1
+      },
+      "checks": {
+        "manuscript": "pass",
+        "render": "pass",
+        "visual": "pending",
+        "portrait": "pending",
+        "landscape": "pending",
+        "motion": "not_applicable",
+        "browser_portrait": "pass",
+        "browser_landscape": "pass"
+      },
+      "conclusion": "hold",
+      "reason": "原稿・作図・自動ブラウザ検査は通過。人による錯視の見え方・iPhone実機の縦横が未確認のため採用保留。",
+      "evidence": "docs/verification/base-33.md",
+      "checkedAt": "2026-10-31 JST",
+      "environment": "Node 24.19.0 / Playwright 1.64.1 Chromium 156.0.8078.4・WebKit 27.2 / Linux",
+      "viewports": [
+        "402x700",
+        "393x852",
+        "852x393"
+      ]
+    },
+    {
+      "questionId": "Q10",
+      "variantId": "base",
+      "versions": {
+        "bank": 1,
+        "rules": 1,
+        "renderer": 1
+      },
+      "checks": {
+        "manuscript": "pass",
+        "render": "pass",
+        "visual": "pending",
+        "portrait": "pending",
+        "landscape": "pending",
+        "motion": "not_applicable",
+        "browser_portrait": "pass",
+        "browser_landscape": "pass"
+      },
+      "conclusion": "hold",
+      "reason": "原稿・作図・自動ブラウザ検査は通過。人による錯視の見え方・iPhone実機の縦横が未確認のため採用保留。",
+      "evidence": "docs/verification/base-33.md",
+      "checkedAt": "2026-10-31 JST",
+      "environment": "Node 24.19.0 / Playwright 1.64.1 Chromium 156.0.8078.4・WebKit 27.2 / Linux",
+      "viewports": [
+        "402x700",
+        "393x852",
+        "852x393"
+      ]
+    },
+    {
+      "questionId": "Q11",
+      "variantId": "base",
+      "versions": {
+        "bank": 1,
+        "rules": 1,
+        "renderer": 1
+      },
+      "checks": {
+        "manuscript": "pass",
+        "render": "pass",
+        "visual": "pending",
+        "portrait": "pending",
+        "landscape": "pending",
+        "motion": "not_applicable",
+        "browser_portrait": "pass",
+        "browser_landscape": "pass"
+      },
+      "conclusion": "hold",
+      "reason": "原稿・作図・自動ブラウザ検査は通過。人による錯視の見え方・iPhone実機の縦横が未確認のため採用保留。",
+      "evidence": "docs/verification/base-33.md",
+      "checkedAt": "2026-10-31 JST",
+      "environment": "Node 24.19.0 / Playwright 1.64.1 Chromium 156.0.8078.4・WebKit 27.2 / Linux",
+      "viewports": [
+        "402x700",
+        "393x852",
+        "852x393"
+      ]
+    },
+    {
+      "questionId": "Q12",
+      "variantId": "base",
+      "versions": {
+        "bank": 1,
+        "rules": 1,
+        "renderer": 1
+      },
+      "checks": {
+        "manuscript": "pass",
+        "render": "pass",
+        "visual": "pending",
+        "portrait": "pending",
+        "landscape": "pending",
+        "motion": "not_applicable",
+        "browser_portrait": "pass",
+        "browser_landscape": "pass"
+      },
+      "conclusion": "hold",
+      "reason": "原稿・作図・自動ブラウザ検査は通過。人による錯視の見え方・iPhone実機の縦横が未確認のため採用保留。",
+      "evidence": "docs/verification/base-33.md",
+      "checkedAt": "2026-10-31 JST",
+      "environment": "Node 24.19.0 / Playwright 1.64.1 Chromium 156.0.8078.4・WebKit 27.2 / Linux",
+      "viewports": [
+        "402x700",
+        "393x852",
+        "852x393"
+      ]
+    },
+    {
+      "questionId": "Q13",
+      "variantId": "base",
+      "versions": {
+        "bank": 1,
+        "rules": 1,
+        "renderer": 1
+      },
+      "checks": {
+        "manuscript": "pass",
+        "render": "pass",
+        "visual": "pending",
+        "portrait": "pending",
+        "landscape": "pending",
+        "motion": "not_applicable",
+        "browser_portrait": "pass",
+        "browser_landscape": "pass"
+      },
+      "conclusion": "hold",
+      "reason": "原稿・作図・自動ブラウザ検査は通過。人による錯視の見え方・iPhone実機の縦横が未確認のため採用保留。",
+      "evidence": "docs/verification/base-33.md",
+      "checkedAt": "2026-10-31 JST",
+      "environment": "Node 24.19.0 / Playwright 1.64.1 Chromium 156.0.8078.4・WebKit 27.2 / Linux",
+      "viewports": [
+        "402x700",
+        "393x852",
+        "852x393"
+      ]
+    },
+    {
+      "questionId": "Q14",
+      "variantId": "base",
+      "versions": {
+        "bank": 1,
+        "rules": 1,
+        "renderer": 1
+      },
+      "checks": {
+        "manuscript": "pass",
+        "render": "pass",
+        "visual": "pending",
+        "portrait": "pending",
+        "landscape": "pending",
+        "motion": "not_applicable",
+        "browser_portrait": "pass",
+        "browser_landscape": "pass"
+      },
+      "conclusion": "hold",
+      "reason": "原稿・作図・自動ブラウザ検査は通過。人による錯視の見え方・iPhone実機の縦横が未確認のため採用保留。",
+      "evidence": "docs/verification/base-33.md",
+      "checkedAt": "2026-10-31 JST",
+      "environment": "Node 24.19.0 / Playwright 1.64.1 Chromium 156.0.8078.4・WebKit 27.2 / Linux",
+      "viewports": [
+        "402x700",
+        "393x852",
+        "852x393"
+      ]
+    },
+    {
+      "questionId": "Q15",
+      "variantId": "base",
+      "versions": {
+        "bank": 1,
+        "rules": 1,
+        "renderer": 1
+      },
+      "checks": {
+        "manuscript": "pass",
+        "render": "pass",
+        "visual": "pending",
+        "portrait": "pending",
+        "landscape": "pending",
+        "motion": "not_applicable",
+        "browser_portrait": "pass",
+        "browser_landscape": "pass"
+      },
+      "conclusion": "hold",
+      "reason": "原稿・作図・自動ブラウザ検査は通過。人による錯視の見え方・iPhone実機の縦横が未確認のため採用保留。",
+      "evidence": "docs/verification/base-33.md",
+      "checkedAt": "2026-10-31 JST",
+      "environment": "Node 24.19.0 / Playwright 1.64.1 Chromium 156.0.8078.4・WebKit 27.2 / Linux",
+      "viewports": [
+        "402x700",
+        "393x852",
+        "852x393"
+      ]
+    },
+    {
+      "questionId": "Q16",
+      "variantId": "base",
+      "versions": {
+        "bank": 1,
+        "rules": 1,
+        "renderer": 1
+      },
+      "checks": {
+        "manuscript": "pass",
+        "render": "pass",
+        "visual": "pending",
+        "portrait": "pending",
+        "landscape": "pending",
+        "motion": "not_applicable",
+        "browser_portrait": "pass",
+        "browser_landscape": "pass"
+      },
+      "conclusion": "hold",
+      "reason": "原稿・作図・自動ブラウザ検査は通過。人による錯視の見え方・iPhone実機の縦横が未確認のため採用保留。",
+      "evidence": "docs/verification/base-33.md",
+      "checkedAt": "2026-10-31 JST",
+      "environment": "Node 24.19.0 / Playwright 1.64.1 Chromium 156.0.8078.4・WebKit 27.2 / Linux",
+      "viewports": [
+        "402x700",
+        "393x852",
+        "852x393"
+      ]
+    },
+    {
+      "questionId": "Q17",
+      "variantId": "base",
+      "versions": {
+        "bank": 1,
+        "rules": 1,
+        "renderer": 1
+      },
+      "checks": {
+        "manuscript": "pass",
+        "render": "pass",
+        "visual": "pending",
+        "portrait": "pending",
+        "landscape": "pending",
+        "motion": "not_applicable",
+        "browser_portrait": "pass",
+        "browser_landscape": "pass"
+      },
+      "conclusion": "hold",
+      "reason": "原稿・作図・自動ブラウザ検査は通過。人による錯視の見え方・iPhone実機の縦横が未確認のため採用保留。",
+      "evidence": "docs/verification/base-33.md",
+      "checkedAt": "2026-10-31 JST",
+      "environment": "Node 24.19.0 / Playwright 1.64.1 Chromium 156.0.8078.4・WebKit 27.2 / Linux",
+      "viewports": [
+        "402x700",
+        "393x852",
+        "852x393"
+      ]
+    },
+    {
+      "questionId": "Q18",
+      "variantId": "base",
+      "versions": {
+        "bank": 1,
+        "rules": 1,
+        "renderer": 1
+      },
+      "checks": {
+        "manuscript": "pass",
+        "render": "pass",
+        "visual": "pending",
+        "portrait": "pending",
+        "landscape": "pending",
+        "motion": "not_applicable",
+        "browser_portrait": "pass",
+        "browser_landscape": "pass"
+      },
+      "conclusion": "hold",
+      "reason": "原稿・作図・自動ブラウザ検査は通過。人による錯視の見え方・iPhone実機の縦横が未確認のため採用保留。",
+      "evidence": "docs/verification/base-33.md",
+      "checkedAt": "2026-10-31 JST",
+      "environment": "Node 24.19.0 / Playwright 1.64.1 Chromium 156.0.8078.4・WebKit 27.2 / Linux",
+      "viewports": [
+        "402x700",
+        "393x852",
+        "852x393"
+      ]
+    },
+    {
+      "questionId": "Q19",
+      "variantId": "base",
+      "versions": {
+        "bank": 1,
+        "rules": 1,
+        "renderer": 1
+      },
+      "checks": {
+        "manuscript": "pass",
+        "render": "pass",
+        "visual": "pending",
+        "portrait": "pending",
+        "landscape": "pending",
+        "motion": "not_applicable",
+        "browser_portrait": "pass",
+        "browser_landscape": "pass"
+      },
+      "conclusion": "hold",
+      "reason": "原稿・作図・自動ブラウザ検査は通過。人による錯視の見え方・iPhone実機の縦横が未確認のため採用保留。",
+      "evidence": "docs/verification/base-33.md",
+      "checkedAt": "2026-10-31 JST",
+      "environment": "Node 24.19.0 / Playwright 1.64.1 Chromium 156.0.8078.4・WebKit 27.2 / Linux",
+      "viewports": [
+        "402x700",
+        "393x852",
+        "852x393"
+      ]
+    },
+    {
+      "questionId": "Q20",
+      "variantId": "base",
+      "versions": {
+        "bank": 1,
+        "rules": 1,
+        "renderer": 1
+      },
+      "checks": {
+        "manuscript": "pass",
+        "render": "pass",
+        "visual": "pending",
+        "portrait": "pending",
+        "landscape": "pending",
+        "motion": "not_applicable",
+        "browser_portrait": "pass",
+        "browser_landscape": "pass"
+      },
+      "conclusion": "hold",
+      "reason": "原稿・作図・自動ブラウザ検査は通過。人による錯視の見え方・iPhone実機の縦横が未確認のため採用保留。",
+      "evidence": "docs/verification/base-33.md",
+      "checkedAt": "2026-10-31 JST",
+      "environment": "Node 24.19.0 / Playwright 1.64.1 Chromium 156.0.8078.4・WebKit 27.2 / Linux",
+      "viewports": [
+        "402x700",
+        "393x852",
+        "852x393"
+      ]
+    },
+    {
+      "questionId": "Q21",
+      "variantId": "base",
+      "versions": {
+        "bank": 1,
+        "rules": 1,
+        "renderer": 1
+      },
+      "checks": {
+        "manuscript": "pass",
+        "render": "pass",
+        "visual": "pending",
+        "portrait": "pending",
+        "landscape": "pending",
+        "motion": "not_applicable",
+        "browser_portrait": "pass",
+        "browser_landscape": "pass"
+      },
+      "conclusion": "hold",
+      "reason": "原稿・作図・自動ブラウザ検査は通過。人による錯視の見え方・iPhone実機の縦横が未確認のため採用保留。",
+      "evidence": "docs/verification/base-33.md",
+      "checkedAt": "2026-10-31 JST",
+      "environment": "Node 24.19.0 / Playwright 1.64.1 Chromium 156.0.8078.4・WebKit 27.2 / Linux",
+      "viewports": [
+        "402x700",
+        "393x852",
+        "852x393"
+      ]
+    },
+    {
+      "questionId": "Q22",
+      "variantId": "base",
+      "versions": {
+        "bank": 1,
+        "rules": 1,
+        "renderer": 1
+      },
+      "checks": {
+        "manuscript": "pass",
+        "render": "pass",
+        "visual": "pending",
+        "portrait": "pending",
+        "landscape": "pending",
+        "motion": "not_applicable",
+        "browser_portrait": "pass",
+        "browser_landscape": "pass"
+      },
+      "conclusion": "hold",
+      "reason": "原稿・作図・自動ブラウザ検査は通過。人による錯視の見え方・iPhone実機の縦横が未確認のため採用保留。",
+      "evidence": "docs/verification/base-33.md",
+      "checkedAt": "2026-10-31 JST",
+      "environment": "Node 24.19.0 / Playwright 1.64.1 Chromium 156.0.8078.4・WebKit 27.2 / Linux",
+      "viewports": [
+        "402x700",
+        "393x852",
+        "852x393"
+      ]
+    },
+    {
+      "questionId": "Q23",
+      "variantId": "base",
+      "versions": {
+        "bank": 1,
+        "rules": 1,
+        "renderer": 1
+      },
+      "checks": {
+        "manuscript": "pass",
+        "render": "pass",
+        "visual": "pending",
+        "portrait": "pending",
+        "landscape": "pending",
+        "motion": "not_applicable",
+        "browser_portrait": "pass",
+        "browser_landscape": "pass"
+      },
+      "conclusion": "hold",
+      "reason": "原稿・作図・自動ブラウザ検査は通過。人による錯視の見え方・iPhone実機の縦横が未確認のため採用保留。",
+      "evidence": "docs/verification/base-33.md",
+      "checkedAt": "2026-10-31 JST",
+      "environment": "Node 24.19.0 / Playwright 1.64.1 Chromium 156.0.8078.4・WebKit 27.2 / Linux",
+      "viewports": [
+        "402x700",
+        "393x852",
+        "852x393"
+      ]
+    },
+    {
+      "questionId": "Q24",
+      "variantId": "base",
+      "versions": {
+        "bank": 1,
+        "rules": 1,
+        "renderer": 1
+      },
+      "checks": {
+        "manuscript": "pass",
+        "render": "pass",
+        "visual": "pending",
+        "portrait": "pending",
+        "landscape": "pending",
+        "motion": "not_applicable",
+        "browser_portrait": "pass",
+        "browser_landscape": "pass"
+      },
+      "conclusion": "hold",
+      "reason": "原稿・作図・自動ブラウザ検査は通過。人による錯視の見え方・iPhone実機の縦横が未確認のため採用保留。",
+      "evidence": "docs/verification/base-33.md",
+      "checkedAt": "2026-10-31 JST",
+      "environment": "Node 24.19.0 / Playwright 1.64.1 Chromium 156.0.8078.4・WebKit 27.2 / Linux",
+      "viewports": [
+        "402x700",
+        "393x852",
+        "852x393"
+      ]
+    },
+    {
+      "questionId": "Q25",
+      "variantId": "base",
+      "versions": {
+        "bank": 1,
+        "rules": 1,
+        "renderer": 1
+      },
+      "checks": {
+        "manuscript": "pass",
+        "render": "pass",
+        "visual": "pending",
+        "portrait": "pending",
+        "landscape": "pending",
+        "motion": "not_applicable",
+        "browser_portrait": "pass",
+        "browser_landscape": "pass"
+      },
+      "conclusion": "hold",
+      "reason": "原稿・作図・自動ブラウザ検査は通過。人による錯視の見え方・iPhone実機の縦横が未確認のため採用保留。",
+      "evidence": "docs/verification/base-33.md",
+      "checkedAt": "2026-10-31 JST",
+      "environment": "Node 24.19.0 / Playwright 1.64.1 Chromium 156.0.8078.4・WebKit 27.2 / Linux",
+      "viewports": [
+        "402x700",
+        "393x852",
+        "852x393"
+      ]
+    },
+    {
+      "questionId": "Q26",
+      "variantId": "base",
+      "versions": {
+        "bank": 1,
+        "rules": 1,
+        "renderer": 1
+      },
+      "checks": {
+        "manuscript": "pass",
+        "render": "pass",
+        "visual": "pending",
+        "portrait": "pending",
+        "landscape": "pending",
+        "motion": "not_applicable",
+        "browser_portrait": "pass",
+        "browser_landscape": "pass"
+      },
+      "conclusion": "hold",
+      "reason": "原稿・作図・自動ブラウザ検査は通過。人による錯視の見え方・iPhone実機の縦横が未確認のため採用保留。",
+      "evidence": "docs/verification/base-33.md",
+      "checkedAt": "2026-10-31 JST",
+      "environment": "Node 24.19.0 / Playwright 1.64.1 Chromium 156.0.8078.4・WebKit 27.2 / Linux",
+      "viewports": [
+        "402x700",
+        "393x852",
+        "852x393"
+      ]
+    },
+    {
+      "questionId": "Q27",
+      "variantId": "base",
+      "versions": {
+        "bank": 1,
+        "rules": 1,
+        "renderer": 1
+      },
+      "checks": {
+        "manuscript": "pass",
+        "render": "pass",
+        "visual": "pending",
+        "portrait": "pending",
+        "landscape": "pending",
+        "motion": "not_applicable",
+        "browser_portrait": "pass",
+        "browser_landscape": "pass"
+      },
+      "conclusion": "hold",
+      "reason": "原稿・作図・自動ブラウザ検査は通過。人による錯視の見え方・iPhone実機の縦横が未確認のため採用保留。",
+      "evidence": "docs/verification/base-33.md",
+      "checkedAt": "2026-10-31 JST",
+      "environment": "Node 24.19.0 / Playwright 1.64.1 Chromium 156.0.8078.4・WebKit 27.2 / Linux",
+      "viewports": [
+        "402x700",
+        "393x852",
+        "852x393"
+      ]
+    },
+    {
+      "questionId": "Q28",
+      "variantId": "base",
+      "versions": {
+        "bank": 1,
+        "rules": 1,
+        "renderer": 1
+      },
+      "checks": {
+        "manuscript": "pass",
+        "render": "pass",
+        "visual": "pending",
+        "portrait": "pending",
+        "landscape": "pending",
+        "motion": "pass",
+        "browser_portrait": "pass",
+        "browser_landscape": "pass"
+      },
+      "conclusion": "hold",
+      "reason": "原稿・作図・自動ブラウザ検査は通過。人による錯視の見え方・iPhone実機の縦横が未確認のため採用保留。",
+      "evidence": "docs/verification/base-33.md",
+      "checkedAt": "2026-10-31 JST",
+      "environment": "Node 24.19.0 / Playwright 1.64.1 Chromium 156.0.8078.4・WebKit 27.2 / Linux",
+      "viewports": [
+        "402x700",
+        "393x852",
+        "852x393"
+      ]
+    },
+    {
+      "questionId": "Q29",
+      "variantId": "base",
+      "versions": {
+        "bank": 1,
+        "rules": 1,
+        "renderer": 1
+      },
+      "checks": {
+        "manuscript": "pass",
+        "render": "pass",
+        "visual": "pending",
+        "portrait": "pending",
+        "landscape": "pending",
+        "motion": "pass",
+        "browser_portrait": "pass",
+        "browser_landscape": "pass"
+      },
+      "conclusion": "hold",
+      "reason": "原稿・作図・自動ブラウザ検査は通過。人による錯視の見え方・iPhone実機の縦横が未確認のため採用保留。",
+      "evidence": "docs/verification/base-33.md",
+      "checkedAt": "2026-10-31 JST",
+      "environment": "Node 24.19.0 / Playwright 1.64.1 Chromium 156.0.8078.4・WebKit 27.2 / Linux",
+      "viewports": [
+        "402x700",
+        "393x852",
+        "852x393"
+      ]
+    },
+    {
+      "questionId": "Q30",
+      "variantId": "base",
+      "versions": {
+        "bank": 1,
+        "rules": 1,
+        "renderer": 1
+      },
+      "checks": {
+        "manuscript": "pass",
+        "render": "pass",
+        "visual": "pending",
+        "portrait": "pending",
+        "landscape": "pending",
+        "motion": "pass",
+        "browser_portrait": "pass",
+        "browser_landscape": "pass"
+      },
+      "conclusion": "hold",
+      "reason": "原稿・作図・自動ブラウザ検査は通過。人による錯視の見え方・iPhone実機の縦横が未確認のため採用保留。",
+      "evidence": "docs/verification/base-33.md",
+      "checkedAt": "2026-10-31 JST",
+      "environment": "Node 24.19.0 / Playwright 1.64.1 Chromium 156.0.8078.4・WebKit 27.2 / Linux",
+      "viewports": [
+        "402x700",
+        "393x852",
+        "852x393"
+      ]
+    },
+    {
+      "questionId": "Q31",
+      "variantId": "base",
+      "versions": {
+        "bank": 1,
+        "rules": 1,
+        "renderer": 1
+      },
+      "checks": {
+        "manuscript": "pass",
+        "render": "pass",
+        "visual": "pending",
+        "portrait": "pending",
+        "landscape": "pending",
+        "motion": "pass",
+        "browser_portrait": "pass",
+        "browser_landscape": "pass"
+      },
+      "conclusion": "hold",
+      "reason": "原稿・作図・自動ブラウザ検査は通過。人による錯視の見え方・iPhone実機の縦横が未確認のため採用保留。",
+      "evidence": "docs/verification/base-33.md",
+      "checkedAt": "2026-10-31 JST",
+      "environment": "Node 24.19.0 / Playwright 1.64.1 Chromium 156.0.8078.4・WebKit 27.2 / Linux",
+      "viewports": [
+        "402x700",
+        "393x852",
+        "852x393"
+      ]
+    },
+    {
+      "questionId": "Q32",
+      "variantId": "base",
+      "versions": {
+        "bank": 1,
+        "rules": 1,
+        "renderer": 1
+      },
+      "checks": {
+        "manuscript": "pass",
+        "render": "pass",
+        "visual": "pending",
+        "portrait": "pending",
+        "landscape": "pending",
+        "motion": "pass",
+        "browser_portrait": "pass",
+        "browser_landscape": "pass"
+      },
+      "conclusion": "hold",
+      "reason": "原稿・作図・自動ブラウザ検査は通過。人による錯視の見え方・iPhone実機の縦横が未確認のため採用保留。",
+      "evidence": "docs/verification/base-33.md",
+      "checkedAt": "2026-10-31 JST",
+      "environment": "Node 24.19.0 / Playwright 1.64.1 Chromium 156.0.8078.4・WebKit 27.2 / Linux",
+      "viewports": [
+        "402x700",
+        "393x852",
+        "852x393"
+      ]
+    },
+    {
+      "questionId": "Q33",
+      "variantId": "base",
+      "versions": {
+        "bank": 1,
+        "rules": 1,
+        "renderer": 1
+      },
+      "checks": {
+        "manuscript": "pass",
+        "render": "pass",
+        "visual": "pending",
+        "portrait": "pending",
+        "landscape": "pending",
+        "motion": "pass",
+        "browser_portrait": "pass",
+        "browser_landscape": "pass"
+      },
+      "conclusion": "hold",
+      "reason": "原稿・作図・自動ブラウザ検査は通過。人による錯視の見え方・iPhone実機の縦横が未確認のため採用保留。",
+      "evidence": "docs/verification/base-33.md",
+      "checkedAt": "2026-10-31 JST",
+      "environment": "Node 24.19.0 / Playwright 1.64.1 Chromium 156.0.8078.4・WebKit 27.2 / Linux",
+      "viewports": [
+        "402x700",
+        "393x852",
+        "852x393"
+      ]
+    }
+  ]
+}
