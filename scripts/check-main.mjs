@@ -13,7 +13,7 @@ export function checkFreshness({ event, ref, sha, latest }) {
     };
   return { allowed: true, reason: `検査済みmain ${sha}` };
 }
-export async function readMainSha() {
+export async function readMainSha({ signal } = {}) {
   const r = await fetch(
     `https://api.github.com/repos/${process.env.GITHUB_REPOSITORY}/git/ref/heads/main`,
     {
@@ -21,7 +21,9 @@ export async function readMainSha() {
         Accept: "application/vnd.github+json",
         Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
       },
-      signal: AbortSignal.timeout(15000),
+      signal: signal
+        ? AbortSignal.any([signal, AbortSignal.timeout(15000)])
+        : AbortSignal.timeout(15000),
     },
   );
   if (!r.ok) throw Error(`main SHA確認に失敗 (${r.status})`);

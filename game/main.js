@@ -462,6 +462,7 @@ $("next").onclick = () => {
 };
 $("pause").onclick = () => interrupt("手動で停止");
 $("resume").onclick = () => {
+  if (!session || phase !== "interrupted") return;
   if (current.motion && reduced.matches) {
     showError(
       "動きを減らす設定では動く問題を再開できません。ホームから静止問題だけで確認してください。",
@@ -488,11 +489,11 @@ $("overlay").onclick = () => {
   draw({ proof: true });
 };
 $("question-select").onchange = () => {
-  stop();
-  session?.abort();
-  session = null;
+  clearRun();
+  hideScreens();
+  clearError();
+  $("gallery-controls").hidden = false;
   setPhase("gallery");
-  $("question").hidden = true;
 };
 // Document visibility events suspend even if the browser has already become visible again.
 document.addEventListener("visibilitychange", () =>

@@ -302,3 +302,21 @@ test("home clears rendered answer/time data and reduced-motion changes cannot re
     "question",
   );
 });
+
+test("selecting another gallery ID while interrupted clears stale controls and resumes with that exact ID", async ({
+  page,
+}) => {
+  const errors = [];
+  page.on("pageerror", (e) => errors.push(e.message));
+  await openQuestion(page, "Q28");
+  await page.locator("#pause").click();
+  await page.locator("#question-select").selectOption("Q02");
+  await expect(page.locator("#interrupted")).toBeHidden();
+  await expect(page.locator('[data-answer="A"]')).toBeDisabled();
+  await page.locator("#load-question").click();
+  await expect(page.locator("#app")).toHaveAttribute("data-phase", "question");
+  await expect(page.locator("#question-id")).toHaveText("Q02");
+  await answer(page);
+  await expect(page.locator("#feedback")).toContainText("正解");
+  expect(errors).toEqual([]);
+});

@@ -171,3 +171,46 @@ test("safety rejects mismatched renderer metrics, out of range geometry and inva
     );
   }
 });
+
+test("production requires every evidence field, and only a static motion check may be not applicable", () => {
+  assert.equal(
+    isEligible(
+      { conclusion: "qualified", checks: { manuscript: "pass" } },
+      "production",
+    ),
+    false,
+  );
+  const checks = {
+    manuscript: "pass",
+    render: "pass",
+    visual: "pass",
+    portrait: "pass",
+    landscape: "pass",
+    motion: "not_applicable",
+  };
+  assert.equal(
+    isEligible(
+      { questionId: "Q01", conclusion: "qualified", checks },
+      "production",
+    ),
+    true,
+  );
+  assert.equal(
+    isEligible(
+      { questionId: "Q28", conclusion: "qualified", checks },
+      "production",
+    ),
+    false,
+  );
+  assert.equal(
+    isEligible(
+      {
+        questionId: "Q01",
+        conclusion: "qualified",
+        checks: { ...checks, portrait: "not_applicable" },
+      },
+      "production",
+    ),
+    false,
+  );
+});

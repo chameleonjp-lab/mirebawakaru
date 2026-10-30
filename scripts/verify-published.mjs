@@ -9,21 +9,34 @@ const base = url.endsWith("/") ? url : url + "/",
   expected = JSON.parse(await readFile(`${dir}/release.json`, "utf8")),
   expectedSha = expected.sha;
 const latestSha = process.env.GITHUB_ACTIONS ? readMainSha : undefined;
-async function readManifest() {
+async function readManifest(signal) {
   const r = await fetch(
     new URL(`release.json?expected=${expectedSha}&at=${Date.now()}`, base),
-    { cache: "no-store", signal: AbortSignal.timeout(10000) },
+    {
+      cache: "no-store",
+      signal: signal
+        ? AbortSignal.any([signal, AbortSignal.timeout(10000)])
+        : AbortSignal.timeout(10000),
+    },
   );
   if (!r.ok) throw Error(`manifest HTTP ${r.status}`);
   return r.json();
 }
-async function checkBrowser() {
+async function checkBrowser(signal) {
   const browser = await chromium.launch(),
     page = await browser.newPage({ viewport: { width: 393, height: 852 } }),
     errors = [],
     loaded = new Set(),
     pending = [],
     root = new URL(base);
+  const abortBrowser = () => {
+    void browser.close().catch(() => {});
+  };
+  signal?.addEventListener("abort", abortBrowser, { once: true });
+  if (signal?.aborted) {
+    await browser.close();
+    throw signal.reason;
+  }
   page.setDefaultTimeout(10000);
   page.on("pageerror", (e) => errors.push(e.message));
   page.on("requestfailed", (r) => errors.push(`通信失敗 ${r.url()}`));
@@ -90,6 +103,7 @@ async function checkBrowser() {
     if (errors.length) throw Error(errors.join("\n"));
     return loaded.size;
   } finally {
+    signal?.removeEventListener("abort", abortBrowser);
     await browser.close();
   }
 }
@@ -97,13 +111,13 @@ try {
   const result = await pollRelease({
     expectedSha,
     latestSha,
-    read: async () => {
-      const m = await readManifest();
+    read: async ({ signal }) => {
+      const m = await readManifest(signal);
       if (m.sha === expectedSha) {
         if (JSON.stringify(m) !== JSON.stringify(expected))
           throw Error("manifest content mismatch");
-        const count = await checkBrowser();
-        if ((await readManifest()).sha !== expectedSha)
+        const count = await checkBrowser(signal);
+        if ((await readManifest(signal)).sha !== expectedSha)
           throw Error("検査中に公開SHAが変更");
         m.browserVerifiedCount = count;
       }

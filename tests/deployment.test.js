@@ -138,3 +138,35 @@ test("published bytes: mixed assets fail, retries bounded, latest successor dist
   });
   assert.equal(ok.status, "matched");
 });
+
+test("publication rejects a matching response after deadline and bounds stalled asynchronous checks", async () => {
+  let time = 0;
+  await assert.rejects(
+    pollRelease({
+      expectedSha: sha,
+      read: async () => {
+        time = 300001;
+        return { sha };
+      },
+      now: () => time,
+      sleep: async () => {},
+      maxWaitMs: 300000,
+    }),
+    /期限/,
+  );
+  const start = Date.now();
+  let signal;
+  await assert.rejects(
+    pollRelease({
+      expectedSha: sha,
+      read: ({ signal: s }) => {
+        signal = s;
+        return new Promise(() => {});
+      },
+      maxWaitMs: 30,
+    }),
+    /期限/,
+  );
+  assert.ok(signal.aborted);
+  assert.ok(Date.now() - start < 1000);
+});

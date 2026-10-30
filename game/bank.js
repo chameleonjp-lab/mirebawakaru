@@ -214,11 +214,20 @@ export function loadBaseQuestions(raw) {
 }
 export function isEligible(a, mode = "verification") {
   if (!a || a.checks?.manuscript !== "pass") return false;
-  return (
-    mode === "verification" ||
-    (a.conclusion === "qualified" &&
-      Object.values(a.checks).every(
-        (v) => v === "pass" || v === "not_applicable",
-      ))
+  if (mode === "verification") return true;
+  const required = ["manuscript", "render", "visual", "portrait", "landscape"];
+  if (
+    a.conclusion !== "qualified" ||
+    !required.every((key) => a.checks[key] === "pass")
+  )
+    return false;
+  const knownStatic = /^Q(0[1-9]|1[0-9]|2[0-7])$/.test(a.questionId ?? "");
+  if (
+    a.checks.motion !== "pass" &&
+    !(knownStatic && a.checks.motion === "not_applicable")
+  )
+    return false;
+  return Object.values(a.checks).every(
+    (v) => v === "pass" || (v === "not_applicable" && knownStatic),
   );
 }

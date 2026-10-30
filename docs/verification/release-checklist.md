@@ -25,9 +25,9 @@
 - URL: <https://chameleonjp-lab.github.io/mirebawakaru/>。
 - `github-pages` 環境: mainだけを許可するcustom branch policy。必須レビュアー、待機タイマーなし。既存の保護は変更・回避していない。
 - Actions workflows: 0件。既存資料の `visual-illusion-atlas.html` は404だった。ビルドはその相対パスと元ファイルの内容を保持する。
-- リポジトリのActions全体設定を読むAPIは `403 Resource not accessible by integration`。PRのワークフロー起動結果を最後に確認する。現時点で新しいPAT・秘密値・有料契約は不要。Pages方式の変更は既にworkflowだったため不要。
+- リポジトリのActions全体設定を読むAPIは `403 Resource not accessible by integration`。PR #4の実行 [41131618310](https://github.com/chameleonjp-lab/mirebawakaru/actions/runs/41131618310) で事前検査成功・配備skipを確認した。現時点で一度限りの設定作業、新しいPAT・秘密値・有料契約は不要。Pages方式の変更は既にworkflowだったため不要。
 
-PRで検査が自動起動しない場合に限る、一度限りのiPhoneからの確認：Safariでリポジトリを開く → `…`／Settings（見つからなければ「デスクトップ用Webサイトを表示」）→ Actions → General → Actions permissions で公式actionsを許可。既存の組織ポリシーを勝手に解除しない。Settings → Pages → Build and deployment → Source が **GitHub Actions** であることを確認する。Environments → github-pages → Deployment branches は **main** を許可する。必須承認が追加されていた場合は回避せず、完全自動反映を妨げる設定として報告する。
+将来設定が変わりPRで検査が自動起動しなくなった場合に限る、iPhoneからの一度限りの確認：Safariでリポジトリを開く → `…`／Settings（見つからなければ「デスクトップ用Webサイトを表示」）→ Actions → General → Actions permissions で公式actionsを許可。既存の組織ポリシーを勝手に解除しない。Settings → Pages → Build and deployment → Source が **GitHub Actions** であることを確認する。Environments → github-pages → Deployment branches は **main** を許可する。必須承認が追加されていた場合は回避せず、完全自動反映を妨げる設定として報告する。
 
 通常運用では、PRごとの手動デプロイやCodexへの再依頼は不要。
 
